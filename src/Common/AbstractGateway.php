@@ -8,7 +8,6 @@ use Omniship\Http\Client;
 use Omniship\Message\RequestInterface;
 use Omniship\Helper\Helper;
 use Omniship\Interfaces\GatewayInterface;
-use Omniship\Traits\Parameters;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 
@@ -46,8 +45,10 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
  */
 abstract class AbstractGateway implements GatewayInterface
 {
-    
-    use Parameters;
+    /**
+     * @var \Symfony\Component\HttpFoundation\ParameterBag
+     */
+    protected $parameters;
     
     /**
      * @var Client
@@ -96,6 +97,34 @@ abstract class AbstractGateway implements GatewayInterface
             }
         }
         Helper::initialize($this, $parameters);
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getParameters()
+    {
+        return $this->parameters->all();
+    }
+
+    /**
+     * @param $key
+     * @return mixed
+     */
+    public function getParameter($key)
+    {
+        return $this->parameters->get($key);
+    }
+
+    /**
+     * @param $key
+     * @param $value
+     * @return $this
+     */
+    public function setParameter($key, $value)
+    {
+        $this->parameters->set($key, $value);
         return $this;
     }
     /**
