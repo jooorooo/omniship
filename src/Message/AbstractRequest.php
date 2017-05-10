@@ -2,7 +2,7 @@
 /**
  * Abstract Request
  */
-namespace Omniship\Common\Message;
+namespace Omniship\Message;
 
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;
@@ -13,7 +13,7 @@ use Money\Parser\DecimalMoneyParser;
 use Omniship\Exceptions\InvalidRequestException;
 use Omniship\Exceptions\RuntimeException;
 use Omniship\Helper\Helper;
-use Omniship\Common\Http\Client;
+use Omniship\Http\Client;
 use Omniship\Common\ItemBag;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
@@ -31,7 +31,7 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
  * Example -- creating a request:
  *
  * <code>
- *   class MyRequest extends \Omniship\Common\Message\AbstractRequest {};
+ *   class MyRequest extends \Omniship\Message\AbstractRequest {};
  *
  *   class MyGateway extends \Omniship\Common\AbstractGateway {
  *     function myRequest($parameters) {

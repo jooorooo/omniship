@@ -1,6 +1,6 @@
 <?php
 
-namespace Omniship\Common\Http;
+namespace Omniship\Http;
 
 use Http\Client\HttpClient;
 use Http\Discovery\HttpClientDiscovery;

@@ -5,7 +5,7 @@
 namespace Omniship\Common;
 
 use Omniship\Exceptions\RuntimeException;
-use Omniship\Common\Http\Client;
+use Omniship\Http\Client;
 use Omniship\Helper\Helper;
 use Omniship\Interfaces\GatewayInterface;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;

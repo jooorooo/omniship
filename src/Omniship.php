@@ -5,7 +5,7 @@
 namespace Omniship;
 
 use Omniship\Common\GatewayFactory;
-use Omniship\Common\Http\Client;
+use Omniship\Http\Client;
 
 /**
  * Omniship class

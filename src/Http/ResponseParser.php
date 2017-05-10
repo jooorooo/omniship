@@ -1,5 +1,5 @@
 <?php
-namespace Omniship\Common\Http;
+namespace Omniship\Http;
 
 use Omniship\Exceptions\RuntimeException;
 use Psr\Http\Message\ResponseInterface;

@@ -4,8 +4,8 @@
  */
 namespace Omniship\Common;
 
-use Omniship\Common\Http\Client;
-use Omniship\Common\Message\RequestInterface;
+use Omniship\Http\Client;
+use Omniship\Message\RequestInterface;
 use Omniship\Helper\Helper;
 use Omniship\Interfaces\GatewayInterface;
 use Omniship\Traits\Parameters;
@@ -142,13 +142,13 @@ abstract class AbstractGateway implements GatewayInterface
      * Create and initialize a request object
      *
      * This function is usually used to create objects of type
-     * Omniship\Common\Message\AbstractRequest (or a non-abstract subclass of it)
+     * Omniship\Message\AbstractRequest (or a non-abstract subclass of it)
      * and initialise them with using existing parameters from this gateway.
      *
      * Example:
      *
      * <code>
-     *   class MyRequest extends \Omniship\Common\Message\AbstractRequest {};
+     *   class MyRequest extends \Omniship\Message\AbstractRequest {};
      *
      *   class MyGateway extends \Omniship\Common\AbstractGateway {
      *     function myRequest($parameters) {
@@ -163,10 +163,10 @@ abstract class AbstractGateway implements GatewayInterface
      *   $myRequest = $gw->myRequest($someParameters);
      * </code>
      *
-     * @see \Omniship\Common\Message\AbstractRequest
+     * @see \Omniship\Message\AbstractRequest
      * @param string $class The request class name
      * @param array $parameters
-     * @return \Omniship\Common\Message\AbstractRequest
+     * @return \Omniship\Message\AbstractRequest
      */
     protected function createRequest($class, array $parameters)
     {
