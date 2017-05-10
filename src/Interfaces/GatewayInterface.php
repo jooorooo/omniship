@@ -5,6 +5,17 @@
 
 namespace Omniship\Interfaces;
 
+/**
+ * Payment gateway interface
+ *
+ * This interface class defines the standard functions that any
+ * Omnipay gateway needs to define.
+ *
+ * @see AbstractGateway
+ *
+ * @method \Omniship\Interfaces\RequestInterface getQuote()         (Optional method)
+ *         Get shipping quotes
+ */
 interface GatewayInterface
 {
     /**

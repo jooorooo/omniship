@@ -11,13 +11,14 @@ use Omniship\Address\State;
 use Omniship\Exceptions\InvalidArgumentException;
 use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
+use Omniship\Traits\Exceptions;
 use Omniship\Traits\Parameters;
 use Omniship\Interfaces\AddressInterface;
 
 class Address implements AddressInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
 
-    use Parameters;
+    use Parameters, Exceptions;
 
     const INVALID_ARGUMENTS = [
         '10001' => 'Invalid arguments for method Omniship\Common\Address::setCountry',

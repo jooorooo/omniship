@@ -1,12 +1,12 @@
 <?php
 /**
- * Shipping Item Bag
+ * Shipping Method Bag
  */
 namespace Omniship\Common;
 
 use Omniship\Interfaces\ArrayableInterface;
-use Omniship\Interfaces\ItemInterface;
 use Omniship\Interfaces\JsonableInterface;
+use Omniship\Interfaces\ShippingMethodInterface;
 
 /**
  * Shipping Item Bag
@@ -16,7 +16,12 @@ use Omniship\Interfaces\JsonableInterface;
  *
  * @see Item
  */
-class ItemBag implements \IteratorAggregate, \Countable, ArrayableInterface, \JsonSerializable, JsonableInterface
+class QuoteBag implements
+    \IteratorAggregate,
+    \Countable,
+    ArrayableInterface,
+    \JsonSerializable,
+    JsonableInterface
 {
     /**
      * Item storage
@@ -42,7 +47,7 @@ class ItemBag implements \IteratorAggregate, \Countable, ArrayableInterface, \Js
      *
      * @see Item
      *
-     * @return Item[]
+     * @return array An array of items
      */
     public function all()
     {
@@ -69,14 +74,14 @@ class ItemBag implements \IteratorAggregate, \Countable, ArrayableInterface, \Js
      *
      * @see Item
      *
-     * @param ItemInterface|array $item An existing item, or associative array of item parameters
+     * @param ShippingMethodInterface|array $item An existing item, or associative array of item parameters
      */
     public function add($item)
     {
-        if ($item instanceof ItemInterface) {
+        if ($item instanceof ShippingMethodInterface) {
             $this->items[] = $item;
         } else {
-            $this->items[] = new Item($item);
+            $this->items[] = new Quote($item);
         }
     }
 
@@ -127,7 +132,7 @@ class ItemBag implements \IteratorAggregate, \Countable, ArrayableInterface, \Js
     /**
      * Convert the object to its JSON representation.
      *
-     * @param  int  $options
+     * @param  int $options
      * @return string
      */
     public function toJson($options = 0)

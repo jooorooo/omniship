@@ -2,7 +2,7 @@
 /**
  * Request Interface
  */
-namespace Omniship\Message;
+namespace Omniship\Interfaces;
 
 /**
  * Request Interface

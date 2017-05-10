@@ -10,11 +10,15 @@ use Money\Formatter\DecimalMoneyFormatter;
 use Money\Money;
 use Money\Number;
 use Money\Parser\DecimalMoneyParser;
+use Omniship\Common\Address;
 use Omniship\Exceptions\InvalidRequestException;
 use Omniship\Exceptions\RuntimeException;
 use Omniship\Helper\Helper;
 use Omniship\Http\Client;
 use Omniship\Common\ItemBag;
+use Omniship\Interfaces\RequestInterface;
+use Omniship\Interfaces\ResponseInterface;
+use Omniship\Traits\Exceptions;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 
@@ -63,6 +67,14 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
  */
 abstract class AbstractRequest implements RequestInterface
 {
+
+    use Exceptions;
+
+    const INVALID_ARGUMENTS = [
+        '20001' => 'Invalid arguments for method Omniship\Message\AbstractRequest::setReceiverAddress',
+        '20002' => 'Invalid arguments for method Omniship\Message\AbstractRequest::setSenderAddress',
+    ];
+
     /**
      * The request parameters
      *
@@ -550,6 +562,48 @@ abstract class AbstractRequest implements RequestInterface
     public function setPaymentMethod($value)
     {
         return $this->setParameter('paymentMethod', $value);
+    }
+    /**
+     * @return Address
+     */
+    public function getReceiverAddress()
+    {
+        return $this->getParameter('receiver_address');
+    }
+    /**
+     * @param  Address|array $address
+     * @return $this
+     */
+    public function setReceiverAddress($address)
+    {
+        if(!($address instanceof Address)) {
+            $address = new Address($address);
+        }
+        if ($address->isEmpty()) {
+            $this->invalidArguments('20001');
+        }
+        return $this->setParameter('receiver_address', $address);
+    }
+    /**
+     * @return Address
+     */
+    public function getSenderAddress()
+    {
+        return $this->getParameter('sender_address');
+    }
+    /**
+     * @param  Address|array $address
+     * @return $this
+     */
+    public function setSenderAddress($address)
+    {
+        if(!($address instanceof Address)) {
+            $address = new Address($address);
+        }
+        if ($address->isEmpty()) {
+            $this->invalidArguments('20002');
+        }
+        return $this->setParameter('sender_address', $address);
     }
     /**
      * Send the request

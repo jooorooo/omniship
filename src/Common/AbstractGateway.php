@@ -5,9 +5,10 @@
 namespace Omniship\Common;
 
 use Omniship\Http\Client;
-use Omniship\Message\RequestInterface;
+use Omniship\Interfaces\RequestInterface;
 use Omniship\Helper\Helper;
 use Omniship\Interfaces\GatewayInterface;
+use Omniship\Traits\Exceptions;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 
@@ -45,6 +46,14 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
  */
 abstract class AbstractGateway implements GatewayInterface
 {
+
+    use Exceptions;
+
+    const INVALID_ARGUMENTS = [
+        '20001' => 'Invalid arguments for method Omniship\Common\AbstractGateway::setReceiverAddress',
+        '20002' => 'Invalid arguments for method Omniship\Common\AbstractGateway::setSenderAddress',
+    ];
+
     /**
      * @var \Symfony\Component\HttpFoundation\ParameterBag
      */
@@ -150,6 +159,78 @@ abstract class AbstractGateway implements GatewayInterface
         return $this->setParameter('testMode', $value);
     }
     /**
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return strtoupper($this->getParameter('currency'));
+    }
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setCurrency($value)
+    {
+        return $this->setParameter('currency', $value);
+    }
+    /**
+     * @return Address
+     */
+    public function getReceiverAddress()
+    {
+        return $this->getParameter('receiver_address');
+    }
+    /**
+     * @param  Address|array $address
+     * @return $this
+     */
+    public function setReceiverAddress($address)
+    {
+        if(!($address instanceof Address)) {
+            $address = new Address($address);
+        }
+        if ($address->isEmpty()) {
+            $this->invalidArguments('20001');
+        }
+        return $this->setParameter('receiver_address', $address);
+    }
+    /**
+     * @return Address
+     */
+    public function getSenderAddress()
+    {
+        return $this->getParameter('sender_address');
+    }
+    /**
+     * @param  Address|array $address
+     * @return $this
+     */
+    public function setSenderAddress($address)
+    {
+        if(!($address instanceof Address)) {
+            $address = new Address($address);
+        }
+        if ($address->isEmpty()) {
+            $this->invalidArguments('20002');
+        }
+        return $this->setParameter('sender_address', $address);
+    }
+    /**
+     * @return ItemBag
+     */
+    public function getItems()
+    {
+        return $this->getParameter('items');
+    }
+    /**
+     * @param  ItemBag $items
+     * @return $this
+     */
+    public function setItems(ItemBag $items)
+    {
+        return $this->setParameter('items', $items);
+    }
+    /**
      * Supports Authorize
      *
      * @return boolean True if this gateway supports the authorize() method
@@ -166,6 +247,15 @@ abstract class AbstractGateway implements GatewayInterface
     public function supportsCompleteAuthorize()
     {
         return method_exists($this, 'completeAuthorize');
+    }
+    /**
+     * Supports GetQuote
+     *
+     * @return boolean True if this gateway supports the getQuote() method
+     */
+    public function supportsGetQuote()
+    {
+        return method_exists($this, 'getQuote');
     }
     /**
      * Create and initialize a request object

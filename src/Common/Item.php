@@ -99,9 +99,7 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
     {
         return $this->setParameter('price', $value);
     }
-
-
-
+    
     /**
      * Get item height
      */
