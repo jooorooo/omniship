@@ -34,11 +34,6 @@
     },
     "classmap": ["src/Omniship.php"]
   },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  },
   "suggest": {
     "php-http/guzzle6-adapter": "Use the Guzzle adapter to send your requests."
   },
