@@ -8,6 +8,7 @@
 
 namespace Omniship\Common;
 
+use Carbon\Carbon;
 use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Interfaces\QuoteInterface;
@@ -20,7 +21,7 @@ use Omniship\Traits\Parameters;
  *
  * @see QuoteInterface
  */
-class Quote implements QuoteInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
     use Parameters;
 
@@ -89,7 +90,39 @@ class Quote implements QuoteInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * @return string
+     * Tax of the quote
+     */
+    public function getTax()
+    {
+        return $this->getParameter('tax');
+    }
+
+    /**
+     * Set tax
+     */
+    public function setTax($value)
+    {
+        return $this->setParameter('tax', $value);
+    }
+
+    /**
+     * Insurance of the quote
+     */
+    public function getInsurance()
+    {
+        return $this->getParameter('insurance');
+    }
+
+    /**
+     * Set Insurance
+     */
+    public function setInsurance($value)
+    {
+        return $this->setParameter('insurance', $value);
+    }
+
+    /**
+     * @return Carbon
      */
     public function getPickupDate()
     {
@@ -97,16 +130,16 @@ class Quote implements QuoteInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * @param  string $value
+     * @param  Carbon $value
      * @return $this
      */
-    public function setPickupDate($value)
+    public function setPickupDate(Carbon $value)
     {
         return $this->setParameter('pickup_date', $value);
     }
 
     /**
-     * @return string
+     * @return Carbon
      */
     public function getPickupTime()
     {
@@ -114,16 +147,16 @@ class Quote implements QuoteInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * @param  string $value
+     * @param  Carbon $value
      * @return $this
      */
-    public function setPickupTime($value)
+    public function setPickupTime(Carbon $value)
     {
         return $this->setParameter('pickup_time', $value);
     }
 
     /**
-     * @return string
+     * @return Carbon
      */
     public function getDeliveryDate()
     {
@@ -131,16 +164,16 @@ class Quote implements QuoteInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * @param  string $value
+     * @param  Carbon $value
      * @return $this
      */
-    public function setDeliveryDate($value)
+    public function setDeliveryDate(Carbon $value)
     {
         return $this->setParameter('delivery_date', $value);
     }
 
     /**
-     * @return string
+     * @return Carbon
      */
     public function getDeliveryTime()
     {
@@ -148,10 +181,10 @@ class Quote implements QuoteInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * @param  string $value
+     * @param  Carbon $value
      * @return $this
      */
-    public function setDeliveryTime($value)
+    public function setDeliveryTime(Carbon $value)
     {
         return $this->setParameter('delivery_time', $value);
     }

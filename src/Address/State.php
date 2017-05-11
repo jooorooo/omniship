@@ -3,11 +3,11 @@
 namespace Omniship\Address;
 
 use Omniship\Interfaces\ArrayableInterface;
-use Omniship\Interfaces\ComponentInterface;
 use Omniship\Interfaces\JsonableInterface;
+use Omniship\Interfaces\StateInterface;
 use Omniship\Traits\Parameters;
 
-class State implements ComponentInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class State implements StateInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
 
     use Parameters;
@@ -52,5 +52,21 @@ class State implements ComponentInterface, ArrayableInterface, \JsonSerializable
     public function setName($value)
     {
         return $this->setParameter('name', $value);
+    }
+
+    /**
+     * Get iso2
+     */
+    public function getIso2()
+    {
+        return $this->getParameter('iso2');
+    }
+
+    /**
+     * Set iso2
+     */
+    public function setIso2($value)
+    {
+        return $this->setParameter('iso2', $value);
     }
 }

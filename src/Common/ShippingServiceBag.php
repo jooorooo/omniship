@@ -16,7 +16,7 @@ use Omniship\Interfaces\ShippingMethodInterface;
  *
  * @see Item
  */
-class QuoteBag implements
+class ShippingServiceBag implements
     \IteratorAggregate,
     \Countable,
     ArrayableInterface,
@@ -81,7 +81,7 @@ class QuoteBag implements
         if ($item instanceof ShippingMethodInterface) {
             $this->items[] = $item;
         } else {
-            $this->items[] = new Quote($item);
+            $this->items[] = new ShippingService($item);
         }
     }
 

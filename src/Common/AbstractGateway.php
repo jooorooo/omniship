@@ -231,6 +231,36 @@ abstract class AbstractGateway implements GatewayInterface
         return $this->setParameter('items', $items);
     }
     /**
+     * @return string
+     */
+    public function getWeightUnit()
+    {
+        return $this->getParameter('weight_unit');
+    }
+    /**
+     * @param  $weight_unit
+     * @return $this
+     */
+    public function setWeightUnit($weight_unit)
+    {
+        return $this->setParameter('weight_unit', $weight_unit);
+    }
+    /**
+     * @return string
+     */
+    public function getDimensionUnit()
+    {
+        return $this->getParameter('dimension_unit');
+    }
+    /**
+     * @param  $dimension_unit
+     * @return $this
+     */
+    public function setDimensionUnit($dimension_unit)
+    {
+        return $this->setParameter('dimension_unit', $dimension_unit);
+    }
+    /**
      * Supports Authorize
      *
      * @return boolean True if this gateway supports the authorize() method
@@ -249,13 +279,58 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'completeAuthorize');
     }
     /**
-     * Supports GetQuote
+     * Supports getServices
      *
-     * @return boolean True if this gateway supports the getQuote() method
+     * @return boolean True if this gateway supports the getServices() method
      */
-    public function supportsGetQuote()
+    public function supportsGetServices()
     {
-        return method_exists($this, 'getQuote');
+        return method_exists($this, 'getServices');
+    }
+    /**
+     * Supports addressValidation
+     *
+     * @return boolean True if this gateway supports the addressValidation() method
+     */
+    public function supportsAddressValidation()
+    {
+        return method_exists($this, 'addressValidation');
+    }
+    /**
+     * Supports createBillOfLading
+     *
+     * @return boolean True if this gateway supports the createBillOfLading() method
+     */
+    public function supportsCreateBillOfLading()
+    {
+        return method_exists($this, 'createBillOfLading');
+    }
+    /**
+     * Supports cancelBillOfLading
+     *
+     * @return boolean True if this gateway supports the cancelBillOfLading() method
+     */
+    public function supportsCancelBillOfLading()
+    {
+        return method_exists($this, 'cancelBillOfLading');
+    }
+    /**
+     * Supports deleteBillOfLading
+     *
+     * @return boolean True if this gateway supports the deleteBillOfLading() method
+     */
+    public function supportsDeleteBillOfLading()
+    {
+        return method_exists($this, 'deleteBillOfLading');
+    }
+    /**
+     * Supports trackingParcel
+     *
+     * @return boolean True if this gateway supports the trackingParcel() method
+     */
+    public function supportsTrackingParcel()
+    {
+        return method_exists($this, 'trackingParcel');
     }
     /**
      * Create and initialize a request object

@@ -6,15 +6,25 @@
 namespace Omniship\Interfaces;
 
 /**
- * Payment gateway interface
+ * Shipping gateway interface
  *
  * This interface class defines the standard functions that any
- * Omnipay gateway needs to define.
+ * Omniship gateway needs to define.
  *
  * @see AbstractGateway
  *
- * @method \Omniship\Interfaces\RequestInterface getQuote()         (Optional method)
- *         Get shipping quotes
+ * @method RequestInterface getServices()         (Optional method)
+ *         Get shipping services
+ * @method RequestInterface addressValidation()   (Optional method)
+ *         Validate address
+ * @method RequestInterface createBillOfLading()  (Optional method)
+ *         Create Bill Of Lading
+ * @method RequestInterface cancelBillOfLading()  (Optional method)
+ *         Cancel Bill Of Lading
+ * @method RequestInterface deleteBillOfLading()  (Optional method)
+ *         Delete Bill Of Lading
+ * @method RequestInterface trackingParcel()      (Optional method)
+ *         Tracking Parcel
  */
 interface GatewayInterface
 {
@@ -37,12 +47,12 @@ interface GatewayInterface
      * array(
      *     'username' => '', // string variable
      *     'testMode' => false, // boolean variable
-     *     'landingPage' => array('billing', 'login'), // enum variable, first item is default
      * );
      */
     public function getDefaultParameters();
     /**
      * Initialize gateway with parameters
+     * @param array $parameters
      */
     public function initialize(array $parameters = array());
     /**

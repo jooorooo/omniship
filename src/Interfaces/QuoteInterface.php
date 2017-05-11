@@ -21,6 +21,14 @@ interface QuoteInterface extends ComponentInterface
      */
     public function getPrice();
     /**
+     * Tax of the quote
+     */
+    public function getTax();
+    /**
+     * Insurance of the quote
+     */
+    public function getInsurance();
+    /**
      * Pickup date of the quote
      */
     public function getPickupDate();
