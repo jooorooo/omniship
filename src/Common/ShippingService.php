@@ -130,16 +130,16 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
     }
 
     /**
-     * @param  Carbon $value
+     * @param  Carbon|null $value
      * @return $this
      */
-    public function setPickupDate(Carbon $value)
+    public function setPickupDate(Carbon $value = null)
     {
         return $this->setParameter('pickup_date', $value);
     }
 
     /**
-     * @return Carbon
+     * @return Carbon|null
      */
     public function getPickupTime()
     {
@@ -147,16 +147,16 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
     }
 
     /**
-     * @param  Carbon $value
+     * @param  Carbon|null $value
      * @return $this
      */
-    public function setPickupTime(Carbon $value)
+    public function setPickupTime(Carbon $value = null)
     {
         return $this->setParameter('pickup_time', $value);
     }
 
     /**
-     * @return Carbon
+     * @return Carbon|null
      */
     public function getDeliveryDate()
     {
@@ -164,16 +164,16 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
     }
 
     /**
-     * @param  Carbon $value
+     * @param  Carbon|null $value
      * @return $this
      */
-    public function setDeliveryDate(Carbon $value)
+    public function setDeliveryDate(Carbon $value = null)
     {
         return $this->setParameter('delivery_date', $value);
     }
 
     /**
-     * @return Carbon
+     * @return Carbon|null
      */
     public function getDeliveryTime()
     {
@@ -181,10 +181,10 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
     }
 
     /**
-     * @param  Carbon $value
+     * @param  Carbon|null $value
      * @return $this
      */
-    public function setDeliveryTime(Carbon $value)
+    public function setDeliveryTime(Carbon $value = null)
     {
         return $this->setParameter('delivery_time', $value);
     }
