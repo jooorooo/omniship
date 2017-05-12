@@ -3,6 +3,9 @@
  * Request Interface
  */
 namespace Omniship\Interfaces;
+use Money\Money;
+use Omniship\Common\Address;
+use Omniship\Exceptions\InvalidRequestException;
 
 /**
  * Request Interface
@@ -25,6 +28,30 @@ interface RequestInterface extends MessageInterface
      * @return array
      */
     public function getParameters();
+    /**
+     * Get a single parameter.
+     *
+     * @param string $key The parameter key
+     * @return mixed
+     */
+    public function getParameter($key);
+    /**
+     * @return Address
+     */
+    public function getReceiverAddress();
+    /**
+     * @return Address
+     */
+    public function getSenderAddress();
+
+    /**
+     * @return null|string
+     */
+    public function getSenderTimeZone();
+    /**
+     * @return null|string
+     */
+    public function getReceiverTimeZone();
     /**
      * Get the response to this request (if the request has been sent)
      *

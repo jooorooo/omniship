@@ -13,6 +13,11 @@ interface AddressInterface
 {
 
     /**
+     * Get the address id
+     * @return mixed
+     */
+    public function getId();
+    /**
      * Get the address country
      * @return Country
      */

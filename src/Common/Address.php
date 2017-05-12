@@ -14,6 +14,7 @@ use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Exceptions;
 use Omniship\Traits\Parameters;
 use Omniship\Interfaces\AddressInterface;
+use DateTimeZone;
 
 class Address implements AddressInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
@@ -24,7 +25,30 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         '10001' => 'Invalid arguments for method Omniship\Common\Address::setCountry',
         '10002' => 'Invalid arguments for method Omniship\Common\Address::setState',
         '10003' => 'Invalid arguments for method Omniship\Common\Address::setCity',
+        '10004' => 'Invalid arguments for method Omniship\Common\Address::setTimeZone',
     ];
+
+    /**
+     * @var array
+     */
+    protected $time_zones;
+
+    /**
+     * Get the address id
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->getParameter('id');
+    }
+
+    /**
+     * Set address id
+     */
+    public function setId($value)
+    {
+        return $this->setParameter('id', $value);
+    }
 
     /**
      * Get the address country
@@ -330,5 +354,41 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     public function setCompanyName($company_name)
     {
         return $this->setParameter('company_name', $company_name);
+    }
+
+    /**
+     * Get the address time zone
+     * @return string|null
+     */
+    public function getTimeZone()
+    {
+        return $this->getParameter('timezone');
+    }
+
+    /**
+     * Set the address time zone
+     * @param string|null $timezone
+     * @return $this
+     */
+    public function setTimeZone($timezone)
+    {
+        if(!is_null($timezone) && array_search(strtolower($timezone), $this->getTimeZones()) === false) {
+            $this->invalidArguments('10004', sprintf('Invalid timezone set "%s"', $timezone));
+        }
+        return $this->setParameter('timezone', $timezone);
+    }
+
+    /**
+     * @return array
+     */
+    protected function getTimeZones() {
+        if(!is_null($this->time_zones)) {
+            return $this->time_zones;
+        }
+        $list_abbreviations = DateTimeZone::listAbbreviations();
+        foreach($list_abbreviations AS $list) {
+            $this->time_zones = array_merge(is_array($this->time_zones) ? $this->time_zones : [], array_map(function($timezone) { return $timezone['timezone_id']; }, $list));
+        }
+        return array_map('strtolower', array_filter(array_unique($this->time_zones)));
     }
 }

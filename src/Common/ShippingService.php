@@ -83,14 +83,16 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
 
     /**
      * Set the item price
+     * @param mixed $value
+     * @return $this
      */
-    public function setPrice($value)
+    public function setPrice($value = null)
     {
         return $this->setParameter('price', $value);
     }
 
     /**
-     * Tax of the quote
+     * {@inheritDoc}
      */
     public function getTax()
     {
@@ -99,14 +101,16 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
 
     /**
      * Set tax
+     * @param mixed $value
+     * @return $this
      */
-    public function setTax($value)
+    public function setTax($value = null)
     {
         return $this->setParameter('tax', $value);
     }
 
     /**
-     * Insurance of the quote
+     * {@inheritDoc}
      */
     public function getInsurance()
     {
@@ -115,14 +119,16 @@ class ShippingService implements QuoteInterface, ArrayableInterface, \JsonSerial
 
     /**
      * Set Insurance
+     * @param mixed $value
+     * @return $this
      */
-    public function setInsurance($value)
+    public function setInsurance($value = null)
     {
         return $this->setParameter('insurance', $value);
     }
 
     /**
-     * @return Carbon
+     * @return Carbon|null
      */
     public function getPickupDate()
     {
