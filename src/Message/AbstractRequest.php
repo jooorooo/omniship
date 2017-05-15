@@ -5,16 +5,15 @@
 namespace Omniship\Message;
 
 use Money\Currencies\ISOCurrencies;
-use Money\Currency;
-use Omniship\Common\Address;
 use Omniship\Exceptions\InvalidRequestException;
 use Omniship\Exceptions\RuntimeException;
 use Omniship\Helper\Helper;
 use Omniship\Http\Client;
-use Omniship\Common\ItemBag;
 use Omniship\Interfaces\RequestInterface;
 use Omniship\Interfaces\ResponseInterface;
 use Omniship\Traits\Exceptions;
+use Omniship\Traits\Parameters;
+use Omniship\Traits\ParametersData;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 
@@ -64,12 +63,9 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
 abstract class AbstractRequest implements RequestInterface
 {
 
-    use Exceptions;
-
-    const INVALID_ARGUMENTS = [
-        '20001' => 'Invalid arguments for method Omniship\Message\AbstractRequest::setReceiverAddress',
-        '20002' => 'Invalid arguments for method Omniship\Message\AbstractRequest::setSenderAddress',
-    ];
+    use Exceptions, ParametersData, Parameters {
+        Parameters::__construct AS parametersConstruct;
+    }
 
     /**
      * The request parameters
@@ -100,14 +96,6 @@ abstract class AbstractRequest implements RequestInterface
      */
     protected $currencies;
     /**
-     * @var bool
-     */
-    protected $zeroAmountAllowed = true;
-    /**
-     * @var bool
-     */
-    protected $negativeAmountAllowed = false;
-    /**
      * Create a new Request
      *
      * @param Client $httpClient  A HTTP client to make API calls with
@@ -117,7 +105,7 @@ abstract class AbstractRequest implements RequestInterface
     {
         $this->httpClient = $httpClient;
         $this->httpRequest = $httpRequest;
-        $this->initialize();
+        $this->parametersConstruct();
     }
     /**
      * Initialize the object with parameters.
@@ -139,25 +127,6 @@ abstract class AbstractRequest implements RequestInterface
         return $this;
     }
     /**
-     * Get all parameters as an associative array.
-     *
-     * @return array
-     */
-    public function getParameters()
-    {
-        return $this->parameters->all();
-    }
-    /**
-     * Get a single parameter.
-     *
-     * @param string $key The parameter key
-     * @return mixed
-     */
-    public function getParameter($key)
-    {
-        return $this->parameters->get($key);
-    }
-    /**
      * Set a single parameter
      *
      * @param string $key The parameter key
@@ -172,25 +141,6 @@ abstract class AbstractRequest implements RequestInterface
         }
         $this->parameters->set($key, $value);
         return $this;
-    }
-    /**
-     * Gets the test mode of the request from the gateway.
-     *
-     * @return boolean
-     */
-    public function getTestMode()
-    {
-        return $this->getParameter('testMode');
-    }
-    /**
-     * Sets the test mode of the request.
-     *
-     * @param boolean $value True for test mode on.
-     * @return AbstractRequest
-     */
-    public function setTestMode($value)
-    {
-        return $this->setParameter('testMode', $value);
     }
     /**
      * Validate the request.
@@ -209,333 +159,6 @@ abstract class AbstractRequest implements RequestInterface
                 throw new InvalidRequestException("The $key parameter is required");
             }
         }
-    }
-    /**
-     * Get the card token.
-     *
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->getParameter('token');
-    }
-    /**
-     * Sets the card token.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setToken($value)
-    {
-        return $this->setParameter('token', $value);
-    }
-    /**
-     * @return ISOCurrencies
-     */
-    protected function getCurrencies()
-    {
-        if ($this->currencies === null) {
-            $this->currencies = new ISOCurrencies();
-        }
-        return $this->currencies;
-    }
-    /**
-     * Get the payment currency code.
-     *
-     * @return string
-     */
-    public function getCurrency()
-    {
-        return $this->getParameter('currency');
-    }
-    /**
-     * Sets the payment currency code.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setCurrency($value)
-    {
-        if ($value !== null) {
-            $value = strtoupper($value);
-        }
-        return $this->setParameter('currency', $value);
-    }
-    /**
-     * Get the payment currency number.
-     *
-     * @return string|null
-     */
-    public function getCurrencyNumeric()
-    {
-        if (! $this->getCurrency()) {
-            return null;
-        }
-        $currency = new Currency($this->getCurrency());
-        if ($this->getCurrencies()->contains($currency)) {
-            return (string) $this->getCurrencies()->numericCodeFor($currency);
-        }
-        return null;
-    }
-    /**
-     * Get the request description.
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->getParameter('description');
-    }
-    /**
-     * Sets the request description.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setDescription($value)
-    {
-        return $this->setParameter('description', $value);
-    }
-    /**
-     * @return string
-     */
-    public function getWeightUnit()
-    {
-        return $this->getParameter('weight_unit');
-    }
-    /**
-     * @param  $weight_unit
-     * @return $this
-     */
-    public function setWeightUnit($weight_unit)
-    {
-        return $this->setParameter('weight_unit', $weight_unit);
-    }
-    /**
-     * @return string
-     */
-    public function getDimensionUnit()
-    {
-        return $this->getParameter('dimension_unit');
-    }
-    /**
-     * @param  $dimension_unit
-     * @return $this
-     */
-    public function setDimensionUnit($dimension_unit)
-    {
-        return $this->setParameter('dimension_unit', $dimension_unit);
-    }
-    /**
-     * Get the parcel ID.
-     *
-     * The parcel ID is the identifier generated by the merchant website.
-     *
-     * @return mixed
-     */
-    public function getParcelId()
-    {
-        return $this->getParameter('parcelId');
-    }
-    /**
-     * Sets the parcel ID.
-     *
-     * @param mixed $value
-     * @return $this
-     */
-    public function setParcelId($value)
-    {
-        return $this->setParameter('parcelId', $value);
-    }
-    /**
-     * A list of items in this order
-     *
-     * @return ItemBag|null A bag containing items in this order
-     */
-    public function getItems()
-    {
-        return $this->getParameter('items');
-    }
-    /**
-     * Set the items in this order
-     *
-     * @param ItemBag|array $items An array of items in this order
-     * @return AbstractRequest
-     */
-    public function setItems($items)
-    {
-        if ($items && !$items instanceof ItemBag) {
-            $items = new ItemBag($items);
-        }
-        return $this->setParameter('items', $items);
-    }
-    /**
-     * Get the client IP address.
-     *
-     * @return string
-     */
-    public function getClientIp()
-    {
-        return $this->getParameter('clientIp');
-    }
-    /**
-     * Sets the client IP address.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setClientIp($value)
-    {
-        return $this->setParameter('clientIp', $value);
-    }
-    /**
-     * Get the request return URL.
-     *
-     * @return string
-     */
-    public function getReturnUrl()
-    {
-        return $this->getParameter('returnUrl');
-    }
-    /**
-     * Sets the request return URL.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setReturnUrl($value)
-    {
-        return $this->setParameter('returnUrl', $value);
-    }
-    /**
-     * Get the request cancel URL.
-     *
-     * @return string
-     */
-    public function getCancelUrl()
-    {
-        return $this->getParameter('cancelUrl');
-    }
-    /**
-     * Sets the request cancel URL.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setCancelUrl($value)
-    {
-        return $this->setParameter('cancelUrl', $value);
-    }
-    /**
-     * Get the request notify URL.
-     *
-     * @return string
-     */
-    public function getNotifyUrl()
-    {
-        return $this->getParameter('notifyUrl');
-    }
-    /**
-     * Sets the request notify URL.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setNotifyUrl($value)
-    {
-        return $this->setParameter('notifyUrl', $value);
-    }
-    /**
-     * Get the payment issuer.
-     *
-     * This field is used by some European gateways, and normally represents
-     * the bank where an account is held (separate from the card brand).
-     *
-     * @return string
-     */
-    public function getIssuer()
-    {
-        return $this->getParameter('issuer');
-    }
-    /**
-     * Set the payment issuer.
-     *
-     * This field is used by some European gateways, and normally represents
-     * the bank where an account is held (separate from the card brand).
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setIssuer($value)
-    {
-        return $this->setParameter('issuer', $value);
-    }
-    /**
-     * Get the payment issuer.
-     *
-     * This field is used by some European gateways, which support
-     * multiple payment providers with a single API.
-     *
-     * @return string
-     */
-    public function getPaymentMethod()
-    {
-        return $this->getParameter('paymentMethod');
-    }
-    /**
-     * Set the payment method.
-     *
-     * This field is used by some European gateways, which support
-     * multiple payment providers with a single API.
-     *
-     * @param string $value
-     * @return AbstractRequest Provides a fluent interface
-     */
-    public function setPaymentMethod($value)
-    {
-        return $this->setParameter('paymentMethod', $value);
-    }
-    /**
-     * @return Address
-     */
-    public function getReceiverAddress()
-    {
-        return $this->getParameter('receiver_address');
-    }
-    /**
-     * @param  Address|array $address
-     * @return $this
-     */
-    public function setReceiverAddress($address)
-    {
-        if(!($address instanceof Address)) {
-            $address = new Address($address);
-        }
-        if ($address->isEmpty()) {
-            $this->invalidArguments('20001');
-        }
-        return $this->setParameter('receiver_address', $address);
-    }
-    /**
-     * @return Address
-     */
-    public function getSenderAddress()
-    {
-        return $this->getParameter('sender_address');
-    }
-    /**
-     * @param  Address|array $address
-     * @return $this
-     */
-    public function setSenderAddress($address)
-    {
-        if(!($address instanceof Address)) {
-            $address = new Address($address);
-        }
-        if ($address->isEmpty()) {
-            $this->invalidArguments('20002');
-        }
-        return $this->setParameter('sender_address', $address);
     }
     /**
      * Send the request
@@ -558,19 +181,5 @@ abstract class AbstractRequest implements RequestInterface
             throw new RuntimeException('You must call send() before accessing the Response!');
         }
         return $this->response;
-    }
-
-    /**
-     * @return null|string
-     */
-    public function getSenderTimeZone() {
-        return $this->getSenderAddress() ? $this->getSenderAddress()->getTimeZone() : null;
-    }
-
-    /**
-     * @return null|string
-     */
-    public function getReceiverTimeZone() {
-        return $this->getReceiverAddress() ? $this->getReceiverAddress()->getTimeZone() : null;
     }
 }

@@ -45,7 +45,7 @@ use Omniship\Http\Client;
  * @method static string register(string $className)
  * @method static array  find()
  * @codingStandardsIgnoreStart
- * @method static \Omniship\Interfaces\GatewayInterface create(string $class, Client $httpClient = null, \Symfony\Component\HttpFoundation\Request $httpRequest = null)
+ * @method static Interfaces\GatewayInterface create(string $class, Client $httpClient = null, \Symfony\Component\HttpFoundation\Request $httpRequest = null)
  * @codingStandardsIgnoreEnd
  *
  * @see Omniship\Common\GatewayFactory

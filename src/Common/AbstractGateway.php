@@ -4,11 +4,14 @@
  */
 namespace Omniship\Common;
 
+use Carbon\Carbon;
 use Omniship\Http\Client;
 use Omniship\Interfaces\RequestInterface;
 use Omniship\Helper\Helper;
 use Omniship\Interfaces\GatewayInterface;
 use Omniship\Traits\Exceptions;
+use Omniship\Traits\Parameters;
+use Omniship\Traits\ParametersData;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 
@@ -47,12 +50,9 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
 abstract class AbstractGateway implements GatewayInterface
 {
 
-    use Exceptions;
-
-    const INVALID_ARGUMENTS = [
-        '20001' => 'Invalid arguments for method Omniship\Common\AbstractGateway::setReceiverAddress',
-        '20002' => 'Invalid arguments for method Omniship\Common\AbstractGateway::setSenderAddress',
-    ];
+    use Exceptions, ParametersData, Parameters {
+        Parameters::__construct AS parametersConstruct;
+    }
 
     /**
      * @var \Symfony\Component\HttpFoundation\ParameterBag
@@ -77,7 +77,7 @@ abstract class AbstractGateway implements GatewayInterface
     {
         $this->httpClient = $httpClient ?: $this->getDefaultHttpClient();
         $this->httpRequest = $httpRequest ?: $this->getDefaultHttpRequest();
-        $this->initialize();
+        $this->parametersConstruct();
     }
     /**
      * Get the short name of the Gateway
@@ -112,175 +112,11 @@ abstract class AbstractGateway implements GatewayInterface
     /**
      * @return array
      */
-    public function getParameters()
-    {
-        return $this->parameters->all();
-    }
-
-    /**
-     * @param $key
-     * @return mixed
-     */
-    public function getParameter($key)
-    {
-        return $this->parameters->get($key);
-    }
-
-    /**
-     * @param $key
-     * @param $value
-     * @return $this
-     */
-    public function setParameter($key, $value)
-    {
-        $this->parameters->set($key, $value);
-        return $this;
-    }
-    /**
-     * @return array
-     */
     public function getDefaultParameters()
     {
         return array();
     }
-    /**
-     * @return boolean
-     */
-    public function getTestMode()
-    {
-        return $this->getParameter('testMode');
-    }
-    /**
-     * @param  boolean $value
-     * @return $this
-     */
-    public function setTestMode($value)
-    {
-        return $this->setParameter('testMode', $value);
-    }
-    /**
-     * @return string
-     */
-    public function getCurrency()
-    {
-        return strtoupper($this->getParameter('currency'));
-    }
-    /**
-     * @param  string $value
-     * @return $this
-     */
-    public function setCurrency($value)
-    {
-        return $this->setParameter('currency', $value);
-    }
-    /**
-     * @return Address
-     */
-    public function getReceiverAddress()
-    {
-        return $this->getParameter('receiver_address');
-    }
-    /**
-     * @param  Address|array $address
-     * @return $this
-     */
-    public function setReceiverAddress($address)
-    {
-        if(!($address instanceof Address)) {
-            $address = new Address($address);
-        }
-        if ($address->isEmpty()) {
-            $this->invalidArguments('20001');
-        }
-        return $this->setParameter('receiver_address', $address);
-    }
-    /**
-     * @return Address
-     */
-    public function getSenderAddress()
-    {
-        return $this->getParameter('sender_address');
-    }
-    /**
-     * @param  Address|array $address
-     * @return $this
-     */
-    public function setSenderAddress($address)
-    {
-        if(!($address instanceof Address)) {
-            $address = new Address($address);
-        }
-        if ($address->isEmpty()) {
-            $this->invalidArguments('20002');
-        }
-        return $this->setParameter('sender_address', $address);
-    }
-    /**
-     * @return ItemBag
-     */
-    public function getItems()
-    {
-        return $this->getParameter('items');
-    }
-    /**
-     * @param  ItemBag $items
-     * @return $this
-     */
-    public function setItems(ItemBag $items)
-    {
-        return $this->setParameter('items', $items);
-    }
-    /**
-     * @return string
-     */
-    public function getWeightUnit()
-    {
-        return $this->getParameter('weight_unit');
-    }
-    /**
-     * @param  $weight_unit
-     * @return $this
-     */
-    public function setWeightUnit($weight_unit)
-    {
-        return $this->setParameter('weight_unit', $weight_unit);
-    }
-    /**
-     * @return string
-     */
-    public function getDimensionUnit()
-    {
-        return $this->getParameter('dimension_unit');
-    }
-    /**
-     * @param  $dimension_unit
-     * @return $this
-     */
-    public function setDimensionUnit($dimension_unit)
-    {
-        return $this->setParameter('dimension_unit', $dimension_unit);
-    }
-    /**
-     * Get the parcel ID.
-     *
-     * The parcel ID is the identifier generated by the merchant website.
-     *
-     * @return mixed
-     */
-    public function getParcelId()
-    {
-        return $this->getParameter('parcelId');
-    }
-    /**
-     * Sets the parcel ID.
-     *
-     * @param mixed $value
-     * @return $this
-     */
-    public function setParcelId($value)
-    {
-        return $this->setParameter('parcelId', $value);
-    }
+
     /**
      * Supports Authorize
      *
@@ -352,6 +188,33 @@ abstract class AbstractGateway implements GatewayInterface
     public function supportsTrackingParcel()
     {
         return method_exists($this, 'trackingParcel');
+    }
+    /**
+     * Supports Cash On Delivery
+     *
+     * @return boolean True if this gateway supports the Cash On Delivery
+     */
+    public function supportsCashOnDelivery()
+    {
+        return false;
+    }
+    /**
+     * Supports Insurance
+     *
+     * @return boolean True if this gateway supports the Insurance
+     */
+    public function supportsInsurance()
+    {
+        return false;
+    }
+    /**
+     * Supports Declared
+     *
+     * @return boolean True if this gateway supports the Declared
+     */
+    public function supportsDeclared()
+    {
+        return false;
     }
     /**
      * Create and initialize a request object

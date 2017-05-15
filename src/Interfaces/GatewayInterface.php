@@ -13,7 +13,7 @@ namespace Omniship\Interfaces;
  *
  * @see AbstractGateway
  *
- * @method RequestInterface getServices()         (Optional method)
+ * @method RequestInterface getServices(array $parameters = [])         (Optional method)
  *         Get shipping services
  * @method RequestInterface addressValidation()   (Optional method)
  *         Validate address
@@ -23,7 +23,7 @@ namespace Omniship\Interfaces;
  *         Cancel Bill Of Lading
  * @method RequestInterface deleteBillOfLading()  (Optional method)
  *         Delete Bill Of Lading
- * @method RequestInterface trackingParcel()      (Optional method)
+ * @method RequestInterface trackingParcel(array $parameters = [])      (Optional method)
  *         Tracking Parcel
  */
 interface GatewayInterface

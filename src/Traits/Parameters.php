@@ -19,7 +19,7 @@ trait Parameters
      *
      * @param array|null $parameters An array of parameters to set on the new object
      */
-    public function __construct(array $parameters = null)
+    public function __construct(array $parameters = [])
     {
         $this->initialize($parameters);
     }
@@ -30,7 +30,7 @@ trait Parameters
      * @param array|null $parameters An array of parameters to set on this object
      * @return $this Item
      */
-    public function initialize(array $parameters = null)
+    public function initialize(array $parameters = [])
     {
         $this->parameters = new ParameterBag();
         Helper::initialize($this, $parameters);

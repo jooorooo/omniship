@@ -30,24 +30,6 @@ class Helper
         );
     }
     /**
-     * Convert strings with underscores to be all lowercase before camelCase is preformed.
-     *
-     * @param  string $str The input string
-     * @return string The output string
-     */
-    protected static function convertToLowercase($str)
-    {
-        $explodedStr = explode('_', $str);
-        $lowercasedStr = [];
-        if (count($explodedStr) > 1) {
-            foreach ($explodedStr as $value) {
-                $lowercasedStr[] = strtolower($value);
-            }
-            $str = implode('_', $lowercasedStr);
-        }
-        return $str;
-    }
-    /**
      * Validate a card number according to the Luhn algorithm.
      *
      * @param  string  $number The card number to validate
@@ -123,5 +105,23 @@ class Helper
             $shortName .= '\\';
         }
         return '\\Omniship\\'.$shortName.'Gateway';
+    }
+    /**
+     * Convert strings with underscores to be all lowercase before camelCase is preformed.
+     *
+     * @param  string $str The input string
+     * @return string The output string
+     */
+    protected static function convertToLowercase($str)
+    {
+        $explodedStr = explode('_', $str);
+        $lowercasedStr = [];
+        if (count($explodedStr) > 1) {
+            foreach ($explodedStr as $value) {
+                $lowercasedStr[] = strtolower($value);
+            }
+            $str = implode('_', $lowercasedStr);
+        }
+        return $str;
     }
 }
