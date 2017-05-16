@@ -4,7 +4,6 @@
  */
 namespace Omniship\Interfaces;
 use Carbon\Carbon;
-use Money\Money;
 
 /**
  * Quote interface
@@ -12,7 +11,7 @@ use Money\Money;
  * This interface defines the functionality that all cart items in
  * the Omniship system are to have.
  */
-interface QuoteInterface extends ComponentInterface
+interface ShippingServiceInterface extends ComponentInterface
 {
     /**
      * Description of the quote
