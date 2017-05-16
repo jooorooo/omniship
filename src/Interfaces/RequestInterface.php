@@ -57,6 +57,10 @@ interface RequestInterface extends MessageInterface
      */
     public function getLanguageCode();
     /**
+     * @return string
+     */
+    public function getCurrency();
+    /**
      * Get the response to this request (if the request has been sent)
      *
      * @return ResponseInterface
