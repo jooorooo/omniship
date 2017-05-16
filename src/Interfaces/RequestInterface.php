@@ -53,6 +53,10 @@ interface RequestInterface extends MessageInterface
      */
     public function getReceiverTimeZone();
     /**
+     * @return string
+     */
+    public function getLanguageCode();
+    /**
      * Get the response to this request (if the request has been sent)
      *
      * @return ResponseInterface
