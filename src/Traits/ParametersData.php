@@ -368,5 +368,39 @@ trait ParametersData
     public function getDeclaredCurrency() {
         return $this->getParameter('declared_currency');
     }
+    /**
+     * Get the request TransactionId.
+     *
+     * @return string
+     */
+    public function getTransactionId()
+    {
+        return $this->getParameter('transaction_id');
+    }
+    /**
+     * Sets the request TransactionId.
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function setTransactionId($value)
+    {
+        return $this->setParameter('transaction_id', $value);
+    }
+    /**
+     * @return string
+     */
+    public function getLanguageCode()
+    {
+        return $this->getParameter('language_code') ? : 'en';
+    }
+    /**
+     * @param  $value
+     * @return $this
+     */
+    public function setLanguageCode($value)
+    {
+        return $this->setParameter('language_code', $value);
+    }
 
 }
