@@ -1,6 +1,6 @@
 # Omniship Common
 
-**Core components for the Omniship PHP payment processing library**
+**Core components for the Omniship PHP shipping processing library**
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)

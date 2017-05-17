@@ -11,6 +11,8 @@ namespace Omniship\Traits;
 use Carbon\Carbon;
 use Omniship\Common\Address;
 use Omniship\Common\ItemBag;
+use Omniship\Common\Parameter;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 trait ParametersData
 {
@@ -88,6 +90,21 @@ trait ParametersData
     public function setDescription($value)
     {
         return $this->setParameter('description', $value);
+    }
+    /**
+     * @return string
+     */
+    public function getWeight()
+    {
+        return $this->getParameter('weight');
+    }
+    /**
+     * @param  $value
+     * @return $this
+     */
+    public function setWeight($value)
+    {
+        return $this->setParameter('weight', $value);
     }
     /**
      * @return string
@@ -401,6 +418,35 @@ trait ParametersData
     public function setLanguageCode($value)
     {
         return $this->setParameter('language_code', $value);
+    }
+    /**
+     * @param $key
+     * @return mixed|ParameterBag
+     */
+    public function getOtherParameters($key = null)
+    {
+        if(is_null($this->getParameter('other_parameters'))) {
+            $this->setParameter('other_parameters', new ParameterBag());
+        }
+        /** @var $other ParameterBag */
+        $other = $this->getParameter('other_parameters');
+        return $key ? $other->get($key) : $other;
+    }
+    /**
+     * @param  $key
+     * @param  $value
+     * @return $this
+     */
+    public function setOtherParameters($key, $value = null)
+    {
+        if(is_array($key) || $key instanceof ParameterBag) {
+            foreach($key as $k => $v) {
+                $this->getOtherParameters()->set($k, $v);
+            }
+        } else {
+            $this->getOtherParameters()->set($key, $value);
+        }
+        return $this;
     }
 
 }
