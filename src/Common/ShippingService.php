@@ -23,6 +23,11 @@ use Omniship\Traits\Parameters;
  */
 class ShippingService implements ShippingServiceInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
+
+    const PAYER_SENDER = 'SENDER';
+    const PAYER_RECEIVER = 'RECEIVER';
+    const PAYER_OTHER = 'OTHER';
+
     use Parameters;
 
     /**

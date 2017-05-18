@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Omniship\Common\Address;
 use Omniship\Common\ItemBag;
 use Omniship\Common\Parameter;
+use Omniship\Common\ShippingService;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 trait ParametersData
@@ -412,12 +413,30 @@ trait ParametersData
         return $this->getParameter('language_code') ? : 'en';
     }
     /**
-     * @param  $value
+     * @param string $value
      * @return $this
      */
     public function setLanguageCode($value)
     {
         return $this->setParameter('language_code', $value);
+    }
+    /**
+     * @return string
+     */
+    public function getPayer()
+    {
+        if(!$this->getParameter('payer')) {
+            $this->setParameter('payer', ShippingService::PAYER_SENDER);
+        }
+        return $this->getParameter('payer');
+    }
+    /**
+     * @param  $payer
+     * @return $this
+     */
+    public function setPayer($payer)
+    {
+        return $this->setParameter('payer', $payer);
     }
     /**
      * @param $key
