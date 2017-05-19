@@ -17,7 +17,7 @@ namespace Omniship\Interfaces;
  *         Get shipping services
  * @method RequestInterface addressValidation()   (Optional method)
  *         Validate address
- * @method RequestInterface createBillOfLading()  (Optional method)
+ * @method RequestInterface createBillOfLading(array $parameters = [])  (Optional method)
  *         Create Bill Of Lading
  * @method RequestInterface cancelBillOfLading()  (Optional method)
  *         Cancel Bill Of Lading

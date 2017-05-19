@@ -1,0 +1,23 @@
+for now in dev mod..
+================ address ($address->getParameter({KEY})) =====================
+office_id
+
+================ provider ($this->getOtherParameters({KEY})) ====================
+receiver_email
+sms_no
+invoice_before_cd
+pay_after_accept
+pay_after_test
+instruction_returns
+returns
+key_word
+dc
+dc_cp
+cd_agreement_num
+express_city_courier_e
+priority_time_type
+priority_time_value
+special_delivery_id
+allowed_services
+last_operation
+payment_method
