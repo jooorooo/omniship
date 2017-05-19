@@ -48,6 +48,7 @@ trait Parameters
         if(is_array($parameters)) {
             return $this->initialize($parameters);
         }
+
         $values = !empty($this->values) && is_array($this->values) ? $this->values : [];
         $temporary = [];
         foreach($values AS $key => $value) {
@@ -61,7 +62,7 @@ trait Parameters
                 $setter = !empty($value['key']) ? $value['key'] : $key;
             }
             $val = null;
-            if(is_object($parameters) && !empty($parameters->{$key})) {
+            if(is_object($parameters) && isset($parameters->{$key})) {
                 $val = $parameters->{$key};
             }
             $temporary[$setter] = $this->setValueType($val, $type, $sub_object);
