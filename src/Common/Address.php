@@ -7,7 +7,9 @@ namespace Omniship\Common;
 
 use Omniship\Address\City;
 use Omniship\Address\Country;
+use Omniship\Address\Quarter;
 use Omniship\Address\State;
+use Omniship\Address\Street;
 use Omniship\Exceptions\InvalidArgumentException;
 use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
@@ -26,6 +28,7 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         '10002' => 'Invalid arguments for method Omniship\Common\Address::setState',
         '10003' => 'Invalid arguments for method Omniship\Common\Address::setCity',
         '10004' => 'Invalid arguments for method Omniship\Common\Address::setTimeZone',
+        '10005' => 'Invalid arguments for method Omniship\Common\Address::setQuarter',
     ];
 
     /**
@@ -126,6 +129,77 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
             $this->invalidArguments('10003');
         }
         return $this->setParameter('city', $city);
+    }
+
+    /**
+     * Get the address quarter
+     * @return Quarter
+     */
+    public function getQuarter()
+    {
+        return $this->getParameter('quarter');
+    }
+
+    /**
+     * Set the address quarter
+     * @param Quarter|array $quarter
+     * @return $this
+     * @throws InvalidArgumentException
+     */
+    public function setQuarter($quarter)
+    {
+        if (!($quarter instanceof Quarter)) {
+            $quarter = new Quarter($quarter);
+        }
+        if ($quarter->isEmpty()) {
+            $this->invalidArguments('10005');
+        }
+        return $this->setParameter('quarter', $quarter);
+    }
+
+    /**
+     * Get the address street
+     * @return Street
+     */
+    public function getStreet()
+    {
+        return $this->getParameter('street');
+    }
+
+    /**
+     * Set the address street
+     * @param Street|array $street
+     * @return $this
+     * @throws InvalidArgumentException
+     */
+    public function setStreet($street)
+    {
+        if (!($street instanceof Street)) {
+            $street = new Street($street);
+        }
+        if ($street->isEmpty()) {
+            $this->invalidArguments('10006');
+        }
+        return $this->setParameter('street', $street);
+    }
+
+    /**
+     * Get the address street num
+     * @return string|mixed
+     */
+    public function getStreetNumber()
+    {
+        return $this->getParameter('street_number');
+    }
+
+    /**
+     * Set the address street num
+     * @param $street_number
+     * @return $this
+     */
+    public function setStreetNumber($street_number)
+    {
+        return $this->setParameter('street_number', $street_number);
     }
 
     /**

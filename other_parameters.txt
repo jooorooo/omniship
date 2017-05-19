@@ -21,3 +21,11 @@ special_delivery_id
 allowed_services
 last_operation
 payment_method
+back_documents
+back_receipt
+is_documents
+fragile
+taking_date
+deffered_days
+client_note
+money_transfer
