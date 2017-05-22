@@ -53,11 +53,6 @@ abstract class AbstractGateway implements GatewayInterface
     use Exceptions, ParametersData, Parameters {
         Parameters::__construct AS parametersConstruct;
     }
-
-    /**
-     * @var \Symfony\Component\HttpFoundation\ParameterBag
-     */
-    protected $parameters;
     
     /**
      * @var Client

@@ -66,13 +66,6 @@ abstract class AbstractRequest implements RequestInterface
     use Exceptions, ParametersData, Parameters {
         Parameters::__construct AS parametersConstruct;
     }
-
-    /**
-     * The request parameters
-     *
-     * @var \Symfony\Component\HttpFoundation\ParameterBag
-     */
-    protected $parameters;
     /**
      * The request client.
      *

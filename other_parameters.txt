@@ -25,7 +25,11 @@ back_documents
 back_receipt
 is_documents
 fragile
-taking_date
 deffered_days
 client_note
 money_transfer
+contents_text
+packing_type
+package_id
+option_before_payment
+shipping_price_in_cod

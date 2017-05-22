@@ -3,6 +3,7 @@
  * Request Interface
  */
 namespace Omniship\Interfaces;
+use Carbon\Carbon;
 use Money\Money;
 use Omniship\Common\Address;
 use Omniship\Exceptions\InvalidRequestException;
@@ -66,6 +67,12 @@ interface RequestInterface extends MessageInterface
      * @return ResponseInterface
      */
     public function getResponse();
+    /**
+     * Get pickup date
+     *
+     * @return null|Carbon
+     */
+    public function getTakingDate();
     /**
      * Send the request
      *

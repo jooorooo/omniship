@@ -406,6 +406,101 @@ trait ParametersData
         return $this->setParameter('transaction_id', $value);
     }
     /**
+     * Get the request BillId.
+     *
+     * @return string
+     */
+    public function getBillId()
+    {
+        return $this->getParameter('bill_id');
+    }
+    /**
+     * Sets the request BillId.
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function setBillId($value)
+    {
+        return $this->setParameter('bill_id', $value);
+    }
+    /**
+     * Get the request CancelComment.
+     *
+     * @return string
+     */
+    public function getCancelComment()
+    {
+        return $this->getParameter('cancel_comment');
+    }
+    /**
+     * Sets the request CancelComment.
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function setCancelComment($value)
+    {
+        return $this->setParameter('cancel_comment', $value);
+    }
+    /**
+     * Get the request address type.
+     *
+     * @return string
+     */
+    public function getAddressType()
+    {
+        return $this->getParameter('address_type');
+    }
+    /**
+     * Sets the request address type.
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function setAddressType($value)
+    {
+        return $this->setParameter('address_type', $value);
+    }
+    /**
+     * Get the request service id.
+     *
+     * @return string
+     */
+    public function getServiceId()
+    {
+        return $this->getParameter('service_id');
+    }
+    /**
+     * Sets the request Service ID.
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function setServiceId($value)
+    {
+        return $this->setParameter('service_id', $value);
+    }
+    /**
+     * Get the taking date.
+     *
+     * @return null|Carbon
+     */
+    public function getTakingDate()
+    {
+        return $this->getParameter('taking_date');
+    }
+    /**
+     * Sets the taking date.
+     *
+     * @param Carbon $value
+     * @return $this
+     */
+    public function setTakingDate(Carbon $value)
+    {
+        return $this->setParameter('taking_date', $value);
+    }
+    /**
      * @return string
      */
     public function getLanguageCode()
