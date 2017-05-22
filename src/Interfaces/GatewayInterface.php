@@ -19,11 +19,15 @@ namespace Omniship\Interfaces;
  *         Validate address
  * @method RequestInterface createBillOfLading(array $parameters = [])  (Optional method)
  *         Create Bill Of Lading
- * @method RequestInterface cancelBillOfLading($bill_id, $cancelComment=null)  (Optional method)
+ * @method RequestInterface cancelBillOfLading($bol_id, $cancelComment=null)  (Optional method)
  *         Cancel Bill Of Lading
  * @method RequestInterface deleteBillOfLading()  (Optional method)
  *         Delete Bill Of Lading
  * @method RequestInterface trackingParcel(array $parameters = [])      (Optional method)
+ *         Tracking Parcel
+ * @method RequestInterface validateCredentials(array $parameters = [])      (Optional method)
+ *         Tracking Parcel
+ * @method RequestInterface requestCourier(array $bol_ids = [])      (Optional method)
  *         Tracking Parcel
  */
 interface GatewayInterface

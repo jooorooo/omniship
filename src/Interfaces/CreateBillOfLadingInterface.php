@@ -33,7 +33,7 @@ interface CreateBillOfLadingInterface
      * Get Bill ID
      * @return string
      */
-    public function getBillId();
+    public function getBolId();
     /**
      * Total Price of the Bill
      * @return mixed

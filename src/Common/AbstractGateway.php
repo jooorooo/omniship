@@ -149,6 +149,15 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'addressValidation');
     }
     /**
+     * Supports validateCredentials
+     *
+     * @return boolean True if this gateway supports the validateCredentials() method
+     */
+    public function supportsValidateCredentials()
+    {
+        return method_exists($this, 'validateCredentials');
+    }
+    /**
      * Supports createBillOfLading
      *
      * @return boolean True if this gateway supports the createBillOfLading() method
@@ -183,6 +192,15 @@ abstract class AbstractGateway implements GatewayInterface
     public function supportsTrackingParcel()
     {
         return method_exists($this, 'trackingParcel');
+    }
+    /**
+     * Supports requestCourier
+     *
+     * @return boolean True if this gateway supports the requestCourier() method
+     */
+    public function supportsRequestCourier()
+    {
+        return method_exists($this, 'requestCourier');
     }
     /**
      * Supports Cash On Delivery

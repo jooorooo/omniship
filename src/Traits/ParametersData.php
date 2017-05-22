@@ -406,23 +406,23 @@ trait ParametersData
         return $this->setParameter('transaction_id', $value);
     }
     /**
-     * Get the request BillId.
+     * Get the request BolId.
      *
      * @return string
      */
-    public function getBillId()
+    public function getBolId()
     {
-        return $this->getParameter('bill_id');
+        return $this->getParameter('bol_id');
     }
     /**
-     * Sets the request BillId.
+     * Sets the request BolId.
      *
      * @param string $value
      * @return $this
      */
-    public function setBillId($value)
+    public function setBolId($value)
     {
-        return $this->setParameter('bill_id', $value);
+        return $this->setParameter('bol_id', $value);
     }
     /**
      * Get the request CancelComment.
