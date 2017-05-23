@@ -7,6 +7,7 @@ namespace Omniship\Interfaces;
 
 use Omniship\Address\City;
 use Omniship\Address\Country;
+use Omniship\Address\Office;
 use Omniship\Address\Quarter;
 use Omniship\Address\State;
 
@@ -33,6 +34,11 @@ interface AddressInterface
      * @return City
      */
     public function getCity();
+    /**
+     * Get the address office
+     * @return Office
+     */
+    public function getOffice();
     /**
      * Get the address quarter
      * @return Quarter
@@ -68,6 +74,11 @@ interface AddressInterface
      * @return string|mixed
      */
     public function getAddress3();
+    /**
+     * Get the address note
+     * @return string|mixed
+     */
+    public function getNote();
     /**
      * Get the address phone
      * @return string|mixed

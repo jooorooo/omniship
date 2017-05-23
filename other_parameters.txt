@@ -1,6 +1,4 @@
 for now in dev mod..
-================ address ($address->getParameter({KEY})) =====================
-office_id
 
 ================ provider ($this->getOtherParameters({KEY})) ====================
 receiver_email

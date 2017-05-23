@@ -465,21 +465,21 @@ trait ParametersData
     /**
      * Get the request address type.
      *
-     * @return string
+     * @return Address
      */
-    public function getAddressType()
+    public function getAddress()
     {
-        return $this->getParameter('address_type');
+        return $this->getParameter('address');
     }
     /**
-     * Sets the request address type.
+     * Sets the request address.
      *
-     * @param string $value
+     * @param Address $value
      * @return $this
      */
-    public function setAddressType($value)
+    public function setAddress($value)
     {
-        return $this->setParameter('address_type', $value);
+        return $this->setParameter('address', $value);
     }
     /**
      * Get the request service id.

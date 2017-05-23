@@ -7,6 +7,7 @@ namespace Omniship\Common;
 
 use Omniship\Address\City;
 use Omniship\Address\Country;
+use Omniship\Address\Office;
 use Omniship\Address\Quarter;
 use Omniship\Address\State;
 use Omniship\Address\Street;
@@ -29,6 +30,8 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         '10003' => 'Invalid arguments for method Omniship\Common\Address::setCity',
         '10004' => 'Invalid arguments for method Omniship\Common\Address::setTimeZone',
         '10005' => 'Invalid arguments for method Omniship\Common\Address::setQuarter',
+        '10006' => 'Invalid arguments for method Omniship\Common\Address::setStreet',
+        '10007' => 'Invalid arguments for method Omniship\Common\Address::setOffice',
     ];
 
     /**
@@ -184,6 +187,32 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
+     * Get the address office
+     * @return Office
+     */
+    public function getOffice()
+    {
+        return $this->getParameter('office');
+    }
+
+    /**
+     * Set the address street
+     * @param Office|array $office
+     * @return $this
+     * @throws InvalidArgumentException
+     */
+    public function setOffice($office)
+    {
+        if (!($office instanceof Office)) {
+            $office = new Office($office);
+        }
+        if ($office->isEmpty()) {
+            $this->invalidArguments('10007');
+        }
+        return $this->setParameter('office', $office);
+    }
+
+    /**
      * Get the address street num
      * @return string|mixed
      */
@@ -276,6 +305,25 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     public function setAddress3($address)
     {
         return $this->setParameter('address3', $address);
+    }
+
+    /**
+     * Get the address note
+     * @return string|mixed
+     */
+    public function getNote()
+    {
+        return $this->getParameter('note');
+    }
+
+    /**
+     * Set the address note
+     * @param string $address
+     * @return $this
+     */
+    public function setNote($address)
+    {
+        return $this->setParameter('note', $address);
     }
 
     /**

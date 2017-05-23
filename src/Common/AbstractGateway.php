@@ -142,11 +142,11 @@ abstract class AbstractGateway implements GatewayInterface
     /**
      * Supports addressValidation
      *
-     * @return boolean True if this gateway supports the addressValidation() method
+     * @return boolean True if this gateway supports the validateAddress() method
      */
-    public function supportsAddressValidation()
+    public function supportsValidateAddress()
     {
-        return method_exists($this, 'addressValidation');
+        return method_exists($this, 'validateAddress');
     }
     /**
      * Supports validateCredentials
@@ -156,6 +156,15 @@ abstract class AbstractGateway implements GatewayInterface
     public function supportsValidateCredentials()
     {
         return method_exists($this, 'validateCredentials');
+    }
+    /**
+     * Supports validatePostCode
+     *
+     * @return boolean True if this gateway supports the validatePostCode() method
+     */
+    public function supportsValidatePostCode()
+    {
+        return method_exists($this, 'validatePostCode');
     }
     /**
      * Supports createBillOfLading

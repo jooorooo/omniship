@@ -5,6 +5,7 @@
 
 namespace Omniship\Interfaces;
 use Carbon\Carbon;
+use Omniship\Common\Address;
 
 /**
  * Shipping gateway interface
@@ -16,8 +17,6 @@ use Carbon\Carbon;
  *
  * @method RequestInterface getServices(array $parameters = [])         (Optional method)
  *         Get shipping services
- * @method RequestInterface addressValidation($type)   (Optional method)
- *         Validate address
  * @method RequestInterface createBillOfLading(array $parameters = [])  (Optional method)
  *         Create Bill Of Lading
  * @method RequestInterface cancelBillOfLading($bol_id, $cancelComment=null)  (Optional method)
@@ -27,6 +26,10 @@ use Carbon\Carbon;
  * @method RequestInterface trackingParcel(array $parameters = [])      (Optional method)
  *         Tracking Parcel
  * @method RequestInterface validateCredentials(array $parameters = [], $test_mode = null)      (Optional method)
+ *         Tracking Parcel
+ * @method RequestInterface validateAddress(Address $address)   (Optional method)
+ *         Validate address
+ * @method RequestInterface validatePostCode(Address $address)      (Optional method)
  *         Tracking Parcel
  * @method RequestInterface requestCourier($bol_id, Carbon $date = null)      (Optional method)
  *         Tracking Parcel
