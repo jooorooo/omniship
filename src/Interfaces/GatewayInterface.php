@@ -4,6 +4,7 @@
  */
 
 namespace Omniship\Interfaces;
+use Carbon\Carbon;
 
 /**
  * Shipping gateway interface
@@ -25,9 +26,9 @@ namespace Omniship\Interfaces;
  *         Delete Bill Of Lading
  * @method RequestInterface trackingParcel(array $parameters = [])      (Optional method)
  *         Tracking Parcel
- * @method RequestInterface validateCredentials(array $parameters = [])      (Optional method)
+ * @method RequestInterface validateCredentials(array $parameters = [], $test_mode = null)      (Optional method)
  *         Tracking Parcel
- * @method RequestInterface requestCourier(array $bol_ids = [])      (Optional method)
+ * @method RequestInterface requestCourier($bol_id, Carbon $date = null)      (Optional method)
  *         Tracking Parcel
  */
 interface GatewayInterface

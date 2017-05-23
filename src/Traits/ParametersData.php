@@ -425,6 +425,25 @@ trait ParametersData
         return $this->setParameter('bol_id', $value);
     }
     /**
+     * Get the request date.
+     *
+     * @return null|Carbon
+     */
+    public function getDate()
+    {
+        return $this->getParameter('date');
+    }
+    /**
+     * Sets the request date.
+     *
+     * @param Carbon $value
+     * @return $this
+     */
+    public function setDate($value)
+    {
+        return $this->setParameter('date', $value);
+    }
+    /**
      * Get the request CancelComment.
      *
      * @return string
