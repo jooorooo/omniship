@@ -170,7 +170,7 @@ trait Parameters
             break;
             case 'bool':
             case 'boolean':
-                $val = (bool)$val;
+                $val = (bool)$val && $val != '0';
             break;
             case 'array':
                 $val = (array)$val;
