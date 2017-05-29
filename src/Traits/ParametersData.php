@@ -251,7 +251,7 @@ trait ParametersData
      * @return string
      */
     public function getCashOnDeliveryCurrency() {
-        return $this->getParameter('cash_on_delivery_currency');
+        return $this->getParameter('cash_on_delivery_currency') ? : $this->getCurrency();
     }
     /**
      * Get the client IP address.
@@ -355,7 +355,7 @@ trait ParametersData
      * @return string
      */
     public function getInsuranceCurrency() {
-        return $this->getParameter('insurance_currency');
+        return $this->getParameter('insurance_currency') ? : $this->getCurrency();
     }
 
     /**
@@ -384,7 +384,7 @@ trait ParametersData
      * @return string
      */
     public function getDeclaredCurrency() {
-        return $this->getParameter('declared_currency');
+        return $this->getParameter('declared_currency') ? : $this->getCurrency();
     }
     /**
      * Get the request TransactionId.
