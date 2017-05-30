@@ -1334,11 +1334,11 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             return $items;
         } elseif ($items instanceof self) {
             return $items->all();
-        } elseif ($items instanceof ArrayableInterface) {
+        } elseif ($items instanceof ArrayableInterface || (is_object($items) && method_exists($items, 'toArray'))) {
             return $items->toArray();
-        } elseif ($items instanceof JsonableInterface) {
+        } elseif ($items instanceof JsonableInterface || (is_object($items) && method_exists($items, 'toJson'))) {
             return json_decode($items->toJson(), true);
-        } elseif ($items instanceof JsonSerializable) {
+        } elseif ($items instanceof JsonSerializable || (is_object($items) && method_exists($items, 'jsonSerialize'))) {
             return $items->jsonSerialize();
         } elseif ($items instanceof Traversable) {
             return iterator_to_array($items);

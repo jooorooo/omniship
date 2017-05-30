@@ -4,8 +4,7 @@
  */
 namespace Omniship\Common;
 
-use Omniship\Interfaces\ArrayableInterface;
-use Omniship\Interfaces\JsonableInterface;
+use Omniship\Helper\Collection;
 use Omniship\Interfaces\TrackingInterface;
 
 /**
@@ -16,127 +15,44 @@ use Omniship\Interfaces\TrackingInterface;
  *
  * @see Item
  */
-class TrackingBag implements
-    \IteratorAggregate,
-    \Countable,
-    ArrayableInterface,
-    \JsonSerializable,
-    JsonableInterface
+class TrackingBag extends Collection
 {
-    /**
-     * Item storage
-     *
-     * @see Item
-     *
-     * @var array
-     */
-    protected $items;
 
     /**
-     * Constructor
+     * Create a new collection.
      *
-     * @param array $items An array of items
+     * @param  mixed  $items
      */
-    public function __construct(array $items = array())
+    public function __construct($items = [])
     {
-        $this->replace($items);
+        $items = array_map(function($item) {
+            return !($item instanceof TrackingInterface) ? new Tracking($item) : $item;
+        }, $items);
+        parent::__construct($items);
     }
 
     /**
-     * Return all the items
+     * Set the item at a given offset.
      *
-     * @see Item
+     * @param  mixed  $key
+     * @param  mixed  $value
+     * @return void
+     */
+    public function offsetSet($key, $value)
+    {
+        if(!($value instanceof TrackingInterface)) {
+            $value = new Tracking($value);
+        }
+        parent::offsetSet($key, $value);
+    }
+
+    /**
+     * Get all of the items in the collection.
      *
-     * @return array An array of items
+     * @return Tracking[]
      */
     public function all()
     {
-        return $this->items;
-    }
-
-    /**
-     * Replace the contents of this bag with the specified items
-     *
-     * @see Item
-     *
-     * @param array $items An array of items
-     */
-    public function replace(array $items = array())
-    {
-        $this->items = array();
-        foreach ($items as $item) {
-            $this->add($item);
-        }
-    }
-
-    /**
-     * Add an item to the bag
-     *
-     * @see Item
-     *
-     * @param TrackingInterface|array $item An existing item, or associative array of item parameters
-     */
-    public function add($item)
-    {
-        if ($item instanceof TrackingInterface) {
-            $this->items[] = $item;
-        } else {
-            $this->items[] = new Tracking($item);
-        }
-    }
-
-    /**
-     * Returns an iterator for items
-     *
-     * @return \ArrayIterator An \ArrayIterator instance
-     */
-    public function getIterator()
-    {
-        return new \ArrayIterator($this->items);
-    }
-
-    /**
-     * Returns the number of items
-     *
-     * @return int The number of items
-     */
-    public function count()
-    {
-        return count($this->items);
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        $array = [];
-        foreach ($this->items as $key => $value) {
-            if ($value instanceof ArrayableInterface) {
-                $array[$key] = $value->toArray();
-            } else {
-                $array[$key] = $value;
-            }
-        }
-        return $array;
-    }
-
-    /**
-     * @return array
-     */
-    public function jsonSerialize()
-    {
-        return $this->toArray();
-    }
-
-    /**
-     * Convert the object to its JSON representation.
-     *
-     * @param  int $options
-     * @return string
-     */
-    public function toJson($options = 0)
-    {
-        return json_encode($this->jsonSerialize(), $options);
+        return parent::all();
     }
 }

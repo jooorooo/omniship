@@ -161,11 +161,11 @@ trait ParametersData
     /**
      * A list of items in this order
      *
-     * @return ItemBag|null A bag containing items in this order
+     * @return ItemBag A bag containing items in this order
      */
     public function getItems()
     {
-        return $this->getParameter('items');
+        return $this->getParameter('items') ? : new ItemBag([]);
     }
     /**
      * Set the items in this order
