@@ -217,4 +217,21 @@ class ShippingService implements ShippingServiceInterface, ArrayableInterface, \
         return $this->setParameter('currency', $value);
     }
 
+    /**
+     * @return string
+     */
+    public function getExchangeRate()
+    {
+        return strtoupper($this->getParameter('exchange_rate'));
+    }
+
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setExchangeRate($value)
+    {
+        return $this->setParameter('exchange_rate', $value);
+    }
+
 }

@@ -13,6 +13,8 @@ use Omniship\Common\Address;
 use Omniship\Common\ItemBag;
 use Omniship\Common\Parameter;
 use Omniship\Common\ShippingService;
+use Omniship\Helper\Collection;
+use Omniship\Helper\Data;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 trait ParametersData
@@ -112,6 +114,10 @@ trait ParametersData
      */
     public function getWeightUnit()
     {
+        $weight_unit = $this->getParameter('weight_unit');
+        if(!$weight_unit) {
+            $this->setWeightUnit($this->findCountryData('WeightUnit'));
+        }
         return $this->getParameter('weight_unit');
     }
     /**
@@ -127,6 +133,10 @@ trait ParametersData
      */
     public function getDimensionUnit()
     {
+        $dimension_unit = $this->getParameter('dimension_unit');
+        if(!$dimension_unit) {
+            $this->setDimensionUnit($this->findCountryData('DimensionalUnit'));
+        }
         return $this->getParameter('dimension_unit');
     }
     /**
@@ -595,6 +605,24 @@ trait ParametersData
     public function setLogo($logo)
     {
         return $this->setParameter('logo', $logo);
+    }
+
+    /**
+     * @param string $type (WeightUnit|DimensionalUnit)
+     * @return string|null
+     */
+    private function findCountryData($type) {
+        if(is_null($address = $this->getSenderAddress())) {
+            $address = $this->getAddress();
+        }
+        if(!$address || is_null($country = $address->getCountry())) {
+            return null;
+        }
+        $country = Collection::make(Data::countries()->get(strtoupper($country->getIso2())));
+        if(!$country->count()) {
+            return null;
+        }
+        return $country->get($type);
     }
 
 }

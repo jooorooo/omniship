@@ -74,6 +74,10 @@ interface RequestInterface extends MessageInterface
      */
     public function getTakingDate();
     /**
+     * @return boolean
+     */
+    public function getTestMode();
+    /**
      * Get pickup ID
      *
      * @return mixed
