@@ -581,5 +581,20 @@ trait ParametersData
         }
         return $this;
     }
+    /**
+     * @return string
+     */
+    public function getLogo()
+    {
+        return $this->getParameter('logo');
+    }
+    /**
+     * @param  $logo
+     * @return $this
+     */
+    public function setLogo($logo)
+    {
+        return $this->setParameter('logo', $logo);
+    }
 
 }

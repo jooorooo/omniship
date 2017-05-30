@@ -34,7 +34,10 @@
   "autoload": {
     "psr-4": {
       "Omniship\\": "src"
-    }
+    },
+    "files": [
+      "Helper/helpers.php"
+    ]
   },
   "suggest": {
     "php-http/guzzle6-adapter": "Use the Guzzle adapter to send your requests."
