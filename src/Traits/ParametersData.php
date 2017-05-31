@@ -193,17 +193,17 @@ trait ParametersData
     /**
      * @return string
      */
-    public function getRegion()
+    public function getPackageType()
     {
-        return $this->getParameter('region');
+        return $this->getParameter('package_type');
     }
     /**
-     * @param  $region
+     * @param string $package_type
      * @return $this
      */
-    public function setRegion($region)
+    public function setPackageType($package_type)
     {
-        return $this->setParameter('region', $region);
+        return $this->setParameter('package_type', $package_type);
     }
     /**
      * @return Carbon
@@ -221,19 +221,23 @@ trait ParametersData
         return $this->setParameter('shipment_date', $shipment_date);
     }
     /**
-     * @return boolean
+     * @return integer
      */
-    public function getDutiable()
+    public function getNumberOfPieces()
     {
-        return $this->getParameter('dutiable');
+        $number_of_pieces = $this->getParameter('number_of_pieces');
+        if((int)$number_of_pieces < 1) {
+            $this->setNumberOfPieces(($number_of_pieces = 1));
+        }
+        return $number_of_pieces;
     }
     /**
-     * @param  $dutiable
+     * @param integer $value
      * @return $this
      */
-    public function setDutiable($dutiable)
+    public function setNumberOfPieces($value)
     {
-        return $this->setParameter('dutiable', $dutiable);
+        return $this->setParameter('number_of_pieces', (int)$value);
     }
     /**
      * @param float $value
@@ -606,12 +610,42 @@ trait ParametersData
     {
         return $this->setParameter('logo', $logo);
     }
+    /**
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->getParameter('content');
+    }
+    /**
+     * @param string $content
+     * @return $this
+     */
+    public function setContent($content)
+    {
+        return $this->setParameter('content', $content);
+    }
+    /**
+     * @return bool
+     */
+    public function getIsDocuments()
+    {
+        return $this->getParameter('is_documents');
+    }
+    /**
+     * @param bool $value
+     * @return $this
+     */
+    public function setIsDocuments($value)
+    {
+        return $this->setParameter('is_documents', (bool)$value);
+    }
 
     /**
      * @param string $type (WeightUnit|DimensionalUnit)
      * @return string|null
      */
-    private function findCountryData($type) {
+    public function findCountryData($type) {
         if(is_null($address = $this->getSenderAddress())) {
             $address = $this->getAddress();
         }

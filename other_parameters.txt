@@ -8,26 +8,26 @@ pay_after_accept
 pay_after_test
 instruction_returns
 returns
-key_word
 dc
 dc_cp
-cd_agreement_num
 express_city_courier_e
 priority_time_type
 priority_time_value
-special_delivery_id
 allowed_services
 last_operation
 payment_method
 back_documents
 back_receipt
-is_documents
-fragile
 deffered_days
-client_note
 money_transfer
-contents_text
-packing_type
+reference_id
+reference_type
 package_id
 option_before_payment
 shipping_price_in_cod
+cod_account_number ////dhl, econt(cd_agreement_num)
+credit_account_number ////econt(key_word)
+sender_vat ////dhl
+special_delivery_id ///speedy
+fragile ////speedy
+client_note ////speedy
