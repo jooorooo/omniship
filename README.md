@@ -10,11 +10,13 @@
 processing library for PHP 5.6+. This package implements common classes required by Omniship.
 
 ## Providers
-[speedy.bg](https://github.com/jooorooo/omniship-speedy/)
+[speedy.bg](https://github.com/jooorooo/omniship-speedy/) - in development
 
-[econt.bg](https://github.com/jooorooo/omniship-econt/)
+[econt.bg](https://github.com/jooorooo/omniship-econt/) - in development
 
-[dhl.com](https://github.com/jooorooo/omniship-dhl/)
+[dhl.com](https://github.com/jooorooo/omniship-dhl/) - in development
+
+[fedex.com](https://github.com/jooorooo/omniship-fedex/) - in development
 
 
 ## Support
