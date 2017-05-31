@@ -112,15 +112,7 @@ trait Parameters
      */
     public function toArray()
     {
-        $array = [];
-        foreach ($this->parameters->all() as $key => $value) {
-            if ($value instanceof ArrayableInterface) {
-                $array[$key] = $value->toArray();
-            } else {
-                $array[$key] = $value;
-            }
-        }
-        return $array;
+        return $this->_toArray($this->parameters->all());
     }
 
     /**
@@ -180,5 +172,24 @@ trait Parameters
             break;
         }
         return $sub_object ? new $sub_object($val) : $val;
+    }
+
+    /**
+     * @param array $parameters
+     * @return array
+     */
+    protected function _toArray(array $parameters = [])
+    {
+        $array = [];
+        foreach ($parameters as $key => $value) {
+            if ($value instanceof ArrayableInterface) {
+                $array[$key] = $this->_toArray($value->toArray());
+            } elseif ($value instanceof ParameterBag) {
+                $array[$key] = $this->_toArray($value->all());
+            } else {
+                $array[$key] = is_array($value) ? $this->_toArray($value) : $value;
+            }
+        }
+        return $array;
     }
 }

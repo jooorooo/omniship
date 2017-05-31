@@ -7,7 +7,6 @@ invoice_before_cd
 pay_after_accept
 pay_after_test
 instruction_returns
-returns
 dc
 dc_cp
 express_city_courier_e
@@ -31,3 +30,4 @@ sender_vat ////dhl
 special_delivery_id ///speedy
 fragile ////speedy
 client_note ////speedy
+envelope_num ////

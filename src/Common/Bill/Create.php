@@ -144,4 +144,21 @@ class Create implements CreateBillOfLadingInterface, ArrayableInterface, \JsonSe
         return $this->setParameter('insurance', $value);
     }
 
+    /**
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return strtoupper($this->getParameter('currency'));
+    }
+
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setCurrency($value)
+    {
+        return $this->setParameter('currency', $value);
+    }
+
 }
