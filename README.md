@@ -6,7 +6,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-[Omniship](https://github.com/jooorooo/omniship) is a framework agnostic, multi-gateway shipping
+[Omniship](https://github.com/jooorooo/omniship) is a framework for multi-gateway shipping
 processing library for PHP 5.6+. This package implements common classes required by Omniship.
 
 ## Providers
