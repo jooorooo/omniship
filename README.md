@@ -9,6 +9,14 @@
 [Omniship](https://github.com/jooorooo/omniship) is a framework agnostic, multi-gateway shipping
 processing library for PHP 5.6+. This package implements common classes required by Omniship.
 
+## Providers
+[speedy.bg](https://github.com/jooorooo/omniship-speedy/)
+
+[econt.bg](https://github.com/jooorooo/omniship-econt/)
+
+[dhl.com](https://github.com/jooorooo/omniship-dhl/)
+
+
 ## Support
 
 If you are having general issues with Omniship, we suggest posting on
