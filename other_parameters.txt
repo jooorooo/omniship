@@ -24,7 +24,7 @@ reference_id
 reference_type
 package_id
 option_before_payment
-shipping_price_in_cod
+shipping_price_in_cod ///speedy
 cod_account_number ////dhl, econt(cd_agreement_num)
 credit_account_number ////econt(key_word)
 sender_vat ////dhl
