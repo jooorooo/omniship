@@ -33,6 +33,8 @@ use Omniship\Common\Address;
  *         Tracking Parcel
  * @method RequestInterface requestCourier($bol_id, Carbon $date = null)      (Optional method)
  *         Tracking Parcel
+ * @method RequestInterface codPayment($bol_id)      (Optional method)
+ *         COD payment information
  */
 interface GatewayInterface
 {

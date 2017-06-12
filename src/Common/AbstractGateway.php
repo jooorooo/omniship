@@ -212,6 +212,15 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'requestCourier');
     }
     /**
+     * Supports codPayment
+     *
+     * @return boolean True if this gateway supports the codPayment() method
+     */
+    public function supportsCodPayment()
+    {
+        return method_exists($this, 'codPayment');
+    }
+    /**
      * Supports Cash On Delivery
      *
      * @return boolean True if this gateway supports the Cash On Delivery
