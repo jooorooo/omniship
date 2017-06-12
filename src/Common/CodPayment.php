@@ -18,6 +18,11 @@ class CodPayment implements CodPaymentInterface, ArrayableInterface, \JsonSerial
 {
     use Parameters;
 
+    protected $values = [
+        'id', 'date', 'price',
+        'error'
+    ];
+
     /**
      * Get item id
      */
@@ -65,6 +70,23 @@ class CodPayment implements CodPaymentInterface, ArrayableInterface, \JsonSerial
     public function setPrice($value)
     {
         return $this->setParameter('price', $value);
+    }
+
+    /**
+     * @param string $error
+     * @return $this
+     */
+    public function setError($error)
+    {
+        return $this->setParameter('error', $error);
+    }
+
+    /**
+     * @return string
+     */
+    public function getError()
+    {
+        return $this->getParameter('error');
     }
 
 }
