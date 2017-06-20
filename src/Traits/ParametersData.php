@@ -11,8 +11,7 @@ namespace Omniship\Traits;
 use Carbon\Carbon;
 use Omniship\Common\Address;
 use Omniship\Common\ItemBag;
-use Omniship\Common\Parameter;
-use Omniship\Common\ShippingService;
+use Omniship\Consts;
 use Omniship\Helper\Collection;
 use Omniship\Helper\Data;
 use Symfony\Component\HttpFoundation\ParameterBag;
@@ -221,6 +220,7 @@ trait ParametersData
         return $this->setParameter('shipment_date', $shipment_date);
     }
     /**
+     * get number of packages
      * @return integer
      */
     public function getNumberOfPieces()
@@ -268,23 +268,23 @@ trait ParametersData
         return $this->getParameter('cash_on_delivery_currency') ? : $this->getCurrency();
     }
     /**
-     * Get the client IP address.
+     * Get the client note.
      *
      * @return string
      */
-    public function getClientIp()
+    public function getClientNote()
     {
-        return $this->getParameter('clientIp');
+        return $this->getParameter('client_note');
     }
     /**
-     * Sets the client IP address.
+     * Sets the client note.
      *
      * @param string $value
      * @return string
      */
-    public function setClientIp($value)
+    public function setClientNote($value)
     {
-        return $this->setParameter('clientIp', $value);
+        return $this->setParameter('client_note', $value);
     }
     /**
      * @return Address
@@ -554,7 +554,7 @@ trait ParametersData
     public function getPayer()
     {
         if(!$this->getParameter('payer')) {
-            $this->setParameter('payer', ShippingService::PAYER_SENDER);
+            $this->setParameter('payer', Consts::PAYER_SENDER);
         }
         return $this->getParameter('payer');
     }
@@ -639,6 +639,98 @@ trait ParametersData
     public function setIsDocuments($value)
     {
         return $this->setParameter('is_documents', (bool)$value);
+    }
+    /**
+     * Get options (open,test)
+     * @return string
+     */
+    public function getOptionBeforePayment()
+    {
+        return $this->getParameter('option_before_payment');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setOptionBeforePayment($value)
+    {
+        return $this->setParameter('option_before_payment', $value);
+    }
+    /**
+     * @return bool
+     */
+    public function getBackReceipt()
+    {
+        return (bool)$this->getParameter('back_receipt');
+    }
+    /**
+     * @param bool $value
+     * @return $this
+     */
+    public function setBackReceipt($value)
+    {
+        return $this->setParameter('back_receipt', (bool)$value);
+    }
+    /**
+     * @return bool
+     */
+    public function getBackDocuments()
+    {
+        return (bool)$this->getParameter('back_documents');
+    }
+    /**
+     * @param bool $value
+     * @return $this
+     */
+    public function setBackDocuments($value)
+    {
+        return $this->setParameter('back_documents', (bool)$value);
+    }
+    /**
+     * @return string
+     */
+    public function getReceiverEmail()
+    {
+        return $this->getParameter('receiver_email');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setReceiverEmail($value)
+    {
+        return $this->setParameter('receiver_email', $value);
+    }
+    /**
+     * @return string
+     */
+    public function getSenderEmail()
+    {
+        return $this->getParameter('sender_email');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setSenderEmail($value)
+    {
+        return $this->setParameter('sender_email', $value);
+    }
+    /**
+     * @return string
+     */
+    public function getReceiverPhone()
+    {
+        $address = $this->getReceiverAddress();
+        return $address ? $address->getPhone() : null;
+    }
+    /**
+     * @return string
+     */
+    public function getSenderPhone()
+    {
+        $address = $this->getSenderAddress();
+        return $address ? $address->getPhone() : null;
     }
 
     /**
