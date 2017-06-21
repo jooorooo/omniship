@@ -752,6 +752,21 @@ trait ParametersData
         $address = $this->getSenderAddress();
         return $address ? $address->getPhone() : null;
     }
+    /**
+     * @return string
+     */
+    public function getPaymentMethod()
+    {
+        return $this->getParameter('payment_method');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setPaymentMethod($value)
+    {
+        return $this->setParameter('payment_method', $value);
+    }
 
     /**
      * @param string $type (WeightUnit|DimensionalUnit)

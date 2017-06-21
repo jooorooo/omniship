@@ -2,11 +2,8 @@ for now in dev mod..
 
 ================ provider ($this->getOtherParameters({KEY})) ====================
 invoice_before_cd
-express_city_courier_e
 priority_time_type
 priority_time_value
-payment_method
-money_transfer
 reference_id
 reference_type
 package_id
@@ -23,3 +20,5 @@ deffered_days /// speedy
 sms_no /// econt
 pack_1...pack_8 ///econt
 ref ///econt
+money_transfer ///econt
+express_city_courier_e ///econt
