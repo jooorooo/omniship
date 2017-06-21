@@ -31,7 +31,7 @@ use Omniship\Common\Address;
  *         Validate address
  * @method RequestInterface validatePostCode(Address $address)      (Optional method)
  *         Tracking Parcel
- * @method RequestInterface requestCourier($bol_id, Carbon $date = null)      (Optional method)
+ * @method RequestInterface requestCourier($bol_id, Carbon $date_start = null, Carbon $date_end = null)      (Optional method)
  *         Tracking Parcel
  * @method RequestInterface codPayment($bol_id)      (Optional method)
  *         COD payment information

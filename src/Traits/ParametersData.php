@@ -215,7 +215,7 @@ trait ParametersData
      * @param  $shipment_date
      * @return $this
      */
-    public function setShipmentDate(Carbon $shipment_date)
+    public function setShipmentDate(Carbon $shipment_date = null)
     {
         return $this->setParameter('shipment_date', $shipment_date);
     }
@@ -443,9 +443,9 @@ trait ParametersData
      *
      * @return null|Carbon
      */
-    public function getDate()
+    public function getStartDate()
     {
-        return $this->getParameter('date');
+        return $this->getParameter('start_date');
     }
     /**
      * Sets the request date.
@@ -453,9 +453,28 @@ trait ParametersData
      * @param Carbon $value
      * @return $this
      */
-    public function setDate($value)
+    public function setStartDate(Carbon $value = null)
     {
-        return $this->setParameter('date', $value);
+        return $this->setParameter('start_date', $value);
+    }
+    /**
+     * Get the request date.
+     *
+     * @return null|Carbon
+     */
+    public function getEndDate()
+    {
+        return $this->getParameter('end_date');
+    }
+    /**
+     * Sets the request date.
+     *
+     * @param Carbon $value
+     * @return $this
+     */
+    public function setEndDate(Carbon $value = null)
+    {
+        return $this->setParameter('end_date', $value);
     }
     /**
      * Get the request CancelComment.
@@ -488,11 +507,12 @@ trait ParametersData
     /**
      * Sets the request address.
      *
-     * @param Address $value
+     * @param Address|array $value
      * @return $this
      */
     public function setAddress($value)
     {
+        $value = !($value instanceof Address) ? new Address(is_array($value) ? $value : []) : $value;
         return $this->setParameter('address', $value);
     }
     /**
@@ -529,7 +549,7 @@ trait ParametersData
      * @param Carbon $value
      * @return $this
      */
-    public function setTakingDate(Carbon $value)
+    public function setTakingDate(Carbon $value = null)
     {
         return $this->setParameter('taking_date', $value);
     }
