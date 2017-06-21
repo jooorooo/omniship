@@ -20,4 +20,11 @@ class Consts
     const PAYER_RECEIVER = 'RECEIVER';
     const PAYER_OTHER = 'OTHER';
 
+    //payment types
+    const PAYMENT_CASH = 'CASH';
+    const PAYMENT_CREDIT = 'CREDIT';
+    const PAYMENT_BONUS = 'BONUS';
+    const PAYMENT_VOUCHER = 'VOUCHER';
+    const PAYMENT_FREE = 'FREE';
+
 }
