@@ -32,6 +32,8 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
 
     /**
      * Set office id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -48,6 +50,8 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
 
     /**
      * Set office name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {

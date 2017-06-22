@@ -30,6 +30,8 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
 
     /**
      * Set item id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -43,9 +45,11 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
     {
         return $this->getParameter('name');
     }
-    
+
     /**
      * Set the item name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {
@@ -59,9 +63,11 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
     {
         return $this->getParameter('description');
     }
-    
+
     /**
      * Set the item description
+     * @param $value
+     * @return $this
      */
     public function setDescription($value)
     {
@@ -75,9 +81,11 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
     {
         return $this->getParameter('quantity');
     }
-    
+
     /**
      * Set the item quantity
+     * @param $value
+     * @return $this
      */
     public function setQuantity($value)
     {
@@ -91,9 +99,11 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
     {
         return $this->getParameter('price');
     }
-    
+
     /**
      * Set the item price
+     * @param $value
+     * @return $this
      */
     public function setPrice($value)
     {
@@ -110,6 +120,8 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
 
     /**
      * Set item height
+     * @param $value
+     * @return $this
      */
     public function setHeight($value)
     {
@@ -126,6 +138,8 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
 
     /**
      * Set item depth
+     * @param $value
+     * @return $this
      */
     public function setDepth($value)
     {
@@ -142,6 +156,8 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
 
     /**
      * Set item width
+     * @param $value
+     * @return $this
      */
     public function setWidth($value)
     {
@@ -158,6 +174,8 @@ class Item implements ItemInterface, ArrayableInterface, \JsonSerializable, Json
 
     /**
      * Set item weight
+     * @param $value
+     * @return $this
      */
     public function setWeight($value)
     {

@@ -2,7 +2,6 @@
 
 namespace Omniship\Traits;
 
-use Omniship\Exceptions\InvalidArgumentException;
 use Omniship\Helper\Helper;
 use Omniship\Interfaces\ArrayableInterface;
 use Symfony\Component\HttpFoundation\ParameterBag;

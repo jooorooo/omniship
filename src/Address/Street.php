@@ -32,6 +32,8 @@ class Street implements ComponentInterface, ArrayableInterface, \JsonSerializabl
 
     /**
      * Set street id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -48,6 +50,8 @@ class Street implements ComponentInterface, ArrayableInterface, \JsonSerializabl
 
     /**
      * Set street name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {

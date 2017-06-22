@@ -124,7 +124,7 @@ abstract class AbstractRequest implements RequestInterface
      *
      * @param string $key The parameter key
      * @param mixed $value The value to set
-     * @return AbstractRequest Provides a fluent interface
+     * @return $this Provides a fluent interface
      * @throws RuntimeException if a request parameter is modified after the request has been sent.
      */
     public function setParameter($key, $value)

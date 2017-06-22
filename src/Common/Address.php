@@ -50,6 +50,8 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
 
     /**
      * Set address id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {

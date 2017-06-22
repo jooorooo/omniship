@@ -10,9 +10,7 @@ namespace Omniship\Common;
 
 use Carbon\Carbon;
 use Omniship\Interfaces\ArrayableInterface;
-use Omniship\Interfaces\ComponentInterface;
 use Omniship\Interfaces\JsonableInterface;
-use Omniship\Interfaces\ShippingServiceInterface;
 use Omniship\Interfaces\TrackingInterface;
 use Omniship\Traits\Parameters;
 
@@ -37,6 +35,8 @@ class Tracking implements TrackingInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set item id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -53,6 +53,8 @@ class Tracking implements TrackingInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set the item name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {
@@ -69,6 +71,8 @@ class Tracking implements TrackingInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set the item name
+     * @param $value
+     * @return $this
      */
     public function setOriginServiceArea($value)
     {
@@ -85,6 +89,8 @@ class Tracking implements TrackingInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set the item name
+     * @param $value
+     * @return $this
      */
     public function setDestinationServiceArea($value)
     {
@@ -101,6 +107,8 @@ class Tracking implements TrackingInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set the item description
+     * @param $value
+     * @return $this
      */
     public function setDescription($value)
     {

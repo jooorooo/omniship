@@ -33,6 +33,8 @@ class CodPayment implements CodPaymentInterface, ArrayableInterface, \JsonSerial
 
     /**
      * Set item id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -66,6 +68,8 @@ class CodPayment implements CodPaymentInterface, ArrayableInterface, \JsonSerial
 
     /**
      * Set the item price
+     * @param $value
+     * @return $this
      */
     public function setPrice($value)
     {

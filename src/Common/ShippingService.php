@@ -36,6 +36,8 @@ class ShippingService implements ShippingServiceInterface, ArrayableInterface, \
 
     /**
      * Set item id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -52,6 +54,8 @@ class ShippingService implements ShippingServiceInterface, ArrayableInterface, \
 
     /**
      * Set the item name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {
@@ -68,6 +72,8 @@ class ShippingService implements ShippingServiceInterface, ArrayableInterface, \
 
     /**
      * Set the item description
+     * @param $value
+     * @return $this
      */
     public function setDescription($value)
     {

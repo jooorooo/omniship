@@ -32,6 +32,8 @@ class Quarter implements ComponentInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set quarter id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -48,6 +50,8 @@ class Quarter implements ComponentInterface, ArrayableInterface, \JsonSerializab
 
     /**
      * Set quarter name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {

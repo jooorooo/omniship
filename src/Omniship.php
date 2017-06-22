@@ -6,6 +6,7 @@ namespace Omniship;
 
 use Omniship\Common\GatewayFactory;
 use Omniship\Http\Client;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Omniship class
@@ -45,7 +46,7 @@ use Omniship\Http\Client;
  * @method static string register(string $className)
  * @method static array  find()
  * @codingStandardsIgnoreStart
- * @method static Interfaces\GatewayInterface create(string $class, Client $httpClient = null, \Symfony\Component\HttpFoundation\Request $httpRequest = null)
+ * @method static Interfaces\GatewayInterface create(string $class, Client $httpClient = null, Request $httpRequest = null)
  * @codingStandardsIgnoreEnd
  *
  * @see Omniship\Common\GatewayFactory

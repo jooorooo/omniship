@@ -4,7 +4,6 @@
  */
 namespace Omniship\Common;
 
-use Carbon\Carbon;
 use Omniship\Http\Client;
 use Omniship\Interfaces\RequestInterface;
 use Omniship\Helper\Helper;

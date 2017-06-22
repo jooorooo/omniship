@@ -30,6 +30,8 @@ class Component implements ComponentInterface, ArrayableInterface, \JsonSerializ
 
     /**
      * Set item id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -43,9 +45,11 @@ class Component implements ComponentInterface, ArrayableInterface, \JsonSerializ
     {
         return $this->getParameter('name');
     }
-    
+
     /**
      * Set the item name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {

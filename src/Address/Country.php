@@ -23,7 +23,7 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
-     * Get city id
+     * Get country id
      */
     public function getId()
     {
@@ -31,7 +31,9 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
-     * Set city id
+     * Set country id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -39,7 +41,7 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
-     * Get city name
+     * Get country name
      */
     public function getName()
     {
@@ -47,7 +49,9 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
-     * Set city name
+     * Set country name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {
@@ -64,6 +68,8 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
 
     /**
      * Set iso2
+     * @param $value
+     * @return $this
      */
     public function setIso2($value)
     {
@@ -80,6 +86,8 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
 
     /**
      * Set iso3
+     * @param $value
+     * @return $this
      */
     public function setIso3($value)
     {

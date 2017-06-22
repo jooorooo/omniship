@@ -23,7 +23,7 @@ class State implements StateInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * Get city id
+     * Get state id
      */
     public function getId()
     {
@@ -31,7 +31,9 @@ class State implements StateInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * Set city id
+     * Set state id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -39,7 +41,7 @@ class State implements StateInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * Get city name
+     * Get state name
      */
     public function getName()
     {
@@ -47,7 +49,9 @@ class State implements StateInterface, ArrayableInterface, \JsonSerializable, Js
     }
 
     /**
-     * Set city name
+     * Set state name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {
@@ -64,6 +68,8 @@ class State implements StateInterface, ArrayableInterface, \JsonSerializable, Js
 
     /**
      * Set iso2
+     * @param $value
+     * @return $this
      */
     public function setIso2($value)
     {

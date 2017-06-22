@@ -32,6 +32,8 @@ class City implements ComponentInterface, ArrayableInterface, \JsonSerializable,
 
     /**
      * Set city id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -48,6 +50,8 @@ class City implements ComponentInterface, ArrayableInterface, \JsonSerializable,
 
     /**
      * Set city name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {

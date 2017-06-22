@@ -30,6 +30,8 @@ class ShippingMethod implements ShippingMethodInterface, ArrayableInterface, \Js
 
     /**
      * Set shipping method id
+     * @param $value
+     * @return $this
      */
     public function setId($value)
     {
@@ -46,6 +48,8 @@ class ShippingMethod implements ShippingMethodInterface, ArrayableInterface, \Js
 
     /**
      * Set the shipping method name
+     * @param $value
+     * @return $this
      */
     public function setName($value)
     {
@@ -62,6 +66,8 @@ class ShippingMethod implements ShippingMethodInterface, ArrayableInterface, \Js
 
     /**
      * Set the shipping method code
+     * @param $value
+     * @return $this
      */
     public function setCode($value)
     {

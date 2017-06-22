@@ -61,7 +61,8 @@ class ResponseParser
         libxml_clear_errors();
         $xml = null;
         try {
-            $xml = new \SimpleXMLElement((string) $body ?: '<root />', LIBXML_NONET);
+            $xml = new \SimpleXMLElement((string) $body ?: /** @lang text */
+                '<root />', LIBXML_NONET);
         } catch (\Exception $e) {
             $errorMessage = $e->getMessage();
         }

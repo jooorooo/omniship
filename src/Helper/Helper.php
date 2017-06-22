@@ -63,11 +63,14 @@ class Helper
             }
         }
     }
+
     /**
      * Resolve a gateway class to a short name.
      *
      * The short name can be used with GatewayFactory as an alias of the gateway class,
      * to create new instances of a gateway.
+     * @param $className
+     * @return string
      */
     public static function getGatewayShortName($className)
     {

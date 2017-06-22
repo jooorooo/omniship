@@ -30,6 +30,5 @@ class InvalidArgumentException extends \InvalidArgumentException implements Omni
         if (!empty($first['line'])) {
             $this->line = $first['line'];
         }
-        $this->trace = [];
     }
 }

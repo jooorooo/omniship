@@ -92,6 +92,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             return null;
         }
 
+        /** @var Collection $values */
         $values = with(isset($key) ? $this->pluck($key) : $this)
                     ->sort()->values();
 
@@ -1098,7 +1099,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
      * @param  string|callable|null  $key
      * @param  bool  $strict
      *
-     * @return static
+     * @return Collection
      */
     public function unique($key = null, $strict = false)
     {
@@ -1116,6 +1117,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             }
 
             $exists[] = $id;
+            return false;
         });
     }
 
