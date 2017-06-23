@@ -29,10 +29,12 @@ trait Parameters
      * @param array|null $parameters An array of parameters to set on this object
      * @return $this Item
      */
-    public function initialize(array $parameters = [])
+    public function initialize(array $parameters = null)
     {
         $this->parameters = new ParameterBag();
-        Helper::initialize($this, $parameters);
+        if(is_array($parameters)) {
+            Helper::initialize($this, $parameters);
+        }
         return $this;
     }
 

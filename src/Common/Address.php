@@ -101,6 +101,9 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
      */
     public function setState($state)
     {
+        if(!$state) {
+            return $this;
+        }
         if (!($state instanceof State)) {
             $state = new State($state);
         }
@@ -153,6 +156,9 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
      */
     public function setQuarter($quarter)
     {
+        if(!$quarter) {
+            return $this;
+        }
         if (!($quarter instanceof Quarter)) {
             $quarter = new Quarter($quarter);
         }
@@ -179,6 +185,9 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
      */
     public function setStreet($street)
     {
+        if(!$street) {
+            return $this;
+        }
         if (!($street instanceof Street)) {
             $street = new Street($street);
         }
@@ -205,6 +214,9 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
      */
     public function setOffice($office)
     {
+        if(!$office) {
+            return $this;
+        }
         if (!($office instanceof Office)) {
             $office = new Office($office);
         }
@@ -496,7 +508,10 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
      */
     public function setTimeZone($timezone)
     {
-        if(!is_null($timezone) && array_search(strtolower($timezone), $this->getTimeZones()) === false) {
+        if(!$timezone) {
+            return $this;
+        }
+        if(array_search(strtolower($timezone), $this->getTimeZones()) === false) {
             $this->invalidArguments('10004', sprintf('Invalid timezone set "%s"', $timezone));
         }
         return $this->setParameter('timezone', $timezone);
