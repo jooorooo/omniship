@@ -535,10 +535,11 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         // off html rendering, customizing the wrapper element and its attributes.
 
         $address = new AddressFormatter($this->getCountry()->getIso2());
-        //add compaby or names to address
+        //add company or names to address
         if($company = $this->getCompanyName()) {
             $address = $address->withRecipient($company);
-        } elseif($recipient = implode(' ', array_filter([$this->getFirstName(), $this->getLastName()]))) {
+        }
+        if($recipient = implode(' ', array_filter([$this->getFirstName(), $this->getLastName()]))) {
             $address = $address->withRecipient($recipient);
         }
         //add state to address
