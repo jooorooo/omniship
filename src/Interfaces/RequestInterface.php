@@ -4,7 +4,9 @@
  */
 namespace Omniship\Interfaces;
 use Carbon\Carbon;
+use Money\Money;
 use Omniship\Common\Address;
+use Omniship\Exceptions\InvalidRequestException;
 
 /**
  * Request Interface

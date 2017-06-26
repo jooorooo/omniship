@@ -92,7 +92,6 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             return null;
         }
 
-        /** @var Collection $values */
         $values = with(isset($key) ? $this->pluck($key) : $this)
                     ->sort()->values();
 
@@ -513,13 +512,14 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
      */
     public function implode($value, $glue = null)
     {
-        $first = $this->first();
+        $new_collection = new Collection($this->toArray());
+        $first = $new_collection->first();
 
         if (is_array($first) || is_object($first)) {
-            return implode($glue, $this->pluck($value)->all());
+            return implode($glue, $new_collection->pluck($value)->all());
         }
 
-        return implode($value, $this->items);
+        return implode($value, $new_collection->all());
     }
 
     /**
@@ -1099,7 +1099,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
      * @param  string|callable|null  $key
      * @param  bool  $strict
      *
-     * @return Collection
+     * @return static
      */
     public function unique($key = null, $strict = false)
     {
@@ -1117,7 +1117,6 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             }
 
             $exists[] = $id;
-            return false;
         });
     }
 

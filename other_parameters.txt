@@ -15,6 +15,7 @@ special_delivery_id ///speedy
 fragile ////speedy
 allowed_services /// speedy
 instruction_returns ///econt -> allow: delivery_return,return
+instruction_returns ///speedy -> allow: return (return is payed from sender, else from receiver)
 instructions /// econt
 deffered_days /// speedy
 sms_no /// econt

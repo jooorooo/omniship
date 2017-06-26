@@ -280,7 +280,7 @@ trait ParametersData
      * Sets the client note.
      *
      * @param string $value
-     * @return string
+     * @return $this
      */
     public function setClientNote($value)
     {

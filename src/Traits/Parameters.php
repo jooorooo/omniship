@@ -143,6 +143,14 @@ trait Parameters
     }
 
     /**
+     * @param $key
+     * @return mixed
+     */
+    public function __get($key) {
+        return $this->getParameter($key);
+    }
+
+    /**
      * @param $val
      * @param string $type
      * @param null $sub_object
