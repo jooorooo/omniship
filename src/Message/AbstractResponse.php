@@ -6,6 +6,7 @@ namespace Omniship\Message;
 
 use Omniship\Interfaces\RequestInterface;
 use Omniship\Interfaces\ResponseInterface;
+use Symfony\Component\Intl\Intl;
 use Symfony\Component\Translation\Loader\PhpFileLoader;
 
 /**
@@ -102,14 +103,10 @@ abstract class AbstractResponse implements ResponseInterface
      */
     public function getCountryName($code)
     {
-        if(is_null($this->locale)) {
-            $lang = $this->getRequest()->getLanguageCode() ? : 'en';
-            $locale = new PhpFileLoader();
-            $this->locale = false;
-            if(is_file($file = __DIR__ . './../../../../umpirsky/country-list/data/' . $lang . '/country.php')) {
-                $this->locale = $locale->load($file, $lang);
-            }
+        $name = Intl::getRegionBundle()->getCountryName(strtoupper($code), $this->getRequest()->getLanguageCode() ? : 'en');
+        if($name) {
+            return $name;
         }
-        return $this->locale ? $this->locale->get($code) : $code;
+        return $code;
     }
 }

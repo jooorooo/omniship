@@ -18,6 +18,13 @@ use Omniship\Traits\Exceptions;
 use Omniship\Traits\Parameters;
 use Omniship\Interfaces\AddressInterface;
 use DateTimeZone;
+//formatter
+
+use CommerceGuys\Addressing\Model\Address AS AddressFormatter;
+use CommerceGuys\Addressing\Formatter\DefaultFormatter;
+use CommerceGuys\Addressing\Repository\AddressFormatRepository;
+use CommerceGuys\Addressing\Repository\CountryRepository;
+use CommerceGuys\Addressing\Repository\SubdivisionRepository;
 
 class Address implements AddressInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
@@ -515,6 +522,61 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
             $this->invalidArguments('10004', sprintf('Invalid timezone set "%s"', $timezone));
         }
         return $this->setParameter('timezone', $timezone);
+    }
+
+    public function format($html = true) {
+        $addressFormatRepository = new AddressFormatRepository();
+        $countryRepository = new CountryRepository();
+        $subdivisionRepository = new SubdivisionRepository();
+        $formatter = new DefaultFormatter($addressFormatRepository, $countryRepository, $subdivisionRepository, $this->getCountry()->getIso2(), [
+            'html' => $html
+        ]);
+        // Options passed to the constructor or setOption / setOptions allow turning
+        // off html rendering, customizing the wrapper element and its attributes.
+
+        $address = new AddressFormatter($this->getCountry()->getIso2());
+        //add compaby or names to address
+        if($company = $this->getCompanyName()) {
+            $address = $address->withRecipient($company);
+        } elseif($recipient = implode(' ', array_filter([$this->getFirstName(), $this->getLastName()]))) {
+            $address = $address->withRecipient($recipient);
+        }
+        //add state to address
+        if($state = $this->getState()) {
+            $address = $address->withAdministrativeArea($state->getIso2());
+        }
+        //add city to address
+        if($city = $this->getCity()) {
+            $address = $address->withLocality($city->getName());
+        }
+        //add post code to address
+        if($postal_code = $this->getPostCode()) {
+            $address = $address->withPostalCode($postal_code);
+        }
+        //if address is office return formatted address
+        if(!is_null($office = $this->getOffice())) {
+            $address = $address->withAddressLine1($office->getName());
+            return $formatter->format($address);
+        }
+
+        $line1 = '';
+        if(!is_null($street = $this->getStreet())) {
+            $number = $this->getStreetNumber();
+            $line1 .= implode(' ', array_filter([$street->getName(), ($number ? '#' . $number : '')]));
+        } else if(!is_null($quarter = $this->getQuarter())) {
+            $line1 .= $quarter->getName();
+        }
+        if($other = implode(' - ', array_filter([$this->getBuilding(), $this->getEntrance(), $this->getFloor(), $this->getApartment()]))) {
+            $line1 .= ($line1 ? ' / ' : '') . $other;
+        }
+        if($line1) {
+            $address = $address->withAddressLine1($line1);
+        }
+        if($lines = implode("\n", array_filter([$this->getAddress1(), $this->getAddress2(), $this->getAddress3()]))) {
+            $address = $address->withAddressLine2($lines);
+        }
+
+        return $formatter->format($address);
     }
 
     /**
