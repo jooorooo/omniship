@@ -14,7 +14,7 @@ use Omniship\Helper\Collection;
  *
  * @see Item
  */
-class ShippingServiceBag extends Collection
+class ShippingQuoteBag extends Collection
 {
 
     /**
@@ -25,7 +25,7 @@ class ShippingServiceBag extends Collection
     public function __construct($items = [])
     {
         $items = array_map(function($item) {
-            return is_array($item) ? new ShippingService($item) : $item;
+            return is_array($item) ? new ShippingQuote($item) : $item;
         }, $items);
         parent::__construct($items);
     }
@@ -40,7 +40,7 @@ class ShippingServiceBag extends Collection
     public function offsetSet($key, $value)
     {
         if(is_array($value)) {
-            $value = new ShippingService($value);
+            $value = new ShippingQuote($value);
         }
         parent::offsetSet($key, $value);
     }
@@ -48,7 +48,7 @@ class ShippingServiceBag extends Collection
     /**
      * Get all of the items in the collection.
      *
-     * @return ShippingService[]
+     * @return ShippingQuote[]
      */
     public function all()
     {

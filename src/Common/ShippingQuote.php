@@ -11,7 +11,7 @@ namespace Omniship\Common;
 use Carbon\Carbon;
 use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
-use Omniship\Interfaces\ShippingServiceInterface;
+use Omniship\Interfaces\ShippingQuoteInterface;
 use Omniship\Traits\Parameters;
 
 /**
@@ -19,9 +19,9 @@ use Omniship\Traits\Parameters;
  *
  * This class defines a single quote in the Omniship system.
  *
- * @see ShippingServiceInterface
+ * @see ShippingQuoteInterface
  */
-class ShippingService implements ShippingServiceInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
 
     use Parameters;

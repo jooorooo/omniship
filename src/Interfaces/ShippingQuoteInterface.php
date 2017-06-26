@@ -11,7 +11,7 @@ use Carbon\Carbon;
  * This interface defines the functionality that all cart items in
  * the Omniship system are to have.
  */
-interface ShippingServiceInterface extends ComponentInterface
+interface ShippingQuoteInterface extends ComponentInterface
 {
     /**
      * Description of the quote
