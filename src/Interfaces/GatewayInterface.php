@@ -15,8 +15,8 @@ use Omniship\Common\Address;
  *
  * @see AbstractGateway
  *
- * @method RequestInterface getServices(array $parameters = [])         (Optional method)
- *         Get shipping services
+ * @method RequestInterface getQuotes(array $parameters = [])         (Optional method)
+ *         Get shipping quotes
  * @method RequestInterface createBillOfLading(array $parameters = [])  (Optional method)
  *         Create Bill Of Lading
  * @method RequestInterface cancelBillOfLading($bol_id, $cancelComment=null)  (Optional method)

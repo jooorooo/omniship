@@ -3,7 +3,6 @@ for now in dev mod..
 ================ provider ($this->getOtherParameters({KEY})) ====================
 invoice_before_cd
 priority_time_type
-priority_time_value
 reference_id
 reference_type
 package_id
@@ -23,3 +22,4 @@ pack_1...pack_8 ///econt
 ref ///econt
 money_transfer ///econt
 express_city_courier_e ///econt
+priority_time_value /// speedy, econt (Carbon)
