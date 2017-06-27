@@ -27,4 +27,10 @@ class Consts
     const PAYMENT_VOUCHER = 'VOUCHER';
     const PAYMENT_FREE = 'FREE';
 
+    //services
+    const SERVICE_ALLOWED = 'ALLOWED';
+    const SERVICE_BANNED = 'BANNED';
+    const SERVICE_REQUIRED = 'REQUIRED';
+    const SERVICE_NULL = 'NULL';
+
 }

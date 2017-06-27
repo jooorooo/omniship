@@ -139,6 +139,15 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'getQuotes');
     }
     /**
+     * Supports getServices
+     *
+     * @return boolean True if this gateway supports the getServices() method
+     */
+    public function supportsGetServices()
+    {
+        return method_exists($this, 'getServices');
+    }
+    /**
      * Supports addressValidation
      *
      * @return boolean True if this gateway supports the validateAddress() method
