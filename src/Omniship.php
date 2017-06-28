@@ -28,15 +28,6 @@ use Symfony\Component\HttpFoundation\Request;
  *   // Get the gateway parameters.
  *   $parameters = $gateway->getParameters();
  *
- *   // Create a credit card object
- *   $card = new CreditCard(...);
- *
- *   // Do an authorisation transaction on the gateway
- *   if ($gateway->supportsAuthorize()) {
- *       $gateway->authorize(...);
- *   } else {
- *       throw new \Exception('Gateway does not support authorize()');
- *   }
  * </code>
  *
  * For further code examples see the *omniship-example* repository on github.

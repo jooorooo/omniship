@@ -30,16 +30,6 @@ use Symfony\Component\HttpFoundation\Request as HttpRequest;
  *
  *   // Get the gateway parameters.
  *   $parameters = $gateway->getParameters();
- *
- *   // Create a credit card object
- *   $card = new CreditCard(...);
- *
- *   // Do an authorisation transaction on the gateway
- *   if ($gateway->supportsAuthorize()) {
- *       $gateway->authorize(...);
- *   } else {
- *       throw new \Exception('Gateway does not support authorize()');
- *   }
  * </code>
  *
  * For further code examples see the *omniship-example* repository on github.
@@ -110,25 +100,6 @@ abstract class AbstractGateway implements GatewayInterface
     {
         return array();
     }
-
-    /**
-     * Supports Authorize
-     *
-     * @return boolean True if this gateway supports the authorize() method
-     */
-    public function supportsAuthorize()
-    {
-        return method_exists($this, 'authorize');
-    }
-    /**
-     * Supports Complete Authorize
-     *
-     * @return boolean True if this gateway supports the completeAuthorize() method
-     */
-    public function supportsCompleteAuthorize()
-    {
-        return method_exists($this, 'completeAuthorize');
-    }
     /**
      * Supports getQuotes
      *
@@ -182,6 +153,15 @@ abstract class AbstractGateway implements GatewayInterface
     public function supportsCreateBillOfLading()
     {
         return method_exists($this, 'createBillOfLading');
+    }
+    /**
+     * Supports getPdf
+     *
+     * @return boolean True if this gateway supports the getPdf() method
+     */
+    public function supportsGetPdf()
+    {
+        return method_exists($this, 'getPdf');
     }
     /**
      * Supports cancelBillOfLading

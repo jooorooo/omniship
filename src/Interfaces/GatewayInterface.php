@@ -41,6 +41,8 @@ use Omniship\Common\Address;
  *         multiple COD payment information
  * @method mixed getClient()      (Optional method)
  *         client with other methods where not defined in \Omniship\Common\AbstractGateway
+ * @method RequestInterface getPdf($bol_id)      (Optional method)
+ *         get pdf content
  */
 interface GatewayInterface
 {
