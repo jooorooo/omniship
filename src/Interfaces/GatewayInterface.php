@@ -39,6 +39,8 @@ use Omniship\Common\Address;
  *         COD payment information
  * @method RequestInterface codPayments(array $bol_ids)      (Optional method)
  *         multiple COD payment information
+ * @method mixed getClient()      (Optional method)
+ *         client with other methods where not defined in \Omniship\Common\AbstractGateway
  */
 interface GatewayInterface
 {
