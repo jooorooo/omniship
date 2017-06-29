@@ -1,11 +1,8 @@
 for now in dev mod..
 
 ================ provider ($this->getOtherParameters({KEY})) ====================
-invoice_before_cd
-priority_time_type
-reference_id
-reference_type
-package_id
+invoice_before_cd ///econt
+package_id ///speedy
 shipping_price_in_cod ///speedy
 cod_account_number ////dhl, econt(cd_agreement_num)
 credit_account_number ////econt(key_word)
@@ -22,5 +19,8 @@ pack_1...pack_8 ///econt
 ref ///econt
 money_transfer ///econt
 express_city_courier_e ///econt
+priority_time_type ///econt
 priority_time_value /// speedy, econt (Carbon)
 printer_type ///speedy
+reference_id ///dhl
+reference_type ///dhl

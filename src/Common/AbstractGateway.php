@@ -191,6 +191,15 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'trackingParcel');
     }
     /**
+     * Supports trackingParcels
+     *
+     * @return boolean True if this gateway supports the trackingParcels() method
+     */
+    public function supportsTrackingParcels()
+    {
+        return method_exists($this, 'trackingParcels');
+    }
+    /**
      * Supports requestCourier
      *
      * @return boolean True if this gateway supports the requestCourier() method

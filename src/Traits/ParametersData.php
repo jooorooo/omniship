@@ -401,7 +401,7 @@ trait ParametersData
     /**
      * Get the request BolId.
      *
-     * @return string
+     * @return string|array|null
      */
     public function getBolId()
     {
@@ -410,7 +410,7 @@ trait ParametersData
     /**
      * Sets the request BolId.
      *
-     * @param string $value
+     * @param string|array $value
      * @return $this
      */
     public function setBolId($value)

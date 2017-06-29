@@ -166,4 +166,38 @@ class Tracking implements TrackingInterface, ArrayableInterface, \JsonSerializab
         return $this->setParameter('events', $value);
     }
 
+    /**
+     * @return string|null
+     */
+    public function getError()
+    {
+        return $this->getParameter('error');
+    }
+
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setError($value)
+    {
+        return $this->setParameter('error', $value);
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getErrorCode()
+    {
+        return $this->getParameter('error_code');
+    }
+
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setErrorCode($value)
+    {
+        return $this->setParameter('error_code', $value);
+    }
+
 }
