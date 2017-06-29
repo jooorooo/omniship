@@ -33,4 +33,8 @@ class Consts
     const SERVICE_REQUIRED = 'REQUIRED';
     const SERVICE_NULL = 'NULL';
 
+    //office types
+    const OFFICE_TYPE_OFFICE = 'office';
+    const OFFICE_TYPE_APT = 'apt';
+
 }

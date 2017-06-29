@@ -151,6 +151,14 @@ trait Parameters
     }
 
     /**
+     * @param $key
+     * @return bool
+     */
+    public function __isset($key) {
+        return $this->parameters->has($key);
+    }
+
+    /**
      * @param $val
      * @param string $type
      * @param null $sub_object

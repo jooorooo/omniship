@@ -57,4 +57,22 @@ class City implements ComponentInterface, ArrayableInterface, \JsonSerializable,
     {
         return $this->setParameter('name', $value);
     }
+
+    /**
+     * Get city post_code
+     */
+    public function getPostCode()
+    {
+        return $this->getParameter('post_code');
+    }
+
+    /**
+     * Set city post_code
+     * @param $value
+     * @return $this
+     */
+    public function setPostCode($value)
+    {
+        return $this->setParameter('post_code', $value);
+    }
 }
