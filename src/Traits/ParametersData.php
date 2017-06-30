@@ -514,25 +514,6 @@ trait ParametersData
         return $this->setParameter('service_id', $value);
     }
     /**
-     * Get the taking date.
-     *
-     * @return null|Carbon
-     */
-    public function getTakingDate()
-    {
-        return $this->getParameter('taking_date');
-    }
-    /**
-     * Sets the taking date.
-     *
-     * @param Carbon $value
-     * @return $this
-     */
-    public function setTakingDate(Carbon $value = null)
-    {
-        return $this->setParameter('taking_date', $value);
-    }
-    /**
      * @return string
      */
     public function getLanguageCode()

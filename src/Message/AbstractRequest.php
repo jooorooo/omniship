@@ -4,7 +4,6 @@
  */
 namespace Omniship\Message;
 
-use Money\Currencies\ISOCurrencies;
 use Omniship\Exceptions\InvalidRequestException;
 use Omniship\Exceptions\RuntimeException;
 use Omniship\Helper\Helper;
@@ -84,10 +83,6 @@ abstract class AbstractRequest implements RequestInterface
      * @var ResponseInterface
      */
     protected $response;
-    /**
-     * @var ISOCurrencies
-     */
-    protected $currencies;
     /**
      * Create a new Request
      *

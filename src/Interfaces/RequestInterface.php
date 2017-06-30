@@ -72,7 +72,7 @@ interface RequestInterface extends MessageInterface
      *
      * @return null|Carbon
      */
-    public function getTakingDate();
+    public function getShipmentDate();
     /**
      * @return boolean
      */
