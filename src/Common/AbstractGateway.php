@@ -263,6 +263,15 @@ abstract class AbstractGateway implements GatewayInterface
         return false;
     }
     /**
+     * Supports supportsTrackingUrl
+     *
+     * @return boolean True if this gateway supports trackingUrl
+     */
+    public function supportsTrackingUrl()
+    {
+        return method_exists($this, 'trackingUrl');
+    }
+    /**
      * Create and initialize a request object
      *
      * This function is usually used to create objects of type
