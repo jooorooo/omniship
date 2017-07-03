@@ -94,6 +94,23 @@ class Create implements CreateBillOfLadingInterface, ArrayableInterface, \JsonSe
     /**
      * {@inheritdoc}
      */
+    public function getBillOfLadingUrl()
+    {
+        return $this->getParameter('bill_of_lading_url');
+    }
+
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setBillOfLadingUrl($value)
+    {
+        return $this->setParameter('bill_of_lading_url', $value);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBolId()
     {
         return $this->getParameter('bol_id');

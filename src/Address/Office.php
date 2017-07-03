@@ -190,4 +190,42 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
     {
         return $this->setParameter('type', $value);
     }
+
+    /**
+     * Get phones
+     * @return array|null
+     */
+    public function getPhones()
+    {
+        return $this->getParameter('phones');
+    }
+
+    /**
+     * Set phones
+     * @param $value
+     * @return $this
+     */
+    public function setPhones($value)
+    {
+        return $this->setParameter('phones', $value);
+    }
+
+    /**
+     * Get address
+     * @return string|null
+     */
+    public function getAddressString()
+    {
+        return $this->getParameter('address_string');
+    }
+
+    /**
+     * Set address
+     * @param $value
+     * @return $this
+     */
+    public function setAddressString($value)
+    {
+        return $this->setParameter('address_string', $value);
+    }
 }

@@ -39,6 +39,18 @@ trait Parameters
     }
 
     /**
+     * @param array|null $parameters An array of parameters to set on this object
+     * @return $this
+     */
+    public function fillFromArray(array $parameters)
+    {
+        if(is_array($parameters)) {
+            Helper::initialize($this, $parameters);
+        }
+        return $this;
+    }
+
+    /**
      * Initialize this item with the specified parameters from $values
      *
      * @param array|object|null $parameters An array of parameters to set on this object
@@ -179,7 +191,8 @@ trait Parameters
             break;
             case 'bool':
             case 'boolean':
-                $val = (bool)$val && $val != '0';
+            $zval = $val;
+                $val = empty(trim((string)$val)) ? false : true;
             break;
             case 'array':
                 $val = (array)$val;

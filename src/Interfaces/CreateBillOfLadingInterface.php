@@ -30,6 +30,11 @@ interface CreateBillOfLadingInterface
      */
     public function getBillOfLadingSource();
     /**
+     * Get Bill Of Lading Url
+     * @return string
+     */
+    public function getBillOfLadingUrl();
+    /**
      * Get Bill ID
      * @return string
      */
