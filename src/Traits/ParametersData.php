@@ -743,6 +743,21 @@ trait ParametersData
     {
         return $this->setParameter('parcel_dimensions', $value);
     }
+    /**
+     * @return string
+     */
+    public function getInstructionReturns()
+    {
+        return $this->getParameter('instruction_returns');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setInstructionReturns($value)
+    {
+        return $this->setParameter('instruction_returns', $value);
+    }
 
     /**
      * @param string $type (WeightUnit|DimensionalUnit)

@@ -27,6 +27,8 @@ use Omniship\Common\Address;
  *         Delete Bill Of Lading
  * @method RequestInterface trackingParcel($bol_id)      (Optional method)
  *         Tracking Parcel
+ * @method string|null trackingUrl($bol_id)      (Optional method)
+ *         return tracking url
  * @method RequestInterface trackingParcels(array $bol_ids = [])      (Optional method)
  *         Tracking Parcel
  * @method RequestInterface validateCredentials(array $parameters = [], $test_mode = null)      (Optional method)
