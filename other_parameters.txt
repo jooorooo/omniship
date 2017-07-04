@@ -4,7 +4,6 @@ for now in dev mod..
 invoice_before_cd ///econt
 package_id ///speedy, econt
 shipping_price_in_cod ///speedy
-cod_account_number ////dhl, econt(cd_agreement_num)
 credit_account_number ////econt(key_word)
 sender_vat ////dhl
 special_delivery_id ///speedy

@@ -548,35 +548,6 @@ trait ParametersData
         return $this->setParameter('payer', $payer);
     }
     /**
-     * @param $key
-     * @return mixed|ParameterBag
-     */
-    public function getOtherParameters($key = null)
-    {
-        if(is_null($this->getParameter('other_parameters'))) {
-            $this->setParameter('other_parameters', new ParameterBag());
-        }
-        /** @var $other ParameterBag */
-        $other = $this->getParameter('other_parameters');
-        return $key ? $other->get($key) : $other;
-    }
-    /**
-     * @param  $key
-     * @param  $value
-     * @return $this
-     */
-    public function setOtherParameters($key, $value = null)
-    {
-        if(is_array($key) || $key instanceof ParameterBag) {
-            foreach($key as $k => $v) {
-                $this->getOtherParameters()->set($k, $v);
-            }
-        } else {
-            $this->getOtherParameters()->set($key, $value);
-        }
-        return $this;
-    }
-    /**
      * @return string
      */
     public function getLogo()
@@ -757,6 +728,50 @@ trait ParametersData
     public function setInstructionReturns($value)
     {
         return $this->setParameter('instruction_returns', $value);
+    }
+    /**
+     * @return string
+     */
+    public function getCodAccount()
+    {
+        return $this->getParameter('cod_account');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setCodAccount($value)
+    {
+        return $this->setParameter('cod_account', $value);
+    }
+    /**
+     * @param $key
+     * @return mixed|ParameterBag
+     */
+    public function getOtherParameters($key = null)
+    {
+        if(is_null($this->getParameter('other_parameters'))) {
+            $this->setParameter('other_parameters', new ParameterBag());
+        }
+        /** @var $other ParameterBag */
+        $other = $this->getParameter('other_parameters');
+        return $key ? $other->get($key) : $other;
+    }
+    /**
+     * @param  $key
+     * @param  $value
+     * @return $this
+     */
+    public function setOtherParameters($key, $value = null)
+    {
+        if(is_array($key) || $key instanceof ParameterBag) {
+            foreach($key as $k => $v) {
+                $this->getOtherParameters()->set($k, $v);
+            }
+        } else {
+            $this->getOtherParameters()->set($key, $value);
+        }
+        return $this;
     }
 
     /**
