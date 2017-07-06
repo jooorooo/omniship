@@ -115,6 +115,11 @@ interface AddressInterface
      */
     public function getLastName();
     /**
+     * Get the full name from template
+     * @return string|null
+     */
+    public function getFullName();
+    /**
      * Get the address company name
      * @return string|mixed
      */

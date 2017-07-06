@@ -47,6 +47,11 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     protected $time_zones;
 
     /**
+     * @var array
+     */
+    protected $full_name_template = '{first_name} {last_name}';
+
+    /**
      * Get the address id
      * @return mixed
      */
@@ -524,6 +529,41 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         return $this->setParameter('timezone', $timezone);
     }
 
+    /**
+     * Get the full name from template
+     * @return string|null
+     */
+    public function getFullName()
+    {
+        return str_replace([
+            '{first_name}',
+            '{last_name}'
+        ], [
+            $this->getFirstName(),
+            $this->getLastName(),
+        ], $this->getTemplateFullName());
+    }
+
+    /**
+     * Get template for full name
+     * @return mixed
+     */
+    public function getTemplateFullName()
+    {
+        return $this->full_name_template;
+    }
+
+    /**
+     * Set template for full name
+     * @param $value
+     * @return $this
+     */
+    public function setTemplateFullName($value)
+    {
+        $this->full_name_template = $value;
+        return $this;
+    }
+
     public function format($html = true) {
         $addressFormatRepository = new AddressFormatRepository();
         $countryRepository = new CountryRepository();
@@ -539,7 +579,7 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         if($company = $this->getCompanyName()) {
             $address = $address->withRecipient($company);
         }
-        if($recipient = implode(' ', array_filter([$this->getFirstName(), $this->getLastName()]))) {
+        if($recipient = $this->getFullName()) {
             $address = $address->withRecipient($recipient);
         }
         //add state to address
