@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Money\Money;
 use Omniship\Common\Address;
 use Omniship\Exceptions\InvalidRequestException;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 /**
  * Request Interface
@@ -83,6 +84,11 @@ interface RequestInterface extends MessageInterface
      * @return mixed
      */
     public function getBolId();
+    /**
+     * @param $key
+     * @return mixed|ParameterBag
+     */
+    public function getOtherParameters($key = null);
     /**
      * Send the request
      *
