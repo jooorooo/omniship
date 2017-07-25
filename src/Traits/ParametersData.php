@@ -760,6 +760,21 @@ trait ParametersData
         return $this->setParameter('cod_account', $value);
     }
     /**
+     * @return string
+     */
+    public function getPackageId()
+    {
+        return $this->getParameter('package_id');
+    }
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setPackageId($value)
+    {
+        return $this->setParameter('package_id', $value);
+    }
+    /**
      * @param $key
      * @return mixed|ParameterBag
      */

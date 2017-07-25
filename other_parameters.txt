@@ -2,7 +2,6 @@ for now in dev mod..
 
 ================ provider ($this->getOtherParameters({KEY})) ====================
 invoice_before_cd ///econt
-package_id ///speedy, econt
 shipping_price_in_cod ///speedy
 credit_account_number ////econt(key_word)
 sender_vat ////dhl
