@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Omniship\Common\Address;
 use Omniship\Common\ItemBag;
 use Omniship\Common\ParcelDimensions;
+use Omniship\Common\PieceBag;
 use Omniship\Consts;
 use Omniship\Helper\Collection;
 use Omniship\Helper\Data;
@@ -165,9 +166,31 @@ trait ParametersData
     public function setItems($items)
     {
         if ($items && !$items instanceof ItemBag) {
-            $items = new ItemBag($items);
+            $items = new ItemBag(is_array($items) ? $items : []);
         }
         return $this->setParameter('items', $items);
+    }
+    /**
+     * A list of pieces in this order
+     *
+     * @return PieceBag A bag containing items in this order
+     */
+    public function getPieces()
+    {
+        return $this->getParameter('pieces') ? : new PieceBag([]);
+    }
+    /**
+     * Set the pieces in this order
+     *
+     * @param PieceBag|array $pieces An array of items in this order
+     * @return $this
+     */
+    public function setPieces($pieces)
+    {
+        if ($pieces && !$pieces instanceof PieceBag) {
+            $pieces = new PieceBag(is_array($pieces) ? $pieces : []);
+        }
+        return $this->setParameter('pieces', $pieces);
     }
     /**
      * @return string
@@ -205,19 +228,11 @@ trait ParametersData
      */
     public function getNumberOfPieces()
     {
-        $number_of_pieces = $this->getParameter('number_of_pieces');
-        if((int)$number_of_pieces < 1) {
-            $this->setNumberOfPieces(($number_of_pieces = 1));
+        $number_of_pieces = $this->getPieces()->count();
+        if($number_of_pieces < 1) {
+            $number_of_pieces = 1;
         }
         return $number_of_pieces;
-    }
-    /**
-     * @param integer $value
-     * @return $this
-     */
-    public function setNumberOfPieces($value)
-    {
-        return $this->setParameter('number_of_pieces', (int)$value);
     }
     /**
      * @param float $value
