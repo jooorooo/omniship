@@ -11,7 +11,6 @@ namespace Omniship\Traits;
 use Carbon\Carbon;
 use Omniship\Common\Address;
 use Omniship\Common\ItemBag;
-use Omniship\Common\ParcelDimensions;
 use Omniship\Common\PieceBag;
 use Omniship\Consts;
 use Omniship\Helper\Collection;
@@ -713,21 +712,6 @@ trait ParametersData
     public function setPaymentMethod($value)
     {
         return $this->setParameter('payment_method', $value);
-    }
-    /**
-     * @return ParcelDimensions
-     */
-    public function getParcelDimensions()
-    {
-        return $this->getParameter('parcel_dimensions');
-    }
-    /**
-     * @param ParcelDimensions|null $value
-     * @return $this
-     */
-    public function setParcelDimensions(ParcelDimensions $value = null)
-    {
-        return $this->setParameter('parcel_dimensions', $value);
     }
     /**
      * @return string
