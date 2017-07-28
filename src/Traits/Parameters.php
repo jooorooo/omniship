@@ -164,6 +164,19 @@ trait Parameters
 
     /**
      * @param $key
+     * @param $value
+     * @return $this
+     */
+    public function __set($key, $value) {
+        $method = 'set' . Helper::camelCase(ucfirst($key));
+        if(method_exists($this, $method)) {
+            $this->setParameter($key, $value);
+        }
+        return $this;
+    }
+
+    /**
+     * @param $key
      * @return bool
      */
     public function __isset($key) {
@@ -191,7 +204,6 @@ trait Parameters
             break;
             case 'bool':
             case 'boolean':
-            $zval = $val;
                 $val = empty(trim((string)$val)) ? false : true;
             break;
             case 'array':
