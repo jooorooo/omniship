@@ -760,16 +760,17 @@ trait ParametersData
     }
     /**
      * @param $key
+     * @param null $default
      * @return mixed|ParameterBag
      */
-    public function getOtherParameters($key = null)
+    public function getOtherParameters($key = null, $default = null)
     {
         if(is_null($this->getParameter('other_parameters'))) {
             $this->setParameter('other_parameters', new ParameterBag());
         }
         /** @var $other ParameterBag */
         $other = $this->getParameter('other_parameters');
-        return $key ? $other->get($key) : $other;
+        return $key ? $other->get($key, $default) : $other;
     }
     /**
      * @param  $key

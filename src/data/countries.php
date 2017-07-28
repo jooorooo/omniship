@@ -1,18 +1,13 @@
 <?php
 
-//https://github.com/thephpleague/iso3166/blob/master/src/ISO3166.php
-
-use Crisu83\Conversion\Quantity\Mass\Unit AS MassUnit;
-use Crisu83\Conversion\Quantity\Length\Unit AS LengthUnit;
-
 return [
     'AD' => [
         'CountryCode' => 'AD',
         'Country' => 'Andorra',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AD',
         'Iso3' => 'AND',
         'Capital' => 'Andorra la Vella',
@@ -23,14 +18,38 @@ return [
         'PostalCodeRegex' => '^(?:AD)*(\\d{3})$',
         'Languages' => 'ca',
         'Neighbours' => 'ES,FR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 42.655791000000001,
+                'lng' => 1.7866390000000001,
+            ],
+            'southwest' => [
+                'lat' => 42.428748800000001,
+                'lng' => 1.4087052,
+            ],
+        ],
+        'Location' => [
+            'lat' => 42.506284999999998,
+            'lng' => 1.521801,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 42.655791000000001,
+                'lng' => 1.7866390000000001,
+            ],
+            'southwest' => [
+                'lat' => 42.428748800000001,
+                'lng' => 1.4087052,
+            ],
+        ],
     ],
     'AE' => [
         'CountryCode' => 'AE',
         'Country' => 'United Arab Emirates',
         'CurrencyCode' => 'AED',
         'CurrencyName' => 'UAE Dirham',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AE',
         'Iso3' => 'ARE',
         'Capital' => 'Abu Dhabi',
@@ -41,14 +60,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar-AE,fa,en,hi,ur',
         'Neighbours' => 'SA,OM',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 26.076499999999999,
+                'lng' => 56.439500099999997,
+            ],
+            'southwest' => [
+                'lat' => 22.6315138,
+                'lng' => 51.472299999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 23.424075999999999,
+            'lng' => 53.847817999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 26.069633,
+                'lng' => 56.381596600000002,
+            ],
+            'southwest' => [
+                'lat' => 22.6315138,
+                'lng' => 51.497705099999997,
+            ],
+        ],
     ],
     'AF' => [
         'CountryCode' => 'AF',
         'Country' => 'Afghanistan',
         'CurrencyCode' => 'AFN',
         'CurrencyName' => 'Afghan Afghani',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AF',
         'Iso3' => 'AFG',
         'Capital' => 'Kabul',
@@ -59,14 +102,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fa-AF,ps,uz-AF,tk',
         'Neighbours' => 'TM,CN,IR,TJ,PK,UZ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 38.490876700000008,
+                'lng' => 74.8898619,
+            ],
+            'southwest' => [
+                'lat' => 29.377199999999998,
+                'lng' => 60.517000500000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 33.939109999999999,
+            'lng' => 67.709952999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 38.4908389,
+                'lng' => 74.8898619,
+            ],
+            'southwest' => [
+                'lat' => 29.377231900000002,
+                'lng' => 60.517000500000002,
+            ],
+        ],
     ],
     'AG' => [
         'CountryCode' => 'AG',
         'Country' => 'Antigua',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'AG',
         'Iso3' => 'ATG',
         'Capital' => 'St. John\'s',
@@ -77,14 +144,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-AG',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.173759700000002,
+                'lng' => -61.672924399999992,
+            ],
+            'southwest' => [
+                'lat' => 16.997578699999998,
+                'lng' => -61.9062506,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.074655700000001,
+            'lng' => -61.817520700000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 17.173759700000002,
+                'lng' => -61.672924399999992,
+            ],
+            'southwest' => [
+                'lat' => 16.997578699999998,
+                'lng' => -61.9062506,
+            ],
+        ],
     ],
     'AI' => [
         'CountryCode' => 'AI',
         'Country' => 'Anguilla',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'AI',
         'Iso3' => 'AIA',
         'Capital' => 'The Valley',
@@ -95,14 +186,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-AI',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.633232599999999,
+                'lng' => -62.919999999999987,
+            ],
+            'southwest' => [
+                'lat' => 18.1465043,
+                'lng' => -63.4803,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.220554,
+            'lng' => -63.068614999999987,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.298007500000001,
+                'lng' => -62.927103199999998,
+            ],
+            'southwest' => [
+                'lat' => 18.1499463,
+                'lng' => -63.190832399999998,
+            ],
+        ],
     ],
     'AL' => [
         'CountryCode' => 'AL',
         'Country' => 'Albania',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AL',
         'Iso3' => 'ALB',
         'Capital' => 'Tirana',
@@ -113,14 +228,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'sq,el',
         'Neighbours' => 'MK,GR,ME,RS,XK',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 42.661081899999999,
+                'lng' => 21.0572394,
+            ],
+            'southwest' => [
+                'lat' => 39.644729599999998,
+                'lng' => 19.121700000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 41.153331999999999,
+            'lng' => 20.168330999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 42.661081899999999,
+                'lng' => 21.0572394,
+            ],
+            'southwest' => [
+                'lat' => 39.644729599999998,
+                'lng' => 19.263936399999999,
+            ],
+        ],
     ],
     'AM' => [
         'CountryCode' => 'AM',
         'Country' => 'Armenia',
         'CurrencyCode' => 'AMD',
         'CurrencyName' => 'Armenian Dram',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AM',
         'Iso3' => 'ARM',
         'Capital' => 'Yerevan',
@@ -131,14 +270,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'hy',
         'Neighbours' => 'GE,IR,AZ,TR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 41.300992999999998,
+                'lng' => 46.6342219,
+            ],
+            'southwest' => [
+                'lat' => 38.840243999999998,
+                'lng' => 43.447260100000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 40.069099000000001,
+            'lng' => 45.038189000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 41.300992999999998,
+                'lng' => 46.6342219,
+            ],
+            'southwest' => [
+                'lat' => 38.840243999999998,
+                'lng' => 43.447260100000001,
+            ],
+        ],
     ],
     'AN' => [
         'CountryCode' => 'AN',
         'Country' => 'Netherlands Antilles',
         'CurrencyCode' => 'ANG',
         'CurrencyName' => 'Netherlands Antilles Guilder',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AN',
         'Iso3' => 'ANT',
         'Capital' => 'Willemstad',
@@ -149,14 +312,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'nl-AN,en,es',
         'Neighbours' => 'GP',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.0645971,
+                'lng' => -63.002622100000004,
+            ],
+            'southwest' => [
+                'lat' => 11.9780353,
+                'lng' => -69.162840899999992,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.201890199999999,
+            'lng' => -68.26238219999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.312246699999999,
+                'lng' => -68.195400300000003,
+            ],
+            'southwest' => [
+                'lat' => 12.0245041,
+                'lng' => -68.420963299999997,
+            ],
+        ],
     ],
     'AO' => [
         'CountryCode' => 'AO',
         'Country' => 'Angola',
         'CurrencyCode' => 'AOA',
         'CurrencyName' => 'Kwanza',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AO',
         'Iso3' => 'AGO',
         'Capital' => 'Luanda',
@@ -167,14 +354,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'pt-AO',
         'Neighbours' => 'CD,NA,ZM,CG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -4.3879438999999998,
+                'lng' => 24.087885499999999,
+            ],
+            'southwest' => [
+                'lat' => -18.039103900000001,
+                'lng' => 11.4696999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -11.202692000000001,
+            'lng' => 17.873887,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -4.3879438999999998,
+                'lng' => 24.087885499999999,
+            ],
+            'southwest' => [
+                'lat' => -18.039103900000001,
+                'lng' => 11.669562000000001,
+            ],
+        ],
     ],
     'AR' => [
         'CountryCode' => 'AR',
         'Country' => 'Argentina',
         'CurrencyCode' => 'ARS',
         'CurrencyName' => 'Argentine Peso',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AR',
         'Iso3' => 'ARG',
         'Capital' => 'Buenos Aires',
@@ -185,14 +396,38 @@ return [
         'PostalCodeRegex' => '^[A-Z]?\\d{4}[A-Z]{0,3}$',
         'Languages' => 'es-AR,en,it,de,fr,gn',
         'Neighbours' => 'CL,BO,UY,PY,BR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -21.781045899999999,
+                'lng' => -53.637481000000001,
+            ],
+            'southwest' => [
+                'lat' => -55.125022399999999,
+                'lng' => -73.560360099999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => -38.416097000000001,
+            'lng' => -63.616671999999987,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -21.781680000000001,
+                'lng' => -53.637481000000001,
+            ],
+            'southwest' => [
+                'lat' => -55.057278999999987,
+                'lng' => -73.560169899999991,
+            ],
+        ],
     ],
     'AS' => [
         'CountryCode' => 'AS',
         'Country' => 'American Samoa',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'AS',
         'Iso3' => 'ASM',
         'Capital' => 'Pago Pago',
@@ -203,14 +438,38 @@ return [
         'PostalCodeRegex' => '96799',
         'Languages' => 'en-AS,sm,to',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -13.4056506,
+                'lng' => -169.20593260000001,
+            ],
+            'southwest' => [
+                'lat' => -14.7217608,
+                'lng' => -171.0076904,
+            ],
+        ],
+        'Location' => [
+            'lat' => -14.3016396,
+            'lng' => -170.69618149999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -14.229563000000001,
+                'lng' => -170.545582,
+            ],
+            'southwest' => [
+                'lat' => -14.3737163,
+                'lng' => -170.84678099999999,
+            ],
+        ],
     ],
     'AT' => [
         'CountryCode' => 'AT',
         'Country' => 'Austria',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AT',
         'Iso3' => 'AUT',
         'Capital' => 'Vienna',
@@ -221,14 +480,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'de-AT,hr,hu,sl',
         'Neighbours' => 'CH,DE,HU,SK,CZ,IT,SI,LI',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 49.020608099999997,
+                'lng' => 17.160686099999999,
+            ],
+            'southwest' => [
+                'lat' => 46.372335799999988,
+                'lng' => 9.5307833999999989,
+            ],
+        ],
+        'Location' => [
+            'lat' => 47.516230999999998,
+            'lng' => 14.550072,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 49.020599900000001,
+                'lng' => 17.160686099999999,
+            ],
+            'southwest' => [
+                'lat' => 46.372335799999988,
+                'lng' => 9.5307833999999989,
+            ],
+        ],
     ],
     'AU' => [
         'CountryCode' => 'AU',
         'Country' => 'Australia',
         'CurrencyCode' => 'AUD',
         'CurrencyName' => 'Australian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AU',
         'Iso3' => 'AUS',
         'Capital' => 'Canberra',
@@ -239,14 +522,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'en-AU',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -9.1870263999999988,
+                'lng' => 159.2872223,
+            ],
+            'southwest' => [
+                'lat' => -54.833765799999988,
+                'lng' => 110.9510339,
+            ],
+        ],
+        'Location' => [
+            'lat' => -25.274398000000001,
+            'lng' => 133.775136,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -0.69113439999999993,
+                'lng' => 166.74291669999999,
+            ],
+            'southwest' => [
+                'lat' => -51.663323200000008,
+                'lng' => 100.0911072,
+            ],
+        ],
     ],
     'AW' => [
         'CountryCode' => 'AW',
         'Country' => 'Aruba',
         'CurrencyCode' => 'AWG',
         'CurrencyName' => 'Aruba Guilder',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'AW',
         'Iso3' => 'ABW',
         'Capital' => 'Oranjestad',
@@ -257,14 +564,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'nl-AW,es,en',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.630617900000001,
+                'lng' => -69.864463799999996,
+            ],
+            'southwest' => [
+                'lat' => 12.406093,
+                'lng' => -70.070114000000004,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.52111,
+            'lng' => -69.968338000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.623334699999999,
+                'lng' => -69.865802000000002,
+            ],
+            'southwest' => [
+                'lat' => 12.411799500000001,
+                'lng' => -70.063991899999991,
+            ],
+        ],
     ],
     'AZ' => [
         'CountryCode' => 'AZ',
         'Country' => 'Azerbaijan',
         'CurrencyCode' => 'AZN',
         'CurrencyName' => 'Azerbaijan Manat',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'AZ',
         'Iso3' => 'AZE',
         'Capital' => 'Baku',
@@ -275,14 +606,38 @@ return [
         'PostalCodeRegex' => '^(?:AZ)*(\\d{4})$',
         'Languages' => 'az,ru,hy',
         'Neighbours' => 'GE,IR,AM,TR,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 41.959499899999997,
+                'lng' => 50.745800099999997,
+            ],
+            'southwest' => [
+                'lat' => 38.392217100000003,
+                'lng' => 44.763259900000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 40.143104999999998,
+            'lng' => 47.576926999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 41.912340200000003,
+                'lng' => 50.621116899999997,
+            ],
+            'southwest' => [
+                'lat' => 38.392217100000003,
+                'lng' => 44.763259900000001,
+            ],
+        ],
     ],
     'BA' => [
         'CountryCode' => 'BA',
         'Country' => 'Bosnia and Herzegovina',
         'CurrencyCode' => 'BAM',
         'CurrencyName' => 'Convertible Marks',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BA',
         'Iso3' => 'BIH',
         'Capital' => 'Sarajevo',
@@ -293,14 +648,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'bs,hr-BA,sr-BA',
         'Neighbours' => 'HR,ME,RS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 45.276626200000003,
+                'lng' => 19.621935000000001,
+            ],
+            'southwest' => [
+                'lat' => 42.556451600000003,
+                'lng' => 15.7223665,
+            ],
+        ],
+        'Location' => [
+            'lat' => 43.915886,
+            'lng' => 17.679075999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 45.276626200000003,
+                'lng' => 19.621935000000001,
+            ],
+            'southwest' => [
+                'lat' => 42.556451600000003,
+                'lng' => 15.7223665,
+            ],
+        ],
     ],
     'BB' => [
         'CountryCode' => 'BB',
         'Country' => 'Barbados',
         'CurrencyCode' => 'BBD',
         'CurrencyName' => 'Barbadian Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'BB',
         'Iso3' => 'BRB',
         'Capital' => 'Bridgetown',
@@ -311,14 +690,38 @@ return [
         'PostalCodeRegex' => '^(?:BB)*(\\d{5})$',
         'Languages' => 'en-BB',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 13.336509299999999,
+                'lng' => -59.417495700000003,
+            ],
+            'southwest' => [
+                'lat' => 13.039844,
+                'lng' => -59.653015099999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 13.193887,
+            'lng' => -59.543197999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 13.335171600000001,
+                'lng' => -59.420097499999997,
+            ],
+            'southwest' => [
+                'lat' => 13.044890499999999,
+                'lng' => -59.650847900000002,
+            ],
+        ],
     ],
     'BD' => [
         'CountryCode' => 'BD',
         'Country' => 'Bangladesh',
         'CurrencyCode' => 'BDT',
         'CurrencyName' => 'Taka',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BD',
         'Iso3' => 'BGD',
         'Capital' => 'Dhaka',
@@ -329,14 +732,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'bn-BD,en',
         'Neighbours' => 'MM,IN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 26.633914000000001,
+                'lng' => 92.680115299999997,
+            ],
+            'southwest' => [
+                'lat' => 20.3794,
+                'lng' => 88.008614100000017,
+            ],
+        ],
+        'Location' => [
+            'lat' => 23.684994,
+            'lng' => 90.356330999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 26.6336236,
+                'lng' => 92.680115299999997,
+            ],
+            'southwest' => [
+                'lat' => 20.576283700000001,
+                'lng' => 88.008614100000017,
+            ],
+        ],
     ],
     'BE' => [
         'CountryCode' => 'BE',
         'Country' => 'Belgium',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BE',
         'Iso3' => 'BEL',
         'Capital' => 'Brussels',
@@ -347,14 +774,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'nl-BE,fr-BE,de-BE',
         'Neighbours' => 'DE,NL,LU,FR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 51.505144899999998,
+                'lng' => 6.4081240999999993,
+            ],
+            'southwest' => [
+                'lat' => 49.497013000000003,
+                'lng' => 2.5240999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 50.503886999999999,
+            'lng' => 4.4699359999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 51.505144899999998,
+                'lng' => 6.408118,
+            ],
+            'southwest' => [
+                'lat' => 49.497013000000003,
+                'lng' => 2.5453705000000002,
+            ],
+        ],
     ],
     'BF' => [
         'CountryCode' => 'BF',
         'Country' => 'Burkina Faso',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BF',
         'Iso3' => 'BFA',
         'Capital' => 'Ouagadougou',
@@ -365,14 +816,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-BF',
         'Neighbours' => 'NE,BJ,GH,CI,TG,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 15.0840032,
+                'lng' => 2.4043597999999999,
+            ],
+            'southwest' => [
+                'lat' => 9.4104718999999992,
+                'lng' => -5.5157195999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.238333000000001,
+            'lng' => -1.561593,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 15.084043299999999,
+                'lng' => 2.4043597999999999,
+            ],
+            'southwest' => [
+                'lat' => 9.4104718999999992,
+                'lng' => -5.5157195999999997,
+            ],
+        ],
     ],
     'BG' => [
         'CountryCode' => 'BG',
         'Country' => 'Bulgaria',
         'CurrencyCode' => 'BGN',
         'CurrencyName' => 'Bulgarian Lev',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BG',
         'Iso3' => 'BGR',
         'Capital' => 'Sofia',
@@ -383,14 +858,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'bg,tr-BG,rom',
         'Neighbours' => 'MK,GR,RO,TR,RS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 44.215233300000001,
+                'lng' => 28.7292001,
+            ],
+            'southwest' => [
+                'lat' => 41.235446899999999,
+                'lng' => 22.357344600000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 42.733882999999999,
+            'lng' => 25.48583,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 44.215233300000001,
+                'lng' => 28.609263299999999,
+            ],
+            'southwest' => [
+                'lat' => 41.235446899999999,
+                'lng' => 22.357344600000001,
+            ],
+        ],
     ],
     'BH' => [
         'CountryCode' => 'BH',
         'Country' => 'Bahrain',
         'CurrencyCode' => 'BHD',
         'CurrencyName' => 'Bahraini Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BH',
         'Iso3' => 'BHR',
         'Capital' => 'Manama',
@@ -401,14 +900,38 @@ return [
         'PostalCodeRegex' => '^(\\d{3}\\d?)$',
         'Languages' => 'ar-BH,en,fa,ur',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 26.331576099999999,
+                'lng' => 50.8509064,
+            ],
+            'southwest' => [
+                'lat' => 25.534999899999999,
+                'lng' => 50.344848499999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 26.066700000000001,
+            'lng' => 50.557699999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 26.3303935,
+                'lng' => 50.824846099999988,
+            ],
+            'southwest' => [
+                'lat' => 25.579840099999998,
+                'lng' => 50.378150899999987,
+            ],
+        ],
     ],
     'BI' => [
         'CountryCode' => 'BI',
         'Country' => 'Burundi',
         'CurrencyCode' => 'BIF',
         'CurrencyName' => 'Burundese Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BI',
         'Iso3' => 'BDI',
         'Capital' => 'Bujumbura',
@@ -419,14 +942,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-BI,rn',
         'Neighbours' => 'TZ,CD,RW',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -2.3097302000000002,
+                'lng' => 30.849544699999999,
+            ],
+            'southwest' => [
+                'lat' => -4.4693288000000004,
+                'lng' => 29.000993000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -3.3730560000000001,
+            'lng' => 29.918886000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -2.3097302000000002,
+                'lng' => 30.849544699999999,
+            ],
+            'southwest' => [
+                'lat' => -4.4693246999999996,
+                'lng' => 29.000993000000001,
+            ],
+        ],
     ],
     'BJ' => [
         'CountryCode' => 'BJ',
         'Country' => 'Benin',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BJ',
         'Iso3' => 'BEN',
         'Capital' => 'Porto-Novo',
@@ -437,14 +984,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-BJ',
         'Neighbours' => 'NE,TG,BF,NG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.4086111,
+                'lng' => 3.8433429000000001,
+            ],
+            'southwest' => [
+                'lat' => 6.2061000999999996,
+                'lng' => 0.77650549999999996,
+            ],
+        ],
+        'Location' => [
+            'lat' => 9.3076899999999991,
+            'lng' => 2.3158340000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.4086111,
+                'lng' => 3.8433429000000001,
+            ],
+            'southwest' => [
+                'lat' => 6.2345967,
+                'lng' => 0.77650549999999996,
+            ],
+        ],
     ],
     'BM' => [
         'CountryCode' => 'BM',
         'Country' => 'Bermuda',
         'CurrencyCode' => 'BMD',
         'CurrencyName' => 'Bermudian Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'BM',
         'Iso3' => 'BMU',
         'Capital' => 'Hamilton',
@@ -455,14 +1026,38 @@ return [
         'PostalCodeRegex' => '^([A-Z]{2}\\d{2})$',
         'Languages' => 'en-BM,pt',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 32.396099999999997,
+                'lng' => -64.641399899999996,
+            ],
+            'southwest' => [
+                'lat' => 32.242497499999999,
+                'lng' => -64.89139999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 32.3078,
+            'lng' => -64.750500000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 32.390989400000002,
+                'lng' => -64.647377399999996,
+            ],
+            'southwest' => [
+                'lat' => 32.247050000000002,
+                'lng' => -64.887476800000002,
+            ],
+        ],
     ],
     'BN' => [
         'CountryCode' => 'BN',
         'Country' => 'Brunei',
         'CurrencyCode' => 'BND',
         'CurrencyName' => 'Brunei Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BN',
         'Iso3' => 'BRN',
         'Capital' => 'Bandar Seri Begawan',
@@ -473,14 +1068,38 @@ return [
         'PostalCodeRegex' => '^([A-Z]{2}\\d{4})$',
         'Languages' => 'ms-BN,en-BN',
         'Neighbours' => 'MY',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.0978000999999997,
+                'lng' => 115.36395520000001,
+            ],
+            'southwest' => [
+                'lat' => 4.0024609999999994,
+                'lng' => 114.0752,
+            ],
+        ],
+        'Location' => [
+            'lat' => 4.5352769999999998,
+            'lng' => 114.72766900000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.0460362999999999,
+                'lng' => 115.36395520000001,
+            ],
+            'southwest' => [
+                'lat' => 4.0024609999999994,
+                'lng' => 114.075298,
+            ],
+        ],
     ],
     'BO' => [
         'CountryCode' => 'BO',
         'Country' => 'Bolivia',
         'CurrencyCode' => 'BOB',
         'CurrencyName' => 'Boliviano',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BO',
         'Iso3' => 'BOL',
         'Capital' => 'Sucre',
@@ -491,14 +1110,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'es-BO,qu,ay',
         'Neighbours' => 'PE,CL,PY,BR,AR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -9.6693230000000003,
+                'lng' => -57.453803000000001,
+            ],
+            'southwest' => [
+                'lat' => -22.898089899999999,
+                'lng' => -69.644989999999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => -16.290154000000001,
+            'lng' => -63.588652999999987,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -9.6693230000000003,
+                'lng' => -57.453803000000001,
+            ],
+            'southwest' => [
+                'lat' => -22.898089899999999,
+                'lng' => -69.6449602,
+            ],
+        ],
     ],
     'BR' => [
         'CountryCode' => 'BR',
         'Country' => 'Brazil',
         'CurrencyCode' => 'BRL',
         'CurrencyName' => 'Real',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BR',
         'Iso3' => 'BRA',
         'Capital' => 'Brasilia',
@@ -509,14 +1152,38 @@ return [
         'PostalCodeRegex' => '^\\d{5}-\\d{3}$',
         'Languages' => 'pt-BR,es,en,fr',
         'Neighbours' => 'SR,PE,BO,UY,GY,PY,GF,VE,CO,AR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.2717862999999996,
+                'lng' => -28.650542999999999,
+            ],
+            'southwest' => [
+                'lat' => -34.089100000000002,
+                'lng' => -73.982816999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => -14.235004,
+            'lng' => -51.925280000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.2695235,
+                'lng' => -28.838591399999999,
+            ],
+            'southwest' => [
+                'lat' => -33.749324000000001,
+                'lng' => -73.982695100000001,
+            ],
+        ],
     ],
     'BS' => [
         'CountryCode' => 'BS',
         'Country' => 'Bahamas',
         'CurrencyCode' => 'BSD',
         'CurrencyName' => 'Bahamian Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'BS',
         'Iso3' => 'BHS',
         'Capital' => 'Nassau',
@@ -527,14 +1194,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-BS',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 27.263411999999999,
+                'lng' => -72.70975390000001,
+            ],
+            'southwest' => [
+                'lat' => 20.9082735,
+                'lng' => -80.477560299999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => 25.034279999999999,
+            'lng' => -77.39627999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 27.444103999999999,
+                'lng' => -70.676278199999999,
+            ],
+            'southwest' => [
+                'lat' => 21.424833199999998,
+                'lng' => -81.257154,
+            ],
+        ],
     ],
     'BT' => [
         'CountryCode' => 'BT',
         'Country' => 'Bhutan',
         'CurrencyCode' => 'BTN',
         'CurrencyName' => 'Ngultrum',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BT',
         'Iso3' => 'BTN',
         'Capital' => 'Thimphu',
@@ -545,14 +1236,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'dz',
         'Neighbours' => 'CN,IN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 28.360824999999998,
+                'lng' => 92.125232099999991,
+            ],
+            'southwest' => [
+                'lat' => 26.702016,
+                'lng' => 88.746473500000008,
+            ],
+        ],
+        'Location' => [
+            'lat' => 27.514161999999999,
+            'lng' => 90.433600999999996,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 28.360824999999998,
+                'lng' => 92.125232099999991,
+            ],
+            'southwest' => [
+                'lat' => 26.702016,
+                'lng' => 88.746473500000008,
+            ],
+        ],
     ],
     'BW' => [
         'CountryCode' => 'BW',
         'Country' => 'Botswana',
         'CurrencyCode' => 'BWP',
         'CurrencyName' => 'Pula',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BW',
         'Iso3' => 'BWA',
         'Capital' => 'Gaborone',
@@ -563,14 +1278,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-BW,tn-BW',
         'Neighbours' => 'ZW,ZA,NA',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -17.778137000000001,
+                'lng' => 29.375304,
+            ],
+            'southwest' => [
+                'lat' => -26.907544999999999,
+                'lng' => 19.998902999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -22.328474,
+            'lng' => 24.684866,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -17.778137000000001,
+                'lng' => 29.375304,
+            ],
+            'southwest' => [
+                'lat' => -26.907544999999999,
+                'lng' => 19.998905000000001,
+            ],
+        ],
     ],
     'BY' => [
         'CountryCode' => 'BY',
         'Country' => 'Belarus',
         'CurrencyCode' => 'BYR',
         'CurrencyName' => 'Belarusian Ruble',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BY',
         'Iso3' => 'BLR',
         'Capital' => 'Minsk',
@@ -581,14 +1320,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'be,ru',
         'Neighbours' => 'PL,LT,UA,RU,LV',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 56.171871899999999,
+                'lng' => 32.776820200000003,
+            ],
+            'southwest' => [
+                'lat' => 51.262011000000008,
+                'lng' => 23.1783377,
+            ],
+        ],
+        'Location' => [
+            'lat' => 53.709806999999998,
+            'lng' => 27.953389000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 56.171871899999999,
+                'lng' => 32.776820200000003,
+            ],
+            'southwest' => [
+                'lat' => 51.262011000000008,
+                'lng' => 23.1783377,
+            ],
+        ],
     ],
     'BZ' => [
         'CountryCode' => 'BZ',
         'Country' => 'Belize',
         'CurrencyCode' => 'BZD',
         'CurrencyName' => 'Belize Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'BZ',
         'Iso3' => 'BLZ',
         'Capital' => 'Belmopan',
@@ -599,14 +1362,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-BZ,es',
         'Neighbours' => 'GT,MX',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.495941899999998,
+                'lng' => -87.412699899999993,
+            ],
+            'southwest' => [
+                'lat' => 15.885618900000001,
+                'lng' => -89.227587899999989,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.189876999999999,
+            'lng' => -88.497649999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.495941899999998,
+                'lng' => -87.491726899999989,
+            ],
+            'southwest' => [
+                'lat' => 15.885618900000001,
+                'lng' => -89.227587899999989,
+            ],
+        ],
     ],
     'CA' => [
         'CountryCode' => 'CA',
         'Country' => 'Canada',
         'CurrencyCode' => 'CAD',
         'CurrencyName' => 'Canadian Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'CA',
         'Iso3' => 'CAN',
         'Capital' => 'Ottawa',
@@ -617,14 +1404,38 @@ return [
         'PostalCodeRegex' => '^([ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\\d[ABCEGHJKLMNPRSTVWXYZ]\\d)$ ',
         'Languages' => 'en-CA,fr-CA,iu',
         'Neighbours' => 'US',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 83.638099999999994,
+                'lng' => -50.976599999999998,
+            ],
+            'southwest' => [
+                'lat' => 41.676555899999997,
+                'lng' => -141.00187,
+            ],
+        ],
+        'Location' => [
+            'lat' => 56.130366000000002,
+            'lng' => -106.346771,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 70,
+                'lng' => -50,
+            ],
+            'southwest' => [
+                'lat' => 42,
+                'lng' => -142,
+            ],
+        ],
     ],
     'CD' => [
         'CountryCode' => 'CD',
         'Country' => 'Congo, The Democratic Republic of',
         'CurrencyCode' => 'CDF',
         'CurrencyName' => 'Congolese Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CD',
         'Iso3' => 'COD',
         'Capital' => 'Kinshasa',
@@ -635,14 +1446,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-CD,ln,kg',
         'Neighbours' => 'TZ,CF,SS,RW,ZM,BI,UG,CG,AO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.3920028999999996,
+                'lng' => 31.314612,
+            ],
+            'southwest' => [
+                'lat' => -13.459034900000001,
+                'lng' => 12.1454,
+            ],
+        ],
+        'Location' => [
+            'lat' => -4.0383329999999997,
+            'lng' => 21.758664,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.3920028999999996,
+                'lng' => 31.314609900000001,
+            ],
+            'southwest' => [
+                'lat' => -13.459034900000001,
+                'lng' => 12.1454,
+            ],
+        ],
     ],
     'CF' => [
         'CountryCode' => 'CF',
         'Country' => 'Central African Republic',
         'CurrencyCode' => 'XAF',
         'CurrencyName' => 'CFA Franc - Central Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CF',
         'Iso3' => 'CAF',
         'Capital' => 'Bangui',
@@ -653,14 +1488,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-CF,sg,ln,kg',
         'Neighbours' => 'TD,SD,CD,SS,CM,CG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 11.0179569,
+                'lng' => 27.458304900000002,
+            ],
+            'southwest' => [
+                'lat' => 2.2208492999999998,
+                'lng' => 14.4150981,
+            ],
+        ],
+        'Location' => [
+            'lat' => 6.6111109999999993,
+            'lng' => 20.939444000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 11.0179569,
+                'lng' => 27.458304900000002,
+            ],
+            'southwest' => [
+                'lat' => 2.2208492999999998,
+                'lng' => 14.4150981,
+            ],
+        ],
     ],
     'CG' => [
         'CountryCode' => 'CG',
         'Country' => 'Congo',
         'CurrencyCode' => 'XAF',
         'CurrencyName' => 'CFA Franc - Central Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CG',
         'Iso3' => 'COG',
         'Capital' => 'Brazzaville',
@@ -671,14 +1530,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-CG,kg,ln-CG',
         'Neighbours' => 'CF,GA,CD,CM,AO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.3920028999999996,
+                'lng' => 31.314612,
+            ],
+            'southwest' => [
+                'lat' => -13.459034900000001,
+                'lng' => 12.1454,
+            ],
+        ],
+        'Location' => [
+            'lat' => -4.0383329999999997,
+            'lng' => 21.758664,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.3920028999999996,
+                'lng' => 31.314609900000001,
+            ],
+            'southwest' => [
+                'lat' => -13.459034900000001,
+                'lng' => 12.1454,
+            ],
+        ],
     ],
     'CH' => [
         'CountryCode' => 'CH',
         'Country' => 'Switzerland',
         'CurrencyCode' => 'CHF',
         'CurrencyName' => 'Swiss Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CH',
         'Iso3' => 'CHE',
         'Capital' => 'Bern',
@@ -689,14 +1572,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'de-CH,fr-CH,it-CH,rm',
         'Neighbours' => 'DE,IT,LI,FR,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 47.808454599999997,
+                'lng' => 10.4923401,
+            ],
+            'southwest' => [
+                'lat' => 45.817920000000001,
+                'lng' => 5.95608,
+            ],
+        ],
+        'Location' => [
+            'lat' => 46.818187999999999,
+            'lng' => 8.227511999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 47.808454599999997,
+                'lng' => 10.4923401,
+            ],
+            'southwest' => [
+                'lat' => 45.817920000000001,
+                'lng' => 5.95608,
+            ],
+        ],
     ],
     'CI' => [
         'CountryCode' => 'CI',
         'Country' => 'Cote d\'Ivoire',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CI',
         'Iso3' => 'CIV',
         'Capital' => 'Yamoussoukro',
@@ -707,14 +1614,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-CI',
         'Neighbours' => 'LR,GH,GN,BF,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 10.740015100000001,
+                'lng' => -2.4930310000000002,
+            ],
+            'southwest' => [
+                'lat' => 4.1929999999999996,
+                'lng' => -8.6020588999999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => 7.5399889999999994,
+            'lng' => -5.5470799999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 10.740015100000001,
+                'lng' => -2.4930310000000002,
+            ],
+            'southwest' => [
+                'lat' => 4.3615005999999994,
+                'lng' => -8.6020588999999994,
+            ],
+        ],
     ],
     'CK' => [
         'CountryCode' => 'CK',
         'Country' => 'Cook Islands',
         'CurrencyCode' => 'NZD',
         'CurrencyName' => 'New Zealand Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CK',
         'Iso3' => 'COK',
         'Capital' => 'Avarua',
@@ -725,14 +1656,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-CK,mi',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -8.1679931999999997,
+                'lng' => -155.69824220000001,
+            ],
+            'southwest' => [
+                'lat' => -23.089838400000001,
+                'lng' => -166.1791992,
+            ],
+        ],
+        'Location' => [
+            'lat' => -21.236736000000001,
+            'lng' => -159.777671,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -21.198730399999999,
+                'lng' => -159.72361029999999,
+            ],
+            'southwest' => [
+                'lat' => -21.272715099999999,
+                'lng' => -159.83111740000001,
+            ],
+        ],
     ],
     'CL' => [
         'CountryCode' => 'CL',
         'Country' => 'Chile',
         'CurrencyCode' => 'CLP',
         'CurrencyName' => 'New Chile Peso',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CL',
         'Iso3' => 'CHL',
         'Capital' => 'Santiago',
@@ -743,15 +1698,39 @@ return [
         'PostalCodeRegex' => '^(\\d{7})$',
         'Languages' => 'es-CL',
         'Neighbours' => 'PE,BO,AR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -17.498329300000002,
+                'lng' => -66.332700000000003,
+            ],
+            'southwest' => [
+                'lat' => -56.145499999999998,
+                'lng' => -110.02809999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -35.675147000000003,
+            'lng' => -71.542968999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -17.4983322,
+                'lng' => -66.422842099999997,
+            ],
+            'southwest' => [
+                'lat' => -55.980441799999987,
+                'lng' => -75.6899236,
+            ],
+        ],
     ],
-    LengthUnit::CENTIMETRE => [
-        'CountryCode' => LengthUnit::CENTIMETRE,
+    'cm' => [
+        'CountryCode' => 'cm',
         'Country' => 'Cameroon',
         'CurrencyCode' => 'XAF',
         'CurrencyName' => 'CFA Franc - Central Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
-        'Iso2' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
+        'Iso2' => 'cm',
         'Iso3' => 'CMR',
         'Capital' => 'Yaounde',
         'AreaInSqKm' => '475440',
@@ -761,14 +1740,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-CM,fr-CM',
         'Neighbours' => 'TD,CF,GA,GQ,CG,NG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 13.083335,
+                'lng' => 16.1944081,
+            ],
+            'southwest' => [
+                'lat' => 1.6558999999999999,
+                'lng' => 8.3936001000000005,
+            ],
+        ],
+        'Location' => [
+            'lat' => 7.3697219999999994,
+            'lng' => 12.354722000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 13.0834037,
+                'lng' => 16.1944081,
+            ],
+            'southwest' => [
+                'lat' => 1.6558999999999999,
+                'lng' => 8.4947634999999995,
+            ],
+        ],
     ],
     'CN' => [
         'CountryCode' => 'CN',
         'Country' => 'China, People\'s Republic',
         'CurrencyCode' => 'CNY',
         'CurrencyName' => 'Yuan (Ren Min Bi)',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CN',
         'Iso3' => 'CHN',
         'Capital' => 'Beijing',
@@ -779,14 +1782,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'zh-CN,yue,wuu,dta,ug,za',
         'Neighbours' => 'LA,BT,TJ,KZ,MN,AF,NP,MM,KG,PK,KP,RU,VN,IN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 53.560973999999987,
+                'lng' => 134.7728099,
+            ],
+            'southwest' => [
+                'lat' => 17.999600000000001,
+                'lng' => 73.499413599999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 35.861660000000001,
+            'lng' => 104.195397,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 53.560973999999987,
+                'lng' => 134.77269509999999,
+            ],
+            'southwest' => [
+                'lat' => 18.161806200000001,
+                'lng' => 73.503426099999999,
+            ],
+        ],
     ],
     'CO' => [
         'CountryCode' => 'CO',
         'Country' => 'Colombia',
         'CurrencyCode' => 'COP',
         'CurrencyName' => 'Colombian Peso',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CO',
         'Iso3' => 'COL',
         'Capital' => 'Bogota',
@@ -797,14 +1824,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'es-CO',
         'Neighbours' => 'EC,PE,PA,BR,VE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 13.5177999,
+                'lng' => -66.851922999999999,
+            ],
+            'southwest' => [
+                'lat' => -4.2271099999999997,
+                'lng' => -81.831699999999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 4.5708679999999999,
+            'lng' => -74.297332999999995,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.4584127,
+                'lng' => -66.851922999999999,
+            ],
+            'southwest' => [
+                'lat' => -4.2271099999999997,
+                'lng' => -79.0088054,
+            ],
+        ],
     ],
     'CR' => [
         'CountryCode' => 'CR',
         'Country' => 'Costa Rica',
         'CurrencyCode' => 'CRC',
         'CurrencyName' => 'Costa Rican Colon',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CR',
         'Iso3' => 'CRI',
         'Capital' => 'San Jose',
@@ -815,14 +1866,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'es-CR,en',
         'Neighbours' => 'PA,NI',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 11.219680800000001,
+                'lng' => -82.51830009999999,
+            ],
+            'southwest' => [
+                'lat' => 5.4960999999999993,
+                'lng' => -87.09899999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 9.7489169999999987,
+            'lng' => -83.753428,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 11.219680800000001,
+                'lng' => -82.55265709999999,
+            ],
+            'southwest' => [
+                'lat' => 8.0406975999999997,
+                'lng' => -85.955711600000001,
+            ],
+        ],
     ],
     'CU' => [
         'CountryCode' => 'CU',
         'Country' => 'Cuba',
         'CurrencyCode' => 'CUC',
         'CurrencyName' => 'Cuban Peso',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CU',
         'Iso3' => 'CUB',
         'Capital' => 'Havana',
@@ -833,14 +1908,38 @@ return [
         'PostalCodeRegex' => '^(?:CP)*(\\d{5})$',
         'Languages' => 'es-CU',
         'Neighbours' => 'US',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 23.377600099999999,
+                'lng' => -73.954499999999996,
+            ],
+            'southwest' => [
+                'lat' => 19.6529001,
+                'lng' => -85.171500100000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 21.521757000000001,
+            'lng' => -77.781166999999996,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 23.2767521,
+                'lng' => -74.13222309999999,
+            ],
+            'southwest' => [
+                'lat' => 19.825899400000001,
+                'lng' => -84.951888699999998,
+            ],
+        ],
     ],
     'CV' => [
         'CountryCode' => 'CV',
         'Country' => 'Cape Verde',
         'CurrencyCode' => 'CVE',
         'CurrencyName' => 'Cape Verde Escudo',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CV',
         'Iso3' => 'CPV',
         'Capital' => 'Praia',
@@ -851,14 +1950,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'pt-CV',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.3191764,
+                'lng' => -22.593383899999999,
+            ],
+            'southwest' => [
+                'lat' => 14.727073300000001,
+                'lng' => -25.383911000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.120142,
+            'lng' => -23.605186799999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 15.3403168,
+                'lng' => -23.429079600000001,
+            ],
+            'southwest' => [
+                'lat' => 14.899967200000001,
+                'lng' => -23.7812941,
+            ],
+        ],
     ],
     'CY' => [
         'CountryCode' => 'CY',
         'Country' => 'Cyprus',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CY',
         'Iso3' => 'CYP',
         'Capital' => 'Nicosia',
@@ -869,14 +1992,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'el-CY,tr-CY,en',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 35.707199899999999,
+                'lng' => 34.604500000000009,
+            ],
+            'southwest' => [
+                'lat' => 34.630400100000003,
+                'lng' => 32.245899999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 35.126412999999999,
+            'lng' => 33.429859,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 35.707196400000001,
+                'lng' => 34.604482599999997,
+            ],
+            'southwest' => [
+                'lat' => 34.632303,
+                'lng' => 32.269481599999999,
+            ],
+        ],
     ],
     'CZ' => [
         'CountryCode' => 'CZ',
         'Country' => 'Czech Republic, The',
         'CurrencyCode' => 'CZK',
         'CurrencyName' => 'Czech Koruna',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'CZ',
         'Iso3' => 'CZE',
         'Capital' => 'Prague',
@@ -887,14 +2034,38 @@ return [
         'PostalCodeRegex' => '^\\d{3}\\s?\\d{2}$',
         'Languages' => 'cs,sk',
         'Neighbours' => 'PL,DE,SK,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 51.055718499999998,
+                'lng' => 18.8592361,
+            ],
+            'southwest' => [
+                'lat' => 48.551808100000002,
+                'lng' => 12.090589,
+            ],
+        ],
+        'Location' => [
+            'lat' => 49.817491999999987,
+            'lng' => 15.472962000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 51.0556786,
+                'lng' => 18.8592361,
+            ],
+            'southwest' => [
+                'lat' => 48.551808100000002,
+                'lng' => 12.090589,
+            ],
+        ],
     ],
     'DE' => [
         'CountryCode' => 'DE',
         'Country' => 'Germany',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'DE',
         'Iso3' => 'DEU',
         'Capital' => 'Berlin',
@@ -905,14 +2076,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'de',
         'Neighbours' => 'CH,PL,NL,DK,BE,CZ,LU,FR,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 55.081499999999998,
+                'lng' => 15.0418962,
+            ],
+            'southwest' => [
+                'lat' => 47.270111499999999,
+                'lng' => 5.8663425,
+            ],
+        ],
+        'Location' => [
+            'lat' => 51.165691000000002,
+            'lng' => 10.451525999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 55.058342499999988,
+                'lng' => 15.041848699999999,
+            ],
+            'southwest' => [
+                'lat' => 47.270248199999997,
+                'lng' => 5.8664873999999996,
+            ],
+        ],
     ],
     'DJ' => [
         'CountryCode' => 'DJ',
         'Country' => 'Djibouti',
         'CurrencyCode' => 'DJF',
         'CurrencyName' => 'Djibouti Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'DJ',
         'Iso3' => 'DJI',
         'Capital' => 'Djibouti',
@@ -923,14 +2118,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-DJ,ar,so-DJ,aa',
         'Neighbours' => 'ER,ET,SO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.7136973,
+                'lng' => 43.483899999999998,
+            ],
+            'southwest' => [
+                'lat' => 10.9319439,
+                'lng' => 41.759721999999996,
+            ],
+        ],
+        'Location' => [
+            'lat' => 11.825138000000001,
+            'lng' => 42.590274999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.713616200000001,
+                'lng' => 43.417358800000002,
+            ],
+            'southwest' => [
+                'lat' => 10.9319439,
+                'lng' => 41.759721999999996,
+            ],
+        ],
     ],
     'DK' => [
         'CountryCode' => 'DK',
         'Country' => 'Denmark',
         'CurrencyCode' => 'DKK',
         'CurrencyName' => 'Danish Krone',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'DK',
         'Iso3' => 'DNK',
         'Capital' => 'Copenhagen',
@@ -941,14 +2160,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'da-DK,en,fo,de-DK',
         'Neighbours' => 'DE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 58.028460000000003,
+                'lng' => 15.229799999999999,
+            ],
+            'southwest' => [
+                'lat' => 54.4317001,
+                'lng' => 7.8552000999999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => 56.263919999999999,
+            'lng' => 9.5017849999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 57.7518131,
+                'lng' => 12.793681599999999,
+            ],
+            'southwest' => [
+                'lat' => 54.559168999999997,
+                'lng' => 8.0722491999999999,
+            ],
+        ],
     ],
     'DM' => [
         'CountryCode' => 'DM',
         'Country' => 'Dominica',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'DM',
         'Iso3' => 'DMA',
         'Capital' => 'Roseau',
@@ -959,14 +2202,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-DM',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 15.6485199,
+                'lng' => -61.230901800000012,
+            ],
+            'southwest' => [
+                'lat' => 15.2042266,
+                'lng' => -61.484107999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.414999,
+            'lng' => -61.370976000000013,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 15.639935299999999,
+                'lng' => -61.240047399999987,
+            ],
+            'southwest' => [
+                'lat' => 15.207533400000001,
+                'lng' => -61.479959399999998,
+            ],
+        ],
     ],
     'DO' => [
         'CountryCode' => 'DO',
         'Country' => 'Dominican Rep.',
         'CurrencyCode' => 'DOP',
         'CurrencyName' => 'Dominican Republic Peso',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'DO',
         'Iso3' => 'DOM',
         'Capital' => 'Santo Domingo',
@@ -977,14 +2244,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'es-DO',
         'Neighbours' => 'HT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 19.978698900000001,
+                'lng' => -68.252600100000009,
+            ],
+            'southwest' => [
+                'lat' => 17.361100100000002,
+                'lng' => -72.007509900000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.735693000000001,
+            'lng' => -70.162650999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 19.931922700000001,
+                'lng' => -68.32292799999999,
+            ],
+            'southwest' => [
+                'lat' => 17.470090899999999,
+                'lng' => -72.007509900000002,
+            ],
+        ],
     ],
     'DZ' => [
         'CountryCode' => 'DZ',
         'Country' => 'Algeria',
         'CurrencyCode' => 'DZD',
         'CurrencyName' => 'Algerian Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'DZ',
         'Iso3' => 'DZA',
         'Capital' => 'Algiers',
@@ -995,14 +2286,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-DZ',
         'Neighbours' => 'NE,EH,LY,MR,TN,MA,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 37.221600000000002,
+                'lng' => 11.999999000000001,
+            ],
+            'southwest' => [
+                'lat' => 18.968146999999998,
+                'lng' => -8.667611299999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 28.033885999999999,
+            'lng' => 1.659626,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 37.089762700000001,
+                'lng' => 11.999999000000001,
+            ],
+            'southwest' => [
+                'lat' => 18.968146999999998,
+                'lng' => -8.6676111000000002,
+            ],
+        ],
     ],
     'EC' => [
         'CountryCode' => 'EC',
         'Country' => 'Ecuador',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'EC',
         'Iso3' => 'ECU',
         'Capital' => 'Quito',
@@ -1013,14 +2328,38 @@ return [
         'PostalCodeRegex' => '^([a-zA-Z]\\d{4}[a-zA-Z])$',
         'Languages' => 'es-EC',
         'Neighbours' => 'PE,CO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 2.2955000000000001,
+                'lng' => -75.188794000000001,
+            ],
+            'southwest' => [
+                'lat' => -5.0143510999999998,
+                'lng' => -92.603799999999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => -1.8312390000000001,
+            'lng' => -78.183405999999991,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 1.4284874999999999,
+                'lng' => -75.188794000000001,
+            ],
+            'southwest' => [
+                'lat' => -5.0143510999999998,
+                'lng' => -81.084980899999991,
+            ],
+        ],
     ],
     'EE' => [
         'CountryCode' => 'EE',
         'Country' => 'Estonia',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'EE',
         'Iso3' => 'EST',
         'Capital' => 'Tallinn',
@@ -1031,14 +2370,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'et,ru',
         'Neighbours' => 'RU,LV',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 59.731499999999997,
+                'lng' => 28.2101389,
+            ],
+            'southwest' => [
+                'lat' => 57.509316000000013,
+                'lng' => 21.654099899999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 58.595272000000001,
+            'lng' => 25.013607,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 59.700265799999997,
+                'lng' => 28.208967699999999,
+            ],
+            'southwest' => [
+                'lat' => 57.509353900000001,
+                'lng' => 21.764372099999999,
+            ],
+        ],
     ],
     'EG' => [
         'CountryCode' => 'EG',
         'Country' => 'Egypt',
         'CurrencyCode' => 'EGP',
         'CurrencyName' => 'Egyptian Pound',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'EG',
         'Iso3' => 'EGY',
         'Capital' => 'Cairo',
@@ -1049,14 +2412,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-EG,en,fr',
         'Neighbours' => 'LY,SD,IL,PS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 31.812200000000001,
+                'lng' => 37.056899999999999,
+            ],
+            'southwest' => [
+                'lat' => 21.999999899999999,
+                'lng' => 24.696774999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 26.820553,
+            'lng' => 30.802498,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 31.670987,
+                'lng' => 36.894544600000003,
+            ],
+            'southwest' => [
+                'lat' => 21.999999899999999,
+                'lng' => 24.696774999999999,
+            ],
+        ],
     ],
     'ER' => [
         'CountryCode' => 'ER',
         'Country' => 'Eritrea',
         'CurrencyCode' => 'ERN',
         'CurrencyName' => 'Nakfa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ER',
         'Iso3' => 'ERI',
         'Capital' => 'Asmara',
@@ -1067,14 +2454,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'aa-ER,ar,tig,kun,ti-ER',
         'Neighbours' => 'ET,SD,DJ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.020413699999999,
+                'lng' => 43.231200000000001,
+            ],
+            'southwest' => [
+                'lat' => 12.354723,
+                'lng' => 36.433348000000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.179384000000001,
+            'lng' => 39.782333999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.020413699999999,
+                'lng' => 43.142924499999999,
+            ],
+            'southwest' => [
+                'lat' => 12.354723,
+                'lng' => 36.433348000000002,
+            ],
+        ],
     ],
     'ES' => [
         'CountryCode' => 'ES',
         'Country' => 'Spain',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ES',
         'Iso3' => 'ESP',
         'Capital' => 'Madrid',
@@ -1085,14 +2496,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'es-ES,ca,gl,eu,oc',
         'Neighbours' => 'AD,PT,GI,FR,MA',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 43.8504,
+                'lng' => 4.6361999999999997,
+            ],
+            'southwest' => [
+                'lat' => 27.4985,
+                'lng' => -18.264800099999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 40.463667000000008,
+            'lng' => -3.7492200000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 45.244,
+                'lng' => 5.0979999999999999,
+            ],
+            'southwest' => [
+                'lat' => 35.173000000000009,
+                'lng' => -12.523999999999999,
+            ],
+        ],
     ],
     'ET' => [
         'CountryCode' => 'ET',
         'Country' => 'Ethiopia',
         'CurrencyCode' => 'ETB',
         'CurrencyName' => 'Birr',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ET',
         'Iso3' => 'ETH',
         'Capital' => 'Addis Ababa',
@@ -1103,14 +2538,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'am,en-ET,om-ET,ti-ET,so-ET,sid',
         'Neighbours' => 'ER,KE,SD,SS,SO,DJ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 14.894214099999999,
+                'lng' => 48.0010561,
+            ],
+            'southwest' => [
+                'lat' => 3.4041369000000001,
+                'lng' => 32.997734000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 9.1450000000000014,
+            'lng' => 40.489673000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 14.894214099999999,
+                'lng' => 48.0010561,
+            ],
+            'southwest' => [
+                'lat' => 3.4041369000000001,
+                'lng' => 32.997734000000001,
+            ],
+        ],
     ],
     'FI' => [
         'CountryCode' => 'FI',
         'Country' => 'Finland',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'FI',
         'Iso3' => 'FIN',
         'Capital' => 'Helsinki',
@@ -1121,14 +2580,38 @@ return [
         'PostalCodeRegex' => '^(?:FI)*(\\d{5})$',
         'Languages' => 'fi-FI,sv-FI,smn',
         'Neighbours' => 'NO,RU,SE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 70.0922932,
+                'lng' => 31.587099899999998,
+            ],
+            'southwest' => [
+                'lat' => 59.693623000000002,
+                'lng' => 20.456500200000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 61.924109999999992,
+            'lng' => 25.748151,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 70.09067619999999,
+                'lng' => 31.585476100000001,
+            ],
+            'southwest' => [
+                'lat' => 59.7432418,
+                'lng' => 20.553211399999999,
+            ],
+        ],
     ],
     'FJ' => [
         'CountryCode' => 'FJ',
         'Country' => 'Fiji',
         'CurrencyCode' => 'FJD',
         'CurrencyName' => 'Fijian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'FJ',
         'Iso3' => 'FJI',
         'Capital' => 'Suva',
@@ -1139,14 +2622,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-FJ,fj',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -12.2084957,
+                'lng' => -177.86865230000001,
+            ],
+            'southwest' => [
+                'lat' => -20.899871300000001,
+                'lng' => 176.79199220000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -17.713370999999999,
+            'lng' => 178.065032,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -15.7088269,
+                'lng' => -178.39293839999999,
+            ],
+            'southwest' => [
+                'lat' => -19.216151700000001,
+                'lng' => 176.9094944,
+            ],
+        ],
     ],
     'FK' => [
         'CountryCode' => 'FK',
         'Country' => 'Falkland Islands',
         'CurrencyCode' => 'GBP',
         'CurrencyName' => 'Pound Sterling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'FK',
         'Iso3' => 'FLK',
         'Capital' => 'Stanley',
@@ -1157,14 +2664,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-FK',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -50.980911499999998,
+                'lng' => -57.676849500000003,
+            ],
+            'southwest' => [
+                'lat' => -52.474416099999999,
+                'lng' => -61.379241899999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => -51.796253,
+            'lng' => -59.523612999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -51.011692500000002,
+                'lng' => -57.687417399999987,
+            ],
+            'southwest' => [
+                'lat' => -52.449627999999997,
+                'lng' => -61.347586300000003,
+            ],
+        ],
     ],
     'FM' => [
         'CountryCode' => 'FM',
         'Country' => 'Micronesia, Federated States Of',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'FM',
         'Iso3' => 'FSM',
         'Capital' => 'Palikir',
@@ -1175,14 +2706,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'en-FM,chk,pon,yap,kos,uli,woe,nkr,kpg',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 10.277086300000001,
+                'lng' => 163.5177612,
+            ],
+            'southwest' => [
+                'lat' => 0.15380840000000001,
+                'lng' => 136.9226075,
+            ],
+        ],
+        'Location' => [
+            'lat' => 6.8874580999999999,
+            'lng' => 158.2225229,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 7.0113411999999986,
+                'lng' => 158.36374670000001,
+            ],
+            'southwest' => [
+                'lat' => 6.7635749999999986,
+                'lng' => 158.08129919999999,
+            ],
+        ],
     ],
     'FO' => [
         'CountryCode' => 'FO',
         'Country' => 'Faroe Islands',
         'CurrencyCode' => 'DKK',
         'CurrencyName' => 'Danish Krone',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'FO',
         'Iso3' => 'FRO',
         'Capital' => 'Torshavn',
@@ -1193,14 +2748,38 @@ return [
         'PostalCodeRegex' => '^(?:FO)*(\\d{3})$',
         'Languages' => 'fo,da-FO',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 62.431074199999998,
+                'lng' => -6.1907959999999997,
+            ],
+            'southwest' => [
+                'lat' => 61.367777599999997,
+                'lng' => -7.7178956000000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 61.892635000000013,
+            'lng' => -6.9118059999999986,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 62.394247499999999,
+                'lng' => -6.2540356999999993,
+            ],
+            'southwest' => [
+                'lat' => 61.390932000000006,
+                'lng' => -7.6919049999999993,
+            ],
+        ],
     ],
     'FR' => [
         'CountryCode' => 'FR',
         'Country' => 'France',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'FR',
         'Iso3' => 'FRA',
         'Capital' => 'Paris',
@@ -1211,14 +2790,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'fr-FR,frp,br,co,ca,eu,oc',
         'Neighbours' => 'CH,DE,BE,LU,IT,AD,MC,ES',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 51.124199900000001,
+                'lng' => 9.6624999000000003,
+            ],
+            'southwest' => [
+                'lat' => 41.3253001,
+                'lng' => -5.5590999999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 46.227637999999999,
+            'lng' => 2.213749,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 51.089162799999997,
+                'lng' => 9.5597934000000002,
+            ],
+            'southwest' => [
+                'lat' => 41.342778000000003,
+                'lng' => -5.1422578999999997,
+            ],
+        ],
     ],
     'GA' => [
         'CountryCode' => 'GA',
         'Country' => 'Gabon',
         'CurrencyCode' => 'XAF',
         'CurrencyName' => 'CFA Franc - Central Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GA',
         'Iso3' => 'GAB',
         'Capital' => 'Libreville',
@@ -1229,14 +2832,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-GA',
         'Neighbours' => 'CM,GQ,CG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 2.3181090000000002,
+                'lng' => 14.526923399999999,
+            ],
+            'southwest' => [
+                'lat' => -4.1656000000000004,
+                'lng' => 8.4209999999999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => -0.80368899999999999,
+            'lng' => 11.609444,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 2.3181090000000002,
+                'lng' => 14.526867899999999,
+            ],
+            'southwest' => [
+                'lat' => -3.9608056999999999,
+                'lng' => 8.6990528000000005,
+            ],
+        ],
     ],
     'GB' => [
         'CountryCode' => 'GB',
         'Country' => 'United Kingdom',
         'CurrencyCode' => 'GBP',
         'CurrencyName' => 'Pound Sterling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GB',
         'Iso3' => 'GBR',
         'Capital' => 'London',
@@ -1247,14 +2874,38 @@ return [
         'PostalCodeRegex' => '^((?:(?:[A-PR-UWYZ][A-HK-Y]\\d[ABEHMNPRV-Y0-9]|[A-PR-UWYZ]\\d[A-HJKPS-UW0-9])\\s\\d[ABD-HJLNP-UW-Z]{2})|GIR\\s?0AA)$',
         'Languages' => 'en-GB,cy-GB,gd',
         'Neighbours' => 'IE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 60.915699999999987,
+                'lng' => 33.916554900000001,
+            ],
+            'southwest' => [
+                'lat' => 34.561399999999999,
+                'lng' => -8.8988999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 55.378050999999999,
+            'lng' => -3.4359730000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 60.854849599999987,
+                'lng' => 1.7629950000000001,
+            ],
+            'southwest' => [
+                'lat' => 49.8823322,
+                'lng' => -8.6494473000000003,
+            ],
+        ],
     ],
     'GD' => [
         'CountryCode' => 'GD',
         'Country' => 'Grenada',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'GD',
         'Iso3' => 'GRD',
         'Capital' => 'St. George\'s',
@@ -1265,14 +2916,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-GD',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.5367,
+                'lng' => -61.374699900000003,
+            ],
+            'southwest' => [
+                'lat' => 11.9829051,
+                'lng' => -61.805899999999987,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.1165,
+            'lng' => -61.678999999999988,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.235072300000001,
+                'lng' => -61.584720599999997,
+            ],
+            'southwest' => [
+                'lat' => 11.9848781,
+                'lng' => -61.802424599999988,
+            ],
+        ],
     ],
     'GE' => [
         'CountryCode' => 'GE',
         'Country' => 'Georgia',
         'CurrencyCode' => 'GEL',
         'CurrencyName' => 'Georgian Lari',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GE',
         'Iso3' => 'GEO',
         'Capital' => 'Tbilisi',
@@ -1283,14 +2958,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'ka,ru,hy,az',
         'Neighbours' => 'AM,AZ,TR,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 35.000658899999998,
+                'lng' => -80.751429000000002,
+            ],
+            'southwest' => [
+                'lat' => 30.355590800000002,
+                'lng' => -85.605164900000005,
+            ],
+        ],
+        'Location' => [
+            'lat' => 32.1656221,
+            'lng' => -82.900075099999995,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 35.000658000000001,
+                'lng' => -80.841316699999993,
+            ],
+            'southwest' => [
+                'lat' => 30.355590800000002,
+                'lng' => -85.605164900000005,
+            ],
+        ],
     ],
     'GF' => [
         'CountryCode' => 'GF',
         'Country' => 'French Guyana',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GF',
         'Iso3' => 'GUF',
         'Capital' => 'Cayenne',
@@ -1301,14 +3000,38 @@ return [
         'PostalCodeRegex' => '^((97|98)3\\d{2})$',
         'Languages' => 'fr-GF',
         'Neighbours' => 'SR,BR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.9547999999999996,
+                'lng' => -51.616449099999997,
+            ],
+            'southwest' => [
+                'lat' => 2.1092870000000001,
+                'lng' => -54.554437900000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 3.9338890000000002,
+            'lng' => -53.125782000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.7522124999999997,
+                'lng' => -51.620710499999987,
+            ],
+            'southwest' => [
+                'lat' => 2.1092870000000001,
+                'lng' => -54.554437900000003,
+            ],
+        ],
     ],
     'GG' => [
         'CountryCode' => 'GG',
         'Country' => 'Guernsey',
         'CurrencyCode' => 'GBP',
         'CurrencyName' => 'Pound Sterling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GG',
         'Iso3' => 'GGY',
         'Capital' => 'St Peter Port',
@@ -1319,14 +3042,38 @@ return [
         'PostalCodeRegex' => '^((?:(?:[A-PR-UWYZ][A-HK-Y]\\d[ABEHMNPRV-Y0-9]|[A-PR-UWYZ]\\d[A-HJKPS-UW0-9])\\s\\d[ABD-HJLNP-UW-Z]{2})|GIR\\s?0AA)$',
         'Languages' => 'en,fr',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 49.734500099999998,
+                'lng' => -2.1562999999999999,
+            ],
+            'southwest' => [
+                'lat' => 49.396900100000003,
+                'lng' => -2.6831000999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 49.465691,
+            'lng' => -2.5852780000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 49.509410799999998,
+                'lng' => -2.5016885000000002,
+            ],
+            'southwest' => [
+                'lat' => 49.416719899999997,
+                'lng' => -2.6745361000000001,
+            ],
+        ],
     ],
     'GH' => [
         'CountryCode' => 'GH',
         'Country' => 'Ghana',
         'CurrencyCode' => 'GHS',
         'CurrencyName' => 'Cedi',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GH',
         'Iso3' => 'GHA',
         'Capital' => 'Accra',
@@ -1337,14 +3084,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-GH,ak,ee,tw',
         'Neighbours' => 'CI,TG,BF',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 11.175031000000001,
+                'lng' => 1.199972,
+            ],
+            'southwest' => [
+                'lat' => 4.6339001,
+                'lng' => -3.260786,
+            ],
+        ],
+        'Location' => [
+            'lat' => 7.9465269999999997,
+            'lng' => -1.0231939999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 11.175031000000001,
+                'lng' => 1.1994742,
+            ],
+            'southwest' => [
+                'lat' => 4.7388737000000001,
+                'lng' => -3.260786,
+            ],
+        ],
     ],
     'GI' => [
         'CountryCode' => 'GI',
         'Country' => 'Gibraltar',
         'CurrencyCode' => 'GBP',
         'CurrencyName' => 'Pound Sterling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GI',
         'Iso3' => 'GIB',
         'Capital' => 'Gibraltar',
@@ -1355,14 +3126,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-GI,es,it,pt',
         'Neighbours' => 'ES',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 36.155118799999997,
+                'lng' => -5.3344999999999994,
+            ],
+            'southwest' => [
+                'lat' => 36.103899900000002,
+                'lng' => -5.3720999999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 36.140751000000002,
+            'lng' => -5.3535849999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 36.155118799999997,
+                'lng' => -5.3384193999999994,
+            ],
+            'southwest' => [
+                'lat' => 36.108834799999997,
+                'lng' => -5.3674153999999996,
+            ],
+        ],
     ],
     'GL' => [
         'CountryCode' => 'GL',
         'Country' => 'Greenland',
         'CurrencyCode' => 'DKK',
         'CurrencyName' => 'Danish Krone',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GL',
         'Iso3' => 'GRL',
         'Capital' => 'Nuuk',
@@ -1373,14 +3168,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'kl,da-GL,en',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 83.9702561,
+                'lng' => -8.2617198999999992,
+            ],
+            'southwest' => [
+                'lat' => 58.263289999999998,
+                'lng' => -73.828119599999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => 71.706935999999999,
+            'lng' => -42.604303000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 83.637899199999993,
+                'lng' => -11.3123194,
+            ],
+            'southwest' => [
+                'lat' => 59.777267399999992,
+                'lng' => -73.035063899999997,
+            ],
+        ],
     ],
     'GM' => [
         'CountryCode' => 'GM',
         'Country' => 'Gambia',
         'CurrencyCode' => 'GMD',
         'CurrencyName' => 'Dalasi',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GM',
         'Iso3' => 'GMB',
         'Capital' => 'Banjul',
@@ -1391,14 +3210,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-GM,mnk,wof,wo,ff',
         'Neighbours' => 'SN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 13.824949699999999,
+                'lng' => -13.792872600000001,
+            ],
+            'southwest' => [
+                'lat' => 13.009899900000001,
+                'lng' => -16.946400100000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 13.443182,
+            'lng' => -15.310138999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 13.824949699999999,
+                'lng' => -13.792872600000001,
+            ],
+            'southwest' => [
+                'lat' => 13.0379673,
+                'lng' => -16.8136312,
+            ],
+        ],
     ],
     'GN' => [
         'CountryCode' => 'GN',
         'Country' => 'Guinea Republic',
         'CurrencyCode' => 'GNF',
         'CurrencyName' => 'Guinea Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GN',
         'Iso3' => 'GIN',
         'Capital' => 'Conakry',
@@ -1409,14 +3252,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-GN',
         'Neighbours' => 'LR,SN,SL,CI,GW,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.674615899999999,
+                'lng' => -7.6378529999999998,
+            ],
+            'southwest' => [
+                'lat' => 7.1909090999999989,
+                'lng' => -15.282,
+            ],
+        ],
+        'Location' => [
+            'lat' => 9.9455869999999997,
+            'lng' => -9.6966450000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.6745099,
+                'lng' => -7.6378621000000004,
+            ],
+            'southwest' => [
+                'lat' => 7.1909090999999989,
+                'lng' => -15.075795599999999,
+            ],
+        ],
     ],
     'GP' => [
         'CountryCode' => 'GP',
         'Country' => 'Guadeloupe',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GP',
         'Iso3' => 'GLP',
         'Capital' => 'Basse-Terre',
@@ -1427,14 +3294,38 @@ return [
         'PostalCodeRegex' => '^((97|98)\\d{3})$',
         'Languages' => 'fr-GP',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 16.557227300000001,
+                'lng' => -60.947299999999998,
+            ],
+            'southwest' => [
+                'lat' => 15.742032,
+                'lng' => -61.846800000000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 16.265000000000001,
+            'lng' => -61.550999999999988,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 16.5143676,
+                'lng' => -61.001879199999991,
+            ],
+            'southwest' => [
+                'lat' => 15.832048,
+                'lng' => -61.809853599999997,
+            ],
+        ],
     ],
     'GQ' => [
         'CountryCode' => 'GQ',
         'Country' => 'Guinea-Equatorial',
         'CurrencyCode' => 'XAF',
         'CurrencyName' => 'CFA Franc - Central Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GQ',
         'Iso3' => 'GNQ',
         'Capital' => 'Malabo',
@@ -1445,14 +3336,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'es-GQ,fr',
         'Neighbours' => 'GA,CM',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 3.8355000000000001,
+                'lng' => 11.333299999999999,
+            ],
+            'southwest' => [
+                'lat' => -1.5475000000000001,
+                'lng' => 5.5419000999999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => 1.650801,
+            'lng' => 10.267894999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 2.3500458000000002,
+                'lng' => 11.333299999999999,
+            ],
+            'southwest' => [
+                'lat' => 0.88908199999999993,
+                'lng' => 9.3022639999999992,
+            ],
+        ],
     ],
     'GR' => [
         'CountryCode' => 'GR',
         'Country' => 'Greece',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GR',
         'Iso3' => 'GRC',
         'Capital' => 'Athens',
@@ -1463,14 +3378,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'el-GR,en,fr',
         'Neighbours' => 'AL,MK,TR,BG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 41.748878400000002,
+                'lng' => 29.652799900000002,
+            ],
+            'southwest' => [
+                'lat' => 34.5428,
+                'lng' => 19.309799999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 39.074207999999999,
+            'lng' => 21.824311999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 41.748878400000002,
+                'lng' => 28.2465279,
+            ],
+            'southwest' => [
+                'lat' => 34.801900600000003,
+                'lng' => 19.3729783,
+            ],
+        ],
     ],
     'GT' => [
         'CountryCode' => 'GT',
         'Country' => 'Guatemala',
         'CurrencyCode' => 'GTQ',
         'CurrencyName' => 'Quetzal',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GT',
         'Iso3' => 'GTM',
         'Capital' => 'Guatemala City',
@@ -1481,14 +3420,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'es-GT',
         'Neighbours' => 'MX,HN,BZ,SV',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.815697199999999,
+                'lng' => -88.198200099999994,
+            ],
+            'southwest' => [
+                'lat' => 13.630000000000001,
+                'lng' => -92.2714,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.783471,
+            'lng' => -90.230758999999992,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 17.815711400000001,
+                'lng' => -88.230724899999998,
+            ],
+            'southwest' => [
+                'lat' => 13.7400214,
+                'lng' => -92.231835899999993,
+            ],
+        ],
     ],
     'GU' => [
         'CountryCode' => 'GU',
         'Country' => 'Guam',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'GU',
         'Iso3' => 'GUM',
         'Capital' => 'Hagatna',
@@ -1499,14 +3462,38 @@ return [
         'PostalCodeRegex' => '^(969\\d{2})$',
         'Languages' => 'en-GU,ch-GU',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 13.799407199999999,
+                'lng' => 145.11291499999999,
+            ],
+            'southwest' => [
+                'lat' => 13.1022175,
+                'lng' => 144.46472180000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 13.444304000000001,
+            'lng' => 144.79373100000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 13.6543391,
+                'lng' => 144.95667220000001,
+            ],
+            'southwest' => [
+                'lat' => 13.2340731,
+                'lng' => 144.6183881,
+            ],
+        ],
     ],
     'GW' => [
         'CountryCode' => 'GW',
         'Country' => 'Guinea-Bissau',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'GW',
         'Iso3' => 'GNB',
         'Capital' => 'Bissau',
@@ -1517,14 +3504,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'pt-GW,pov',
         'Neighbours' => 'SN,GN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.686946799999999,
+                'lng' => -13.626523499999999,
+            ],
+            'southwest' => [
+                'lat' => 10.714600000000001,
+                'lng' => -16.951899900000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 11.803749,
+            'lng' => -15.180413,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.6869139,
+                'lng' => -13.626523499999999,
+            ],
+            'southwest' => [
+                'lat' => 10.864474599999999,
+                'lng' => -16.715127200000001,
+            ],
+        ],
     ],
     'GY' => [
         'CountryCode' => 'GY',
         'Country' => 'Guyana (British)',
         'CurrencyCode' => 'GYD',
         'CurrencyName' => 'Guyanan Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'GY',
         'Iso3' => 'GUY',
         'Capital' => 'Georgetown',
@@ -1535,14 +3546,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-GY',
         'Neighbours' => 'SR,BR,VE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
+        'Location' => [
+            'lat' => NULL,
+            'lng' => NULL,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
     ],
     'HK' => [
         'CountryCode' => 'HK',
         'Country' => 'Hong Kong',
         'CurrencyCode' => 'HKD',
         'CurrencyName' => 'Hong Kong Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'HK',
         'Iso3' => 'HKG',
         'Capital' => 'Hong Kong',
@@ -1553,14 +3588,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'zh-HK,yue,zh,en',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 22.561968,
+                'lng' => 114.4294999,
+            ],
+            'southwest' => [
+                'lat' => 22.1435,
+                'lng' => 113.8259001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 22.396428,
+            'lng' => 114.109497,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 22.561968,
+                'lng' => 114.40694740000001,
+            ],
+            'southwest' => [
+                'lat' => 22.153388400000001,
+                'lng' => 113.83507899999999,
+            ],
+        ],
     ],
     'HN' => [
         'CountryCode' => 'HN',
         'Country' => 'Honduras',
         'CurrencyCode' => 'HNL',
         'CurrencyName' => 'Lempira',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'HN',
         'Iso3' => 'HND',
         'Capital' => 'Tegucigalpa',
@@ -1571,14 +3630,38 @@ return [
         'PostalCodeRegex' => '^([A-Z]{2}\\d{4})$',
         'Languages' => 'es-HN',
         'Neighbours' => 'GT,NI,SV',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.467799899999999,
+                'lng' => -83.062100099999995,
+            ],
+            'southwest' => [
+                'lat' => 12.984224599999999,
+                'lng' => -89.356482200000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.199999,
+            'lng' => -86.241905000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 16.516851500000001,
+                'lng' => -83.127579799999992,
+            ],
+            'southwest' => [
+                'lat' => 12.984224599999999,
+                'lng' => -89.356482200000002,
+            ],
+        ],
     ],
     'HR' => [
         'CountryCode' => 'HR',
         'Country' => 'Croatia',
         'CurrencyCode' => 'HRK',
         'CurrencyName' => 'Croatian Kuna',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'HR',
         'Iso3' => 'HRV',
         'Capital' => 'Zagreb',
@@ -1589,14 +3672,38 @@ return [
         'PostalCodeRegex' => '^(?:HR)*(\\d{5})$',
         'Languages' => 'hr-HR,sr',
         'Neighbours' => 'HU,SI,BA,ME,RS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 46.554985700000003,
+                'lng' => 19.448052300000001,
+            ],
+            'southwest' => [
+                'lat' => 42.338508699999998,
+                'lng' => 13.3649,
+            ],
+        ],
+        'Location' => [
+            'lat' => 45.100000000000001,
+            'lng' => 15.199999999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 46.5547562,
+                'lng' => 19.448052300000001,
+            ],
+            'southwest' => [
+                'lat' => 42.3879661,
+                'lng' => 13.4896998,
+            ],
+        ],
     ],
     'HT' => [
         'CountryCode' => 'HT',
         'Country' => 'Haiti',
         'CurrencyCode' => 'HTG',
         'CurrencyName' => 'Gourde',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'HT',
         'Iso3' => 'HTI',
         'Capital' => 'Port-au-Prince',
@@ -1607,14 +3714,38 @@ return [
         'PostalCodeRegex' => '^(?:HT)*(\\d{4})$',
         'Languages' => 'ht,fr-HT',
         'Neighbours' => 'DO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 20.1282,
+                'lng' => -71.621753999999996,
+            ],
+            'southwest' => [
+                'lat' => 17.9422,
+                'lng' => -74.608199999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.971187,
+            'lng' => -72.285214999999994,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 20.0895318,
+                'lng' => -71.621753999999996,
+            ],
+            'southwest' => [
+                'lat' => 18.021887499999998,
+                'lng' => -74.480751499999997,
+            ],
+        ],
     ],
     'HU' => [
         'CountryCode' => 'HU',
         'Country' => 'Hungary',
         'CurrencyCode' => 'HUF',
         'CurrencyName' => 'Forint',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'HU',
         'Iso3' => 'HUN',
         'Capital' => 'Budapest',
@@ -1625,14 +3756,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'hu-HU',
         'Neighbours' => 'SK,SI,RO,UA,HR,AT,RS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 48.585234,
+                'lng' => 22.8981216,
+            ],
+            'southwest' => [
+                'lat' => 45.737088900000003,
+                'lng' => 16.113307800000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 47.162494000000002,
+            'lng' => 19.503304,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 48.585234,
+                'lng' => 22.8981216,
+            ],
+            'southwest' => [
+                'lat' => 45.737088900000003,
+                'lng' => 16.113307800000001,
+            ],
+        ],
     ],
     'IC' => [
         'CountryCode' => 'IC',
         'Country' => 'Canary Islands, The',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IC',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -1643,14 +3798,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 29.416506900000002,
+                'lng' => -13.333647300000001,
+            ],
+            'southwest' => [
+                'lat' => 27.637789399999999,
+                'lng' => -18.161221600000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 28.291563700000001,
+            'lng' => -16.629130400000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 29.463514,
+                'lng' => -13.315429999999999,
+            ],
+            'southwest' => [
+                'lat' => 27.425414,
+                'lng' => -18.391113000000001,
+            ],
+        ],
     ],
     'ID' => [
         'CountryCode' => 'ID',
         'Country' => 'Indonesia',
         'CurrencyCode' => 'IDR',
         'CurrencyName' => 'Rupiah',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ID',
         'Iso3' => 'IDN',
         'Capital' => 'Jakarta',
@@ -1661,14 +3840,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'id,en,nl,jv',
         'Neighbours' => 'PG,TL,MY',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 6.2169998999999994,
+                'lng' => 141.04249999999999,
+            ],
+            'southwest' => [
+                'lat' => -11.1082999,
+                'lng' => 94.735100000000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => -0.78927499999999995,
+            'lng' => 113.92132700000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.9052479,
+                'lng' => 141.0194444,
+            ],
+            'southwest' => [
+                'lat' => -11.005261000000001,
+                'lng' => 95.011061900000016,
+            ],
+        ],
     ],
     'IE' => [
         'CountryCode' => 'IE',
         'Country' => 'Ireland, Republic Of',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IE',
         'Iso3' => 'IRL',
         'Capital' => 'Dublin',
@@ -1679,14 +3882,38 @@ return [
         'PostalCodeRegex' => '^[A-Z]\\d{2}$|^[A-Z]{3}[A-Z]{4}$',
         'Languages' => 'en-IE,ga-IE',
         'Neighbours' => 'GB',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 55.4602,
+                'lng' => -5.668900100000001,
+            ],
+            'southwest' => [
+                'lat' => 51.306600000000003,
+                'lng' => -10.7666001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 53.412909999999997,
+            'lng' => -8.2438900000000004,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 55.435111799999987,
+                'lng' => -5.9946799000000004,
+            ],
+            'southwest' => [
+                'lat' => 51.420055400000003,
+                'lng' => -10.6629609,
+            ],
+        ],
     ],
     'IL' => [
         'CountryCode' => 'IL',
         'Country' => 'Israel',
         'CurrencyCode' => 'ILS',
         'CurrencyName' => 'New Israeli Shekel',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IL',
         'Iso3' => 'ISR',
         'Capital' => 'Jerusalem',
@@ -1697,14 +3924,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'he,ar-IL,en-IL,',
         'Neighbours' => 'SY,JO,LB,EG,PS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 33.332805000000008,
+                'lng' => 35.896244000000003,
+            ],
+            'southwest' => [
+                'lat' => 29.47969999999999,
+                'lng' => 34.267387100000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 31.046050999999999,
+            'lng' => 34.851612000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 33.332805000000008,
+                'lng' => 35.896244000000003,
+            ],
+            'southwest' => [
+                'lat' => 29.490646399999999,
+                'lng' => 34.267387100000001,
+            ],
+        ],
     ],
     'IN' => [
         'CountryCode' => 'IN',
         'Country' => 'India',
         'CurrencyCode' => 'INR',
         'CurrencyName' => 'Indian Rupee',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IN',
         'Iso3' => 'IND',
         'Capital' => 'New Delhi',
@@ -1715,14 +3966,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'en-IN,hi,bn,te,mr,ta,ur,gu,kn,ml,or,pa,as,bh,sat,ks,ne,sd,kok,doi,mni,sit,sa,fr,lus,inc',
         'Neighbours' => 'CN,NP,MM,BT,PK,BD',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 35.5087008,
+                'lng' => 97.395358699999989,
+            ],
+            'southwest' => [
+                'lat' => 6.4626998999999996,
+                'lng' => 68.109700000000004,
+            ],
+        ],
+        'Location' => [
+            'lat' => 20.593684,
+            'lng' => 78.962879999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 35.5087008,
+                'lng' => 97.394980699999991,
+            ],
+            'southwest' => [
+                'lat' => 6.7535159,
+                'lng' => 68.162885199999991,
+            ],
+        ],
     ],
     'IQ' => [
         'CountryCode' => 'IQ',
         'Country' => 'Iraq',
         'CurrencyCode' => 'IQD',
         'CurrencyName' => 'Iraqi Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IQ',
         'Iso3' => 'IRQ',
         'Capital' => 'Baghdad',
@@ -1733,14 +4008,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-IQ,ku,hy',
         'Neighbours' => 'SY,SA,IR,JO,TR,KW',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 37.380645000000001,
+                'lng' => 48.6350999,
+            ],
+            'southwest' => [
+                'lat' => 29.061207899999999,
+                'lng' => 38.793602900000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 33.223191,
+            'lng' => 43.679290999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 37.380645000000001,
+                'lng' => 48.6350999,
+            ],
+            'southwest' => [
+                'lat' => 29.061207899999999,
+                'lng' => 38.793602900000003,
+            ],
+        ],
     ],
     'IR' => [
         'CountryCode' => 'IR',
         'Country' => 'Iran (Islamic Republic of)',
         'CurrencyCode' => 'IRR',
         'CurrencyName' => 'Iranian Rial',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IR',
         'Iso3' => 'IRN',
         'Capital' => 'Tehran',
@@ -1751,14 +4050,38 @@ return [
         'PostalCodeRegex' => '^(\\d{10})$',
         'Languages' => 'fa-IR,ku',
         'Neighbours' => 'TM,AF,IQ,AM,PK,AZ,TR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 39.782055999999997,
+                'lng' => 63.333336600000003,
+            ],
+            'southwest' => [
+                'lat' => 24.806699900000002,
+                'lng' => 44.032694900000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 32.427908000000002,
+            'lng' => 53.688046,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 39.78154,
+                'lng' => 63.333063999999993,
+            ],
+            'southwest' => [
+                'lat' => 25.0594286,
+                'lng' => 44.033017000000001,
+            ],
+        ],
     ],
     'IS' => [
         'CountryCode' => 'IS',
         'Country' => 'Iceland',
         'CurrencyCode' => 'ISK',
         'CurrencyName' => 'Icelandic Krona',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IS',
         'Iso3' => 'ISL',
         'Capital' => 'Reykjavik',
@@ -1769,14 +4092,38 @@ return [
         'PostalCodeRegex' => '^(\\d{3})$',
         'Languages' => 'is,en,de,da,sv,no',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 67.246600000000001,
+                'lng' => -12.238800100000001,
+            ],
+            'southwest' => [
+                'lat' => 62.481900000000003,
+                'lng' => -26.2572999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 64.963050999999993,
+            'lng' => -19.020835000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 66.566318299999992,
+                'lng' => -13.4959772,
+            ],
+            'southwest' => [
+                'lat' => 63.296224600000002,
+                'lng' => -24.532932200000001,
+            ],
+        ],
     ],
     'IT' => [
         'CountryCode' => 'IT',
         'Country' => 'Italy',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'IT',
         'Iso3' => 'ITA',
         'Capital' => 'Rome',
@@ -1787,14 +4134,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'it-IT,de-IT,fr-IT,sc,ca,co,sl',
         'Neighbours' => 'CH,VA,SI,SM,FR,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 47.091999999999999,
+                'lng' => 18.797599900000002,
+            ],
+            'southwest' => [
+                'lat' => 35.489699999999999,
+                'lng' => 6.6267201,
+            ],
+        ],
+        'Location' => [
+            'lat' => 41.871940000000002,
+            'lng' => 12.56738,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 47.091999999999999,
+                'lng' => 18.520501500000002,
+            ],
+            'southwest' => [
+                'lat' => 35.493032800000002,
+                'lng' => 6.6267231000000004,
+            ],
+        ],
     ],
     'JE' => [
         'CountryCode' => 'JE',
         'Country' => 'Jersey',
         'CurrencyCode' => 'GBP',
         'CurrencyName' => 'Pound Sterling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'JE',
         'Iso3' => 'JEY',
         'Capital' => 'Saint Helier',
@@ -1805,14 +4176,38 @@ return [
         'PostalCodeRegex' => '^((?:(?:[A-PR-UWYZ][A-HK-Y]\\d[ABEHMNPRV-Y0-9]|[A-PR-UWYZ]\\d[A-HJKPS-UW0-9])\\s\\d[ABD-HJLNP-UW-Z]{2})|GIR\\s?0AA)$',
         'Languages' => 'en,pt',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 49.266500099999988,
+                'lng' => -2.0013000999999999,
+            ],
+            'southwest' => [
+                'lat' => 49.158200000000001,
+                'lng' => -2.2602001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 49.214438999999999,
+            'lng' => -2.1312500000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 49.262131400000001,
+                'lng' => -2.0104646000000002,
+            ],
+            'southwest' => [
+                'lat' => 49.160121699999998,
+                'lng' => -2.2548010999999999,
+            ],
+        ],
     ],
     'JM' => [
         'CountryCode' => 'JM',
         'Country' => 'Jamaica',
         'CurrencyCode' => 'JMD',
         'CurrencyName' => 'Jamaican Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'JM',
         'Iso3' => 'JAM',
         'Capital' => 'Kingston',
@@ -1823,14 +4218,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-JM',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.569782100000001,
+                'lng' => -76.144866899999997,
+            ],
+            'southwest' => [
+                'lat' => 17.668885400000001,
+                'lng' => -78.407363899999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.109580999999999,
+            'lng' => -77.297507999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.525310399999999,
+                'lng' => -76.183159000000003,
+            ],
+            'southwest' => [
+                'lat' => 17.7057243,
+                'lng' => -78.368846099999999,
+            ],
+        ],
     ],
     'JO' => [
         'CountryCode' => 'JO',
         'Country' => 'Jordan',
         'CurrencyCode' => 'JOD',
         'CurrencyName' => 'Jordanian Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'JO',
         'Iso3' => 'JOR',
         'Capital' => 'Amman',
@@ -1841,14 +4260,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-JO,en',
         'Neighbours' => 'SY,SA,IQ,IL,PS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 33.374687799999997,
+                'lng' => 39.301153999999997,
+            ],
+            'southwest' => [
+                'lat' => 29.185036100000001,
+                'lng' => 34.9441001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 30.585163999999999,
+            'lng' => 36.238413999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 33.374687799999997,
+                'lng' => 39.301153999999997,
+            ],
+            'southwest' => [
+                'lat' => 29.185036100000001,
+                'lng' => 34.9441001,
+            ],
+        ],
     ],
     'JP' => [
         'CountryCode' => 'JP',
         'Country' => 'Japan',
         'CurrencyCode' => 'JPY',
         'CurrencyName' => 'Yen',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'JP',
         'Iso3' => 'JPN',
         'Capital' => 'Tokyo',
@@ -1859,14 +4302,38 @@ return [
         'PostalCodeRegex' => '^\\d{3}-\\d{4}$',
         'Languages' => 'ja',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 45.641262599999997,
+                'lng' => 154.00314549999999,
+            ],
+            'southwest' => [
+                'lat' => 20.3585295,
+                'lng' => 122.8554688,
+            ],
+        ],
+        'Location' => [
+            'lat' => 36.204824000000002,
+            'lng' => 138.25292400000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 45.521772299999988,
+                'lng' => 145.81627779999999,
+            ],
+            'southwest' => [
+                'lat' => 24.045924400000001,
+                'lng' => 122.9338302,
+            ],
+        ],
     ],
     'KE' => [
         'CountryCode' => 'KE',
         'Country' => 'Kenya',
         'CurrencyCode' => 'KES',
         'CurrencyName' => 'Kenyan Shilling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KE',
         'Iso3' => 'KEN',
         'Capital' => 'Nairobi',
@@ -1877,15 +4344,39 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'en-KE,sw-KE',
         'Neighbours' => 'ET,TZ,SS,SO,UG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.0334208999999994,
+                'lng' => 41.9068957,
+            ],
+            'southwest' => [
+                'lat' => -4.7242999999999986,
+                'lng' => 33.909821099999988,
+            ],
+        ],
+        'Location' => [
+            'lat' => -0.023559,
+            'lng' => 37.906193000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 5.0334208999999994,
+                'lng' => 41.9068957,
+            ],
+            'southwest' => [
+                'lat' => -4.6796584999999986,
+                'lng' => 33.909837099999997,
+            ],
+        ],
     ],
-    MassUnit::KILOGRAM => [
-        'CountryCode' => MassUnit::KILOGRAM,
+    'kg' => [
+        'CountryCode' => 'kg',
         'Country' => 'Kyrgyzstan',
         'CurrencyCode' => 'KGS',
         'CurrencyName' => 'Kyrgyzstanian Som',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
-        'Iso2' => MassUnit::KILOGRAM,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
+        'Iso2' => 'kg',
         'Iso3' => 'KGZ',
         'Capital' => 'Bishkek',
         'AreaInSqKm' => '198500',
@@ -1895,14 +4386,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'ky,uz,ru',
         'Neighbours' => 'CN,TJ,UZ,KZ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 43.2653569,
+                'lng' => 80.226559399999999,
+            ],
+            'southwest' => [
+                'lat' => 39.180253999999998,
+                'lng' => 69.250997999999996,
+            ],
+        ],
+        'Location' => [
+            'lat' => 41.20438,
+            'lng' => 74.766098,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 43.2653569,
+                'lng' => 80.2265321,
+            ],
+            'southwest' => [
+                'lat' => 39.180253999999998,
+                'lng' => 69.250997999999996,
+            ],
+        ],
     ],
     'KH' => [
         'CountryCode' => 'KH',
         'Country' => 'Cambodia',
         'CurrencyCode' => 'KHR',
         'CurrencyName' => 'Khmer Rial',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KH',
         'Iso3' => 'KHM',
         'Capital' => 'Phnom Penh',
@@ -1913,14 +4428,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'km,fr,en',
         'Neighbours' => 'LA,TH,VN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 14.6901791,
+                'lng' => 107.62768699999999,
+            ],
+            'southwest' => [
+                'lat' => 9.6006999999999998,
+                'lng' => 102.33354199999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.565678999999999,
+            'lng' => 104.99096299999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 14.690179000000001,
+                'lng' => 107.62768699999999,
+            ],
+            'southwest' => [
+                'lat' => 9.9136445999999996,
+                'lng' => 102.33354199999999,
+            ],
+        ],
     ],
     'KI' => [
         'CountryCode' => 'KI',
         'Country' => 'Kiribati',
         'CurrencyCode' => 'AUD',
         'CurrencyName' => 'Australian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KI',
         'Iso3' => 'KIR',
         'Capital' => 'Tarawa',
@@ -1931,14 +4470,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-KI,gil',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 5.4082108,
+                'lng' => -145.1513674,
+            ],
+            'southwest' => [
+                'lat' => -13.0502263,
+                'lng' => 168.8818359,
+            ],
+        ],
+        'Location' => [
+            'lat' => 1.8709422,
+            'lng' => -157.36285950000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 2.0484203999999999,
+                'lng' => -157.16375110000001,
+            ],
+            'southwest' => [
+                'lat' => 1.6934640000000001,
+                'lng' => -157.56196790000001,
+            ],
+        ],
     ],
     'KM' => [
         'CountryCode' => 'KM',
         'Country' => 'Comoros',
         'CurrencyCode' => 'KMF',
         'CurrencyName' => 'Comoros Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KM',
         'Iso3' => 'COM',
         'Capital' => 'Moroni',
@@ -1949,14 +4512,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar,fr-KM',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -11.337332099999999,
+                'lng' => 44.564666600000002,
+            ],
+            'southwest' => [
+                'lat' => -12.4687602,
+                'lng' => 43.196868899999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => -11.6455,
+            'lng' => 43.333300000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -11.364743300000001,
+                'lng' => 43.517823900000003,
+            ],
+            'southwest' => [
+                'lat' => -11.938890199999999,
+                'lng' => 43.228671800000001,
+            ],
+        ],
     ],
     'KN' => [
         'CountryCode' => 'KN',
         'Country' => 'St. Kitts',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'KN',
         'Iso3' => 'KNA',
         'Capital' => 'Basseterre',
@@ -1967,14 +4554,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-KN',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.4180706,
+                'lng' => -62.621325700000007,
+            ],
+            'southwest' => [
+                'lat' => 17.2127719,
+                'lng' => -62.864264499999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.343379599999999,
+            'lng' => -62.755904299999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 17.4180706,
+                'lng' => -62.621325700000007,
+            ],
+            'southwest' => [
+                'lat' => 17.2127719,
+                'lng' => -62.864264499999997,
+            ],
+        ],
     ],
     'KP' => [
         'CountryCode' => 'KP',
         'Country' => 'Korea, The D.P.R of',
         'CurrencyCode' => 'KPW',
         'CurrencyName' => 'North Korean Won',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KP',
         'Iso3' => 'PRK',
         'Capital' => 'Pyongyang',
@@ -1985,14 +4596,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'ko-KP',
         'Neighbours' => 'CN,KR,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 43.011589999999998,
+                'lng' => 130.69901669999999,
+            ],
+            'southwest' => [
+                'lat' => 37.589200099999999,
+                'lng' => 124.1718463,
+            ],
+        ],
+        'Location' => [
+            'lat' => 40.339852,
+            'lng' => 127.510093,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 43.011571000000004,
+                'lng' => 130.6988006,
+            ],
+            'southwest' => [
+                'lat' => 37.673332199999997,
+                'lng' => 124.2172049,
+            ],
+        ],
     ],
     'KR' => [
         'CountryCode' => 'KR',
         'Country' => 'Korea, Republic Of',
         'CurrencyCode' => 'KRW',
         'CurrencyName' => 'Korean Won',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KR',
         'Iso3' => 'KOR',
         'Capital' => 'Seoul',
@@ -2003,14 +4638,38 @@ return [
         'PostalCodeRegex' => '^(?:SEOUL)*(\\d{6})$',
         'Languages' => 'ko-KR,en',
         'Neighbours' => 'KP',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 38.634000000000007,
+                'lng' => 131.16030000000001,
+            ],
+            'southwest' => [
+                'lat' => 33.004100000000001,
+                'lng' => 124.58629999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 35.907756999999997,
+            'lng' => 127.76692199999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 38.616915200000001,
+                'lng' => 129.58467110000001,
+            ],
+            'southwest' => [
+                'lat' => 33.106109500000002,
+                'lng' => 124.6081391,
+            ],
+        ],
     ],
     'KV' => [
         'CountryCode' => 'KV',
         'Country' => 'Kosovo',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KV',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -2021,14 +4680,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 43.268898499999999,
+                'lng' => 21.7898669,
+            ],
+            'southwest' => [
+                'lat' => 41.857641000000001,
+                'lng' => 20.014284,
+            ],
+        ],
+        'Location' => [
+            'lat' => 42.602635900000003,
+            'lng' => 20.902977,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 43.268898499999999,
+                'lng' => 21.7898669,
+            ],
+            'southwest' => [
+                'lat' => 41.857641000000001,
+                'lng' => 20.014284,
+            ],
+        ],
     ],
     'KW' => [
         'CountryCode' => 'KW',
         'Country' => 'Kuwait',
         'CurrencyCode' => 'KWD',
         'CurrencyName' => 'Kuwaiti Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KW',
         'Iso3' => 'KWT',
         'Capital' => 'Kuwait City',
@@ -2039,14 +4722,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-KW,en',
         'Neighbours' => 'SA,IQ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 30.103699299999999,
+                'lng' => 48.5184,
+            ],
+            'southwest' => [
+                'lat' => 28.524446300000001,
+                'lng' => 46.553039899999987,
+            ],
+        ],
+        'Location' => [
+            'lat' => 29.31166,
+            'lng' => 47.481766,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 30.103706599999999,
+                'lng' => 48.442702599999997,
+            ],
+            'southwest' => [
+                'lat' => 28.524446300000001,
+                'lng' => 46.553039899999987,
+            ],
+        ],
     ],
     'KY' => [
         'CountryCode' => 'KY',
         'Country' => 'Cayman Islands',
         'CurrencyCode' => 'KYD',
         'CurrencyName' => 'Cayman Islands Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'KY',
         'Iso3' => 'CYM',
         'Capital' => 'George Town',
@@ -2057,14 +4764,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-KY',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 19.761600000000001,
+                'lng' => -79.719099999999997,
+            ],
+            'southwest' => [
+                'lat' => 19.2538999,
+                'lng' => -81.429400100000009,
+            ],
+        ],
+        'Location' => [
+            'lat' => 19.313300000000002,
+            'lng' => -81.254599999999996,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 19.3968153,
+                'lng' => -81.084656199999998,
+            ],
+            'southwest' => [
+                'lat' => 19.262937099999998,
+                'lng' => -81.420202899999992,
+            ],
+        ],
     ],
     'KZ' => [
         'CountryCode' => 'KZ',
         'Country' => 'Kazakhstan',
         'CurrencyCode' => 'KZT',
         'CurrencyName' => 'Tenge',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'KZ',
         'Iso3' => 'KAZ',
         'Capital' => 'Astana',
@@ -2075,14 +4806,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'kk,ru',
         'Neighbours' => 'TM,CN,KG,UZ,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 55.441983899999997,
+                'lng' => 87.315415000000002,
+            ],
+            'southwest' => [
+                'lat' => 40.568584100000002,
+                'lng' => 46.493671999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 48.019573000000001,
+            'lng' => 66.923683999999994,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 55.441983899999997,
+                'lng' => 87.315383999999995,
+            ],
+            'southwest' => [
+                'lat' => 40.568584100000002,
+                'lng' => 46.493671999999997,
+            ],
+        ],
     ],
     'LA' => [
         'CountryCode' => 'LA',
         'Country' => 'Lao People\'s Democratic Republic',
         'CurrencyCode' => 'LAK',
         'CurrencyName' => 'Kip',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LA',
         'Iso3' => 'LAO',
         'Capital' => 'Vientiane',
@@ -2093,15 +4848,39 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'lo,fr,en',
         'Neighbours' => 'CN,MM,KH,TH,VN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 22.502872,
+                'lng' => 107.69483,
+            ],
+            'southwest' => [
+                'lat' => 13.90972,
+                'lng' => 100.0832139,
+            ],
+        ],
+        'Location' => [
+            'lat' => 19.856269999999999,
+            'lng' => 102.495496,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 22.502872,
+                'lng' => 107.69483,
+            ],
+            'southwest' => [
+                'lat' => 13.90972,
+                'lng' => 100.0832139,
+            ],
+        ],
     ],
-    MassUnit::POUND => [
-        'CountryCode' => MassUnit::POUND,
+    'lb' => [
+        'CountryCode' => 'lb',
         'Country' => 'Lebanon',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
-        'Iso2' => MassUnit::POUND,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
+        'Iso2' => 'lb',
         'Iso3' => 'LBN',
         'Capital' => 'Beirut',
         'AreaInSqKm' => '10400',
@@ -2111,14 +4890,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4}(\\d{4})?)$',
         'Languages' => 'ar-LB,fr-LB,en,hy',
         'Neighbours' => 'SY,IL',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 34.69209,
+                'lng' => 36.623719999999999,
+            ],
+            'southwest' => [
+                'lat' => 33.0550256,
+                'lng' => 35.071100100000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 33.854720999999998,
+            'lng' => 35.862285,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 34.69209,
+                'lng' => 36.623719999999999,
+            ],
+            'southwest' => [
+                'lat' => 33.0550256,
+                'lng' => 35.1037781,
+            ],
+        ],
     ],
     'LC' => [
         'CountryCode' => 'LC',
         'Country' => 'St. Lucia',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'LC',
         'Iso3' => 'LCA',
         'Capital' => 'Castries',
@@ -2129,14 +4932,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-LC',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 14.120927699999999,
+                'lng' => -60.859794600000008,
+            ],
+            'southwest' => [
+                'lat' => 13.7047779,
+                'lng' => -61.081237799999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 13.909444000000001,
+            'lng' => -60.978892999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 14.110220999999999,
+                'lng' => -60.873156500000007,
+            ],
+            'southwest' => [
+                'lat' => 13.707881,
+                'lng' => -61.080056099999993,
+            ],
+        ],
     ],
     'LI' => [
         'CountryCode' => 'LI',
         'Country' => 'Liechtenstein',
         'CurrencyCode' => 'CHF',
         'CurrencyName' => 'Swiss Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LI',
         'Iso3' => 'LIE',
         'Capital' => 'Vaduz',
@@ -2147,14 +4974,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'de-LI',
         'Neighbours' => 'CH,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 47.270546699999997,
+                'lng' => 9.6356500999999994,
+            ],
+            'southwest' => [
+                'lat' => 47.048289999999987,
+                'lng' => 9.4716199999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 47.165999999999997,
+            'lng' => 9.5553729999999995,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 47.270546699999997,
+                'lng' => 9.6356500999999994,
+            ],
+            'southwest' => [
+                'lat' => 47.048289999999987,
+                'lng' => 9.4716199999999997,
+            ],
+        ],
     ],
     'LK' => [
         'CountryCode' => 'LK',
         'Country' => 'Sri Lanka',
         'CurrencyCode' => 'LKR',
         'CurrencyName' => 'Sri Lankan Rupee',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LK',
         'Iso3' => 'LKA',
         'Capital' => 'Colombo',
@@ -2165,14 +5016,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'si,ta,en',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 10.033770000000001,
+                'lng' => 82.144799999999989,
+            ],
+            'southwest' => [
+                'lat' => 5.6816000000000004,
+                'lng' => 79.267699999999991,
+            ],
+        ],
+        'Location' => [
+            'lat' => 7.8730539999999989,
+            'lng' => 80.771796999999992,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 9.8357663999999989,
+                'lng' => 81.878702899999993,
+            ],
+            'southwest' => [
+                'lat' => 5.9186971000000002,
+                'lng' => 79.521982699999995,
+            ],
+        ],
     ],
     'LR' => [
         'CountryCode' => 'LR',
         'Country' => 'Liberia',
         'CurrencyCode' => 'LRD',
         'CurrencyName' => 'Liberian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LR',
         'Iso3' => 'LBR',
         'Capital' => 'Monrovia',
@@ -2183,14 +5058,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'en-LR',
         'Neighbours' => 'SL,CI,GN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 8.5519859999999994,
+                'lng' => -7.3692548999999996,
+            ],
+            'southwest' => [
+                'lat' => 4.2696999999999994,
+                'lng' => -11.535599899999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 6.4280549999999996,
+            'lng' => -9.4294990000000016,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 8.5519859999999994,
+                'lng' => -7.3692548999999996,
+            ],
+            'southwest' => [
+                'lat' => 4.3154139000000002,
+                'lng' => -11.475599900000001,
+            ],
+        ],
     ],
     'LS' => [
         'CountryCode' => 'LS',
         'Country' => 'Lesotho',
         'CurrencyCode' => 'LSL',
         'CurrencyName' => 'Loti',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LS',
         'Iso3' => 'LSO',
         'Capital' => 'Maseru',
@@ -2201,14 +5100,38 @@ return [
         'PostalCodeRegex' => '^(\\d{3})$',
         'Languages' => 'en-LS,st,zu,xh',
         'Neighbours' => 'ZA',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -28.570801100000001,
+                'lng' => 29.455708699999999,
+            ],
+            'southwest' => [
+                'lat' => -30.6755788,
+                'lng' => 27.011230999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -29.609988000000001,
+            'lng' => 28.233608,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -28.570801100000001,
+                'lng' => 29.455708699999999,
+            ],
+            'southwest' => [
+                'lat' => -30.6755788,
+                'lng' => 27.011230999999999,
+            ],
+        ],
     ],
     'LT' => [
         'CountryCode' => 'LT',
         'Country' => 'Lithuania',
         'CurrencyCode' => 'LTL',
         'CurrencyName' => 'Lithuanian Litas',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LT',
         'Iso3' => 'LTU',
         'Capital' => 'Vilnius',
@@ -2219,14 +5142,38 @@ return [
         'PostalCodeRegex' => '^(?:LT)*(\\d{5})$',
         'Languages' => 'lt,ru,pl',
         'Neighbours' => 'PL,BY,RU,LV',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 56.450320899999987,
+                'lng' => 26.835591399999998,
+            ],
+            'southwest' => [
+                'lat' => 53.896878699999988,
+                'lng' => 20.931000000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 55.169438,
+            'lng' => 23.881274999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 56.450317899999988,
+                'lng' => 26.835591399999998,
+            ],
+            'southwest' => [
+                'lat' => 53.896878699999988,
+                'lng' => 20.953982700000001,
+            ],
+        ],
     ],
     'LU' => [
         'CountryCode' => 'LU',
         'Country' => 'Luxembourg',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LU',
         'Iso3' => 'LUX',
         'Capital' => 'Luxembourg',
@@ -2237,14 +5184,38 @@ return [
         'PostalCodeRegex' => '^(?:L-)?\\d{4}$',
         'Languages' => 'lb,de-LU,fr-LU',
         'Neighbours' => 'DE,BE,FR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 50.18282,
+                'lng' => 6.5309700999999993,
+            ],
+            'southwest' => [
+                'lat' => 49.447778999999997,
+                'lng' => 5.7356699000000004,
+            ],
+        ],
+        'Location' => [
+            'lat' => 49.815272999999998,
+            'lng' => 6.1295829999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 50.18282,
+                'lng' => 6.5309700999999993,
+            ],
+            'southwest' => [
+                'lat' => 49.447778999999997,
+                'lng' => 5.7356699000000004,
+            ],
+        ],
     ],
     'LV' => [
         'CountryCode' => 'LV',
         'Country' => 'Latvia',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LV',
         'Iso3' => 'LVA',
         'Capital' => 'Riga',
@@ -2255,14 +5226,38 @@ return [
         'PostalCodeRegex' => '^(?:LV)*(\\d{4})$',
         'Languages' => 'lv,ru,lt',
         'Neighbours' => 'LT,EE,BY,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 58.085568799999997,
+                'lng' => 28.241402900000001,
+            ],
+            'southwest' => [
+                'lat' => 55.674776899999998,
+                'lng' => 20.846599900000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 56.879635,
+            'lng' => 24.603189,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 58.085558900000002,
+                'lng' => 28.241366899999999,
+            ],
+            'southwest' => [
+                'lat' => 55.674776899999998,
+                'lng' => 20.970093800000001,
+            ],
+        ],
     ],
     'LY' => [
         'CountryCode' => 'LY',
         'Country' => 'Libya',
         'CurrencyCode' => 'LYD',
         'CurrencyName' => 'Libyan Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'LY',
         'Iso3' => 'LBY',
         'Capital' => 'Tripoli',
@@ -2273,14 +5268,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar-LY,it,en',
         'Neighbours' => 'TD,NE,DZ,SD,TN,EG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 33.220300000000002,
+                'lng' => 25.268599999999999,
+            ],
+            'southwest' => [
+                'lat' => 19.5,
+                'lng' => 9.3914659999999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => 26.335100000000001,
+            'lng' => 17.228331000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 33.168014800000002,
+                'lng' => 25.149433599999998,
+            ],
+            'southwest' => [
+                'lat' => 19.5,
+                'lng' => 9.3914659999999994,
+            ],
+        ],
     ],
     'MA' => [
         'CountryCode' => 'MA',
         'Country' => 'Morocco',
         'CurrencyCode' => 'MAD',
         'CurrencyName' => 'Moroccan Dirham',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MA',
         'Iso3' => 'MAR',
         'Capital' => 'Rabat',
@@ -2291,14 +5310,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-MA,ber,fr',
         'Neighbours' => 'DZ,EH,ES',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 35.934399999999997,
+                'lng' => -0.99697599999999997,
+            ],
+            'southwest' => [
+                'lat' => 27.667269399999999,
+                'lng' => -13.304400100000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 31.791702000000001,
+            'lng' => -7.0926199999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 35.922402300000002,
+                'lng' => -0.99697599999999997,
+            ],
+            'southwest' => [
+                'lat' => 27.667269399999999,
+                'lng' => -13.172470199999999,
+            ],
+        ],
     ],
     'MC' => [
         'CountryCode' => 'MC',
         'Country' => 'Monaco',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MC',
         'Iso3' => 'MCO',
         'Capital' => 'Monaco',
@@ -2309,14 +5352,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'fr-MC,en,it',
         'Neighbours' => 'FR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 43.751902899999997,
+                'lng' => 7.4425999999999997,
+            ],
+            'southwest' => [
+                'lat' => 43.723799900000003,
+                'lng' => 7.4091049,
+            ],
+        ],
+        'Location' => [
+            'lat' => 43.738417600000012,
+            'lng' => 7.4246157999999989,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 43.751902899999997,
+                'lng' => 7.4398112999999997,
+            ],
+            'southwest' => [
+                'lat' => 43.724742900000003,
+                'lng' => 7.4091049,
+            ],
+        ],
     ],
     'MD' => [
         'CountryCode' => 'MD',
         'Country' => 'Moldova, Republic Of',
         'CurrencyCode' => 'MDL',
         'CurrencyName' => 'Moldovan Leu',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MD',
         'Iso3' => 'MDA',
         'Capital' => 'Chisinau',
@@ -2327,14 +5394,38 @@ return [
         'PostalCodeRegex' => '^MD-\\d{4}$',
         'Languages' => 'ro,ru,gag,tr',
         'Neighbours' => 'RO,UA',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 48.491943999999997,
+                'lng' => 30.162538000000001,
+            ],
+            'southwest' => [
+                'lat' => 45.466904,
+                'lng' => 26.616855999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 47.411631,
+            'lng' => 28.369885,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 48.491943999999997,
+                'lng' => 30.162538000000001,
+            ],
+            'southwest' => [
+                'lat' => 45.466904,
+                'lng' => 26.616855999999999,
+            ],
+        ],
     ],
     'ME' => [
         'CountryCode' => 'ME',
         'Country' => 'Montenegro, Republic of',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ME',
         'Iso3' => 'MNE',
         'Capital' => 'Podgorica',
@@ -2345,14 +5436,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'sr,hu,bs,sq,hr,rom',
         'Neighbours' => 'AL,HR,BA,RS,XK',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
+        'Location' => [
+            'lat' => NULL,
+            'lng' => NULL,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
     ],
     'MG' => [
         'CountryCode' => 'MG',
         'Country' => 'Madagascar',
         'CurrencyCode' => 'MGA',
         'CurrencyName' => 'Ariary',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MG',
         'Iso3' => 'MDG',
         'Capital' => 'Antananarivo',
@@ -2363,14 +5478,38 @@ return [
         'PostalCodeRegex' => '^(\\d{3})$',
         'Languages' => 'fr-MG,mg',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -11.4369999,
+                'lng' => 50.998500100000001,
+            ],
+            'southwest' => [
+                'lat' => -26.214600000000001,
+                'lng' => 42.736800000000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => -18.766946999999998,
+            'lng' => 46.869107,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -11.951963900000001,
+                'lng' => 50.483779899999988,
+            ],
+            'southwest' => [
+                'lat' => -25.606515699999999,
+                'lng' => 43.185139499999998,
+            ],
+        ],
     ],
     'MH' => [
         'CountryCode' => 'MH',
         'Country' => 'Marshall Islands',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'MH',
         'Iso3' => 'MHL',
         'Capital' => 'Majuro',
@@ -2381,14 +5520,38 @@ return [
         'PostalCodeRegex' => '^969\\d{2}(-\\d{4})$',
         'Languages' => 'mh,en-MH',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 15.0190749,
+                'lng' => 172.57324209999999,
+            ],
+            'southwest' => [
+                'lat' => 4.1601583,
+                'lng' => 159.8840332,
+            ],
+        ],
+        'Location' => [
+            'lat' => 11.324690800000001,
+            'lng' => 166.84174239999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 11.5011679,
+                'lng' => 167.06220389999999,
+            ],
+            'southwest' => [
+                'lat' => 11.148213800000001,
+                'lng' => 166.62128089999999,
+            ],
+        ],
     ],
     'MK' => [
         'CountryCode' => 'MK',
         'Country' => 'Macedonia, Rep. of (FYROM)',
         'CurrencyCode' => 'MKD',
         'CurrencyName' => 'Macedonian Denar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MK',
         'Iso3' => 'MKD',
         'Capital' => 'Skopje',
@@ -2399,14 +5562,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'mk,sq,tr,rmm,sr',
         'Neighbours' => 'AL,GR,BG,RS,XK',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 41.134738599999999,
+                'lng' => 22.549733499999999,
+            ],
+            'southwest' => [
+                'lat' => 41.133748599999997,
+                'lng' => 22.5483923,
+            ],
+        ],
+        'Location' => [
+            'lat' => 41.134253000000001,
+            'lng' => 22.549000800000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 41.135592580291487,
+                'lng' => 22.550411880291499,
+            ],
+            'southwest' => [
+                'lat' => 41.132894619708487,
+                'lng' => 22.547713919708499,
+            ],
+        ],
     ],
     'ML' => [
         'CountryCode' => 'ML',
         'Country' => 'Mali',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ML',
         'Iso3' => 'MLI',
         'Capital' => 'Bamako',
@@ -2417,14 +5604,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-ML,bm',
         'Neighbours' => 'SN,NE,DZ,CI,GN,MR,BF',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 25.001083999999999,
+                'lng' => 4.2673828,
+            ],
+            'southwest' => [
+                'lat' => 10.147811000000001,
+                'lng' => -12.2388849,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.570692000000001,
+            'lng' => -3.9961660000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 25.001083999999999,
+                'lng' => 4.2673828,
+            ],
+            'southwest' => [
+                'lat' => 10.147811000000001,
+                'lng' => -12.2388849,
+            ],
+        ],
     ],
     'MM' => [
         'CountryCode' => 'MM',
         'Country' => 'Myanmar',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MM',
         'Iso3' => 'MMR',
         'Capital' => 'Nay Pyi Taw',
@@ -2435,14 +5646,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'my',
         'Neighbours' => 'CN,LA,TH,BD,IN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 28.5478351,
+                'lng' => 101.1702717,
+            ],
+            'southwest' => [
+                'lat' => 9.4518000000000004,
+                'lng' => 92.171807999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 21.916221,
+            'lng' => 95.955973999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 28.5478351,
+                'lng' => 101.1695292,
+            ],
+            'southwest' => [
+                'lat' => 9.6062010000000004,
+                'lng' => 92.172239300000001,
+            ],
+        ],
     ],
     'MN' => [
         'CountryCode' => 'MN',
         'Country' => 'Mongolia',
         'CurrencyCode' => 'MNT',
         'CurrencyName' => 'Tugrik',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MN',
         'Iso3' => 'MNG',
         'Capital' => 'Ulan Bator',
@@ -2453,14 +5688,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'mn,ru',
         'Neighbours' => 'CN,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 52.1486965,
+                'lng' => 119.93194889999999,
+            ],
+            'southwest' => [
+                'lat' => 41.581520099999999,
+                'lng' => 87.737619999999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => 46.862496,
+            'lng' => 103.846656,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 52.1486965,
+                'lng' => 119.93194889999999,
+            ],
+            'southwest' => [
+                'lat' => 41.581520099999999,
+                'lng' => 87.737619999999993,
+            ],
+        ],
     ],
     'MO' => [
         'CountryCode' => 'MO',
         'Country' => 'Macau',
         'CurrencyCode' => 'MOP',
         'CurrencyName' => 'Pataca',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MO',
         'Iso3' => 'MAC',
         'Capital' => 'Macao',
@@ -2471,14 +5730,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'zh,zh-MO,pt',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 22.217063899999999,
+                'lng' => 113.6127001,
+            ],
+            'southwest' => [
+                'lat' => 22.106600100000001,
+                'lng' => 113.5276053,
+            ],
+        ],
+        'Location' => [
+            'lat' => 22.198744999999999,
+            'lng' => 113.543873,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 22.217063899999999,
+                'lng' => 113.5981886,
+            ],
+            'southwest' => [
+                'lat' => 22.109769400000001,
+                'lng' => 113.5287412,
+            ],
+        ],
     ],
     'MP' => [
         'CountryCode' => 'MP',
         'Country' => 'Saipan',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'MP',
         'Iso3' => 'MNP',
         'Capital' => 'Saipan',
@@ -2489,14 +5772,38 @@ return [
         'PostalCodeRegex' => '^9695\\d{1}(-\\d{4})$',
         'Languages' => 'fil,tl,zh,ch-MP,en-MP',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 15.288112999999999,
+                'lng' => 145.82986990000001,
+            ],
+            'southwest' => [
+                'lat' => 15.092545100000001,
+                'lng' => 145.690054,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.1515153,
+            'lng' => 145.7297891,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 15.288112999999999,
+                'lng' => 145.8298149,
+            ],
+            'southwest' => [
+                'lat' => 15.092545100000001,
+                'lng' => 145.6902742,
+            ],
+        ],
     ],
     'MQ' => [
         'CountryCode' => 'MQ',
         'Country' => 'Martinique',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MQ',
         'Iso3' => 'MTQ',
         'Capital' => 'Fort-de-France',
@@ -2507,14 +5814,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'fr-MQ',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 14.897345100000001,
+                'lng' => -60.785636799999999,
+            ],
+            'southwest' => [
+                'lat' => 14.370834,
+                'lng' => -61.241912799999987,
+            ],
+        ],
+        'Location' => [
+            'lat' => 14.641527999999999,
+            'lng' => -61.024174000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 14.878716300000001,
+                'lng' => -60.810527800000003,
+            ],
+            'southwest' => [
+                'lat' => 14.3886471,
+                'lng' => -61.229117700000003,
+            ],
+        ],
     ],
     'MR' => [
         'CountryCode' => 'MR',
         'Country' => 'Mauritania',
         'CurrencyCode' => 'MRO',
         'CurrencyName' => 'Ouguiya',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MR',
         'Iso3' => 'MRT',
         'Capital' => 'Nouakchott',
@@ -2525,14 +5856,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar-MR,fuc,snk,fr,mey,wo',
         'Neighbours' => 'SN,DZ,EH,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 27.3158916,
+                'lng' => -4.8336008000000001,
+            ],
+            'southwest' => [
+                'lat' => 14.721273,
+                'lng' => -17.068727599999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 21.00789,
+            'lng' => -10.940835,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 27.3158916,
+                'lng' => -4.8336008000000001,
+            ],
+            'southwest' => [
+                'lat' => 14.721273,
+                'lng' => -17.068727599999999,
+            ],
+        ],
     ],
     'MS' => [
         'CountryCode' => 'MS',
         'Country' => 'Montserrat',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'MS',
         'Iso3' => 'MSR',
         'Capital' => 'Plymouth',
@@ -2543,14 +5898,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-MS',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 16.826067200000001,
+                'lng' => -62.142620099999988,
+            ],
+            'southwest' => [
+                'lat' => 16.671006999999999,
+                'lng' => -62.242584000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 16.742498000000001,
+            'lng' => -62.187365999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 16.824051900000001,
+                'lng' => -62.144205300000003,
+            ],
+            'southwest' => [
+                'lat' => 16.674451399999999,
+                'lng' => -62.241573499999987,
+            ],
+        ],
     ],
     'MT' => [
         'CountryCode' => 'MT',
         'Country' => 'Malta',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MT',
         'Iso3' => 'MLT',
         'Capital' => 'Valletta',
@@ -2561,14 +5940,38 @@ return [
         'PostalCodeRegex' => '^[A-Z]{3}\\s?\\d{4}$',
         'Languages' => 'mt,en-MT',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 36.085299999999997,
+                'lng' => 14.5765999,
+            ],
+            'southwest' => [
+                'lat' => 35.799600000000012,
+                'lng' => 14.180100100000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 35.937496000000003,
+            'lng' => 14.375416,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 36.082227000000003,
+                'lng' => 14.5765028,
+            ],
+            'southwest' => [
+                'lat' => 35.806236400000003,
+                'lng' => 14.183548399999999,
+            ],
+        ],
     ],
     'MU' => [
         'CountryCode' => 'MU',
         'Country' => 'Mauritius',
         'CurrencyCode' => 'MUR',
         'CurrencyName' => 'Mauritius Rupee',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MU',
         'Iso3' => 'MUS',
         'Capital' => 'Port Louis',
@@ -2579,14 +5982,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-MU,bho,fr',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -10.0878538,
+                'lng' => 63.808593900000012,
+            ],
+            'southwest' => [
+                'lat' => -20.745840300000001,
+                'lng' => 56.315917900000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => -20.348403999999999,
+            'lng' => 57.552152000000007,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -18.776299999999999,
+                'lng' => 59.584400000000002,
+            ],
+            'southwest' => [
+                'lat' => -21.637,
+                'lng' => 55.766599999999997,
+            ],
+        ],
     ],
     'MV' => [
         'CountryCode' => 'MV',
         'Country' => 'Maldives',
         'CurrencyCode' => 'MVR',
         'CurrencyName' => 'Rufiyaa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MV',
         'Iso3' => 'MDV',
         'Capital' => 'Male',
@@ -2597,14 +6024,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'dv,en',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 7.5149809000000003,
+                'lng' => 74.729003800000001,
+            ],
+            'southwest' => [
+                'lat' => -1.2907843999999999,
+                'lng' => 71.751708999999991,
+            ],
+        ],
+        'Location' => [
+            'lat' => 1.9772276,
+            'lng' => 73.536101000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 2.1331720999999999,
+                'lng' => 73.585962299999991,
+            ],
+            'southwest' => [
+                'lat' => 1.8212832000000001,
+                'lng' => 73.486239799999993,
+            ],
+        ],
     ],
     'MW' => [
         'CountryCode' => 'MW',
         'Country' => 'Malawi',
         'CurrencyCode' => 'MWK',
         'CurrencyName' => 'Kwacha',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MW',
         'Iso3' => 'MWI',
         'Capital' => 'Lilongwe',
@@ -2615,14 +6066,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ny,yao,tum,swk',
         'Neighbours' => 'TZ,MZ,ZM',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -9.3672273999999991,
+                'lng' => 35.918572999999988,
+            ],
+            'southwest' => [
+                'lat' => -17.1295216,
+                'lng' => 32.672520499999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => -13.254308,
+            'lng' => 34.301524999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -9.3672570999999998,
+                'lng' => 35.918572999999988,
+            ],
+            'southwest' => [
+                'lat' => -17.1295216,
+                'lng' => 32.672520499999997,
+            ],
+        ],
     ],
     'MX' => [
         'CountryCode' => 'MX',
         'Country' => 'Mexico',
         'CurrencyCode' => 'MXN',
         'CurrencyName' => 'Mexican Nuevo Peso',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MX',
         'Iso3' => 'MEX',
         'Capital' => 'Mexico City',
@@ -2633,14 +6108,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'es-MX',
         'Neighbours' => 'GT,US,BZ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 32.718653400000001,
+                'lng' => -86.588700000000003,
+            ],
+            'southwest' => [
+                'lat' => 14.3895,
+                'lng' => -118.65230010000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 23.634501,
+            'lng' => -102.552784,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 32.718608099999997,
+                'lng' => -86.714619799999994,
+            ],
+            'southwest' => [
+                'lat' => 14.534548300000001,
+                'lng' => -118.36368659999999,
+            ],
+        ],
     ],
     'MY' => [
         'CountryCode' => 'MY',
         'Country' => 'Malaysia',
         'CurrencyCode' => 'MYR',
         'CurrencyName' => 'Ringgit',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MY',
         'Iso3' => 'MYS',
         'Capital' => 'Kuala Lumpur',
@@ -2651,14 +6150,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ms-MY,en,zh,ta,te,ml,pa,th',
         'Neighbours' => 'BN,TH,ID',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 7.5190999999999999,
+                'lng' => 119.4000001,
+            ],
+            'southwest' => [
+                'lat' => 0.85382089999999999,
+                'lng' => 98.935399899999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => 4.2104840000000001,
+            'lng' => 101.97576599999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 7.8198469999999993,
+                'lng' => 119.813461,
+            ],
+            'southwest' => [
+                'lat' => 0.46142100000000003,
+                'lng' => 99.42283599999999,
+            ],
+        ],
     ],
     'MZ' => [
         'CountryCode' => 'MZ',
         'Country' => 'Mozambique',
         'CurrencyCode' => 'MZN',
         'CurrencyName' => 'Mozambique Metical',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'MZ',
         'Iso3' => 'MOZ',
         'Capital' => 'Maputo',
@@ -2669,14 +6192,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'pt-MZ,vmw',
         'Neighbours' => 'ZW,TZ,SZ,ZA,ZM,MW',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -10.3128929,
+                'lng' => 41.396500000000003,
+            ],
+            'southwest' => [
+                'lat' => -26.961200000000002,
+                'lng' => 30.215550100000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => -18.665694999999999,
+            'lng' => 35.529561999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -10.4721557,
+                'lng' => 40.839035500000001,
+            ],
+            'southwest' => [
+                'lat' => -26.868161000000001,
+                'lng' => 30.215605,
+            ],
+        ],
     ],
     'NA' => [
         'CountryCode' => 'NA',
         'Country' => 'Namibia',
         'CurrencyCode' => 'NAD',
         'CurrencyName' => 'Namibian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NA',
         'Iso3' => 'NAM',
         'Capital' => 'Windhoek',
@@ -2687,14 +6234,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-NA,af,de,hz,naq',
         'Neighbours' => 'ZA,BW,ZM,AO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -16.9634851,
+                'lng' => 25.261752000000001,
+            ],
+            'southwest' => [
+                'lat' => -28.9706391,
+                'lng' => 11.4696999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -22.957640000000001,
+            'lng' => 18.490410000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -16.9634851,
+                'lng' => 25.261752000000001,
+            ],
+            'southwest' => [
+                'lat' => -28.9706391,
+                'lng' => 11.7364453,
+            ],
+        ],
     ],
     'NC' => [
         'CountryCode' => 'NC',
         'Country' => 'New Caledonia',
         'CurrencyCode' => 'XPF',
         'CurrencyName' => 'CFP Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NC',
         'Iso3' => 'NCL',
         'Capital' => 'Noumea',
@@ -2705,14 +6276,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'fr-NC',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -19.160735500000001,
+                'lng' => 168.3325194,
+            ],
+            'southwest' => [
+                'lat' => -23.251440599999999,
+                'lng' => 163.35571289999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -20.904305000000001,
+            'lng' => 165.618042,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -19.539508699999999,
+                'lng' => 168.1336819,
+            ],
+            'southwest' => [
+                'lat' => -22.8819479,
+                'lng' => 163.56972099999999,
+            ],
+        ],
     ],
     'NE' => [
         'CountryCode' => 'NE',
         'Country' => 'Niger',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NE',
         'Iso3' => 'NER',
         'Capital' => 'Niamey',
@@ -2723,14 +6318,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'fr-NE,ha,kr,dje',
         'Neighbours' => 'TD,BJ,DZ,LY,BF,NG,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 23.499999899999999,
+                'lng' => 15.999033900000001,
+            ],
+            'southwest' => [
+                'lat' => 11.693756,
+                'lng' => 0.16171779999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.607789,
+            'lng' => 8.0816660000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 23.499999899999999,
+                'lng' => 15.999033900000001,
+            ],
+            'southwest' => [
+                'lat' => 11.693756,
+                'lng' => 0.16171779999999999,
+            ],
+        ],
     ],
     'NG' => [
         'CountryCode' => 'NG',
         'Country' => 'Nigeria',
         'CurrencyCode' => 'NGN',
         'CurrencyName' => 'Naira',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NG',
         'Iso3' => 'NGA',
         'Capital' => 'Abuja',
@@ -2741,14 +6360,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'en-NG,ha,yo,ig,ff',
         'Neighbours' => 'TD,NE,BJ,CM',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 13.885644900000001,
+                'lng' => 14.677982,
+            ],
+            'southwest' => [
+                'lat' => 4.1821001000000004,
+                'lng' => 2.6769319999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 9.0819989999999997,
+            'lng' => 8.6752769999999995,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 13.885644900000001,
+                'lng' => 14.677841000000001,
+            ],
+            'southwest' => [
+                'lat' => 4.2698570999999994,
+                'lng' => 2.6769319999999999,
+            ],
+        ],
     ],
     'NI' => [
         'CountryCode' => 'NI',
         'Country' => 'Nicaragua',
         'CurrencyCode' => 'NIO',
         'CurrencyName' => 'Cordoba Oro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NI',
         'Iso3' => 'NIC',
         'Capital' => 'Managua',
@@ -2759,14 +6402,38 @@ return [
         'PostalCodeRegex' => '^(\\d{7})$',
         'Languages' => 'es-NI,en',
         'Neighbours' => 'CR,HN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 15.0302755,
+                'lng' => -82.276600000000002,
+            ],
+            'southwest' => [
+                'lat' => 10.7080549,
+                'lng' => -87.758799999999994,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.865416,
+            'lng' => -85.207228999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 15.0302755,
+                'lng' => -82.592071599999997,
+            ],
+            'southwest' => [
+                'lat' => 10.7080549,
+                'lng' => -87.690307699999991,
+            ],
+        ],
     ],
     'NL' => [
         'CountryCode' => 'NL',
         'Country' => 'Netherlands, The',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NL',
         'Iso3' => 'NLD',
         'Capital' => 'Amsterdam',
@@ -2777,14 +6444,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4}[A-Z]{2})$',
         'Languages' => 'nl-NL,fy-NL',
         'Neighbours' => 'DE,BE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 53.631599999999999,
+                'lng' => 7.2275101999999993,
+            ],
+            'southwest' => [
+                'lat' => 50.750383799999987,
+                'lng' => 3.3316001000000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 52.132632999999998,
+            'lng' => 5.2912659999999994,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 53.675600000000003,
+                'lng' => 7.2271405000000009,
+            ],
+            'southwest' => [
+                'lat' => 50.7503837,
+                'lng' => 3.3315999999999999,
+            ],
+        ],
     ],
     'NO' => [
         'CountryCode' => 'NO',
         'Country' => 'Norway',
         'CurrencyCode' => 'NOK',
         'CurrencyName' => 'Norwegian Krone',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NO',
         'Iso3' => 'NOR',
         'Capital' => 'Oslo',
@@ -2795,14 +6486,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'no,nb,nn,se,fi',
         'Neighbours' => 'FI,RU,SE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 71.307800000000015,
+                'lng' => 31.354999899999999,
+            ],
+            'southwest' => [
+                'lat' => 57.809699999999999,
+                'lng' => 4.0648999999999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => 60.47202399999999,
+            'lng' => 8.468945999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 71.177847,
+                'lng' => 31.149660900000001,
+            ],
+            'southwest' => [
+                'lat' => 57.96495869999999,
+                'lng' => 4.5005147999999986,
+            ],
+        ],
     ],
     'NP' => [
         'CountryCode' => 'NP',
         'Country' => 'Nepal',
         'CurrencyCode' => 'NPR',
         'CurrencyName' => 'Nepalese Rupee',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NP',
         'Iso3' => 'NPL',
         'Capital' => 'Kathmandu',
@@ -2813,14 +6528,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ne,en',
         'Neighbours' => 'CN,IN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 30.446945199999998,
+                'lng' => 88.201525699999991,
+            ],
+            'southwest' => [
+                'lat' => 26.347966100000001,
+                'lng' => 80.058469800000012,
+            ],
+        ],
+        'Location' => [
+            'lat' => 28.394856999999998,
+            'lng' => 84.124007999999989,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 30.446945199999998,
+                'lng' => 88.201525699999991,
+            ],
+            'southwest' => [
+                'lat' => 26.347966100000001,
+                'lng' => 80.058469800000012,
+            ],
+        ],
     ],
     'NR' => [
         'CountryCode' => 'NR',
         'Country' => 'Nauru, Republic Of',
         'CurrencyCode' => 'AUD',
         'CurrencyName' => 'Australian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NR',
         'Iso3' => 'NRU',
         'Capital' => 'Yaren',
@@ -2831,14 +6570,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'na,en-NR',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -0.49789760000000011,
+                'lng' => 166.96317669999999,
+            ],
+            'southwest' => [
+                'lat' => -0.55806230000000001,
+                'lng' => 166.90712930000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -0.52277799999999996,
+            'lng' => 166.93150299999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -0.50263950000000002,
+                'lng' => 166.95892810000001,
+            ],
+            'southwest' => [
+                'lat' => -0.55418939999999994,
+                'lng' => 166.90954859999999,
+            ],
+        ],
     ],
     'NU' => [
         'CountryCode' => 'NU',
         'Country' => 'Niue',
         'CurrencyCode' => 'NZD',
         'CurrencyName' => 'New Zealand Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NU',
         'Iso3' => 'NIU',
         'Capital' => 'Alofi',
@@ -2849,14 +6612,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'niu,en-NU',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -18.952625000000001,
+                'lng' => -169.77432479999999,
+            ],
+            'southwest' => [
+                'lat' => -19.155566799999999,
+                'lng' => -169.9500846,
+            ],
+        ],
+        'Location' => [
+            'lat' => -19.054445000000001,
+            'lng' => -169.867233,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -18.952625999999999,
+                'lng' => -169.77432479999999,
+            ],
+            'southwest' => [
+                'lat' => -19.155480699999998,
+                'lng' => -169.94979230000001,
+            ],
+        ],
     ],
     'NZ' => [
         'CountryCode' => 'NZ',
         'Country' => 'New Zealand',
         'CurrencyCode' => 'NZD',
         'CurrencyName' => 'New Zealand Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'NZ',
         'Iso3' => 'NZL',
         'Capital' => 'Wellington',
@@ -2867,14 +6654,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'en-NZ,mi',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -28.877322499999998,
+                'lng' => -175.1235077,
+            ],
+            'southwest' => [
+                'lat' => -52.722466300000001,
+                'lng' => 165.74376409999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -40.900556999999999,
+            'lng' => 174.88597100000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -34.129617699999997,
+                'lng' => 179.02960479999999,
+            ],
+            'southwest' => [
+                'lat' => -52.619582600000001,
+                'lng' => 165.8700053,
+            ],
+        ],
     ],
     'OM' => [
         'CountryCode' => 'OM',
         'Country' => 'Oman',
         'CurrencyCode' => 'OMR',
         'CurrencyName' => 'Omani Rial',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'OM',
         'Iso3' => 'OMN',
         'Capital' => 'Muscat',
@@ -2885,14 +6696,38 @@ return [
         'PostalCodeRegex' => '^(\\d{3})$',
         'Languages' => 'ar-OM,en,bal,ur',
         'Neighbours' => 'SA,YE,AE',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 26.436100100000001,
+                'lng' => 60.303999999999988,
+            ],
+            'southwest' => [
+                'lat' => 16.457199899999999,
+                'lng' => 52.0000018,
+            ],
+        ],
+        'Location' => [
+            'lat' => 21.473532899999999,
+            'lng' => 55.975413000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 26.405380099999999,
+                'lng' => 59.839401999999993,
+            ],
+            'southwest' => [
+                'lat' => 16.650335999999999,
+                'lng' => 52.0000018,
+            ],
+        ],
     ],
     'PA' => [
         'CountryCode' => 'PA',
         'Country' => 'Panama',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PA',
         'Iso3' => 'PAN',
         'Capital' => 'Panama City',
@@ -2903,14 +6738,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'es-PA,en',
         'Neighbours' => 'CR,CO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 9.7145001000000004,
+                'lng' => -77.158487999999991,
+            ],
+            'southwest' => [
+                'lat' => 7.0408999999999997,
+                'lng' => -83.052241099999989,
+            ],
+        ],
+        'Location' => [
+            'lat' => 8.5379810000000003,
+            'lng' => -80.782127000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 9.6475092999999994,
+                'lng' => -77.158487999999991,
+            ],
+            'southwest' => [
+                'lat' => 7.203556400000001,
+                'lng' => -83.052241099999989,
+            ],
+        ],
     ],
     'PE' => [
         'CountryCode' => 'PE',
         'Country' => 'Peru',
         'CurrencyCode' => 'PEN',
         'CurrencyName' => 'Nuevo Sol',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PE',
         'Iso3' => 'PER',
         'Capital' => 'Lima',
@@ -2921,14 +6780,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'es-PE,qu,ay',
         'Neighbours' => 'EC,CL,BO,BR,CO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -0.038776999999999999,
+                'lng' => -68.652328999999995,
+            ],
+            'southwest' => [
+                'lat' => -18.4483,
+                'lng' => -81.386700099999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -9.1899669999999993,
+            'lng' => -75.015152,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -0.038893999999999998,
+                'lng' => -68.652328999999995,
+            ],
+            'southwest' => [
+                'lat' => -18.351599400000001,
+                'lng' => -81.328504099999989,
+            ],
+        ],
     ],
     'PF' => [
         'CountryCode' => 'PF',
         'Country' => 'Tahiti',
         'CurrencyCode' => 'XPF',
         'CurrencyName' => 'CFP Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PF',
         'Iso3' => 'PYF',
         'Capital' => 'Papeete',
@@ -2939,14 +6822,38 @@ return [
         'PostalCodeRegex' => '^((97|98)7\\d{2})$',
         'Languages' => 'fr-PF,ty',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -17.494204499999999,
+                'lng' => -149.1246884,
+            ],
+            'southwest' => [
+                'lat' => -17.8803348,
+                'lng' => -149.62092050000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -17.650919500000001,
+            'lng' => -149.42604209999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -17.494204499999999,
+                'lng' => -149.1246884,
+            ],
+            'southwest' => [
+                'lat' => -17.8803348,
+                'lng' => -149.62092050000001,
+            ],
+        ],
     ],
     'PG' => [
         'CountryCode' => 'PG',
         'Country' => 'Papua New Guinea',
         'CurrencyCode' => 'PGK',
         'CurrencyName' => 'Kina',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PG',
         'Iso3' => 'PNG',
         'Capital' => 'Port Moresby',
@@ -2957,14 +6864,38 @@ return [
         'PostalCodeRegex' => '^(\\d{3})$',
         'Languages' => 'en-PG,ho,meu,tpi',
         'Neighbours' => 'ID',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -0.67020000000000002,
+                'lng' => 159.9609001,
+            ],
+            'southwest' => [
+                'lat' => -12.0823,
+                'lng' => 140.8419695,
+            ],
+        ],
+        'Location' => [
+            'lat' => -6.3149929999999994,
+            'lng' => 143.95554999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -0.87131949999999991,
+                'lng' => 157.08572380000001,
+            ],
+            'southwest' => [
+                'lat' => -11.657860700000001,
+                'lng' => 140.8419695,
+            ],
+        ],
     ],
     'PH' => [
         'CountryCode' => 'PH',
         'Country' => 'Philippines, The',
         'CurrencyCode' => 'PHP',
         'CurrencyName' => 'Phillipines Peso',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PH',
         'Iso3' => 'PHL',
         'Capital' => 'Manila',
@@ -2975,14 +6906,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'tl,en-PH,fil',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 21.2412572,
+                'lng' => 127.6444784,
+            ],
+            'southwest' => [
+                'lat' => 4.2259000000000002,
+                'lng' => 116.1474999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.879721,
+            'lng' => 121.774017,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 19.761040699999999,
+                'lng' => 130.66002750000001,
+            ],
+            'southwest' => [
+                'lat' => 3.6346295999999998,
+                'lng' => 114.58348100000001,
+            ],
+        ],
     ],
     'PK' => [
         'CountryCode' => 'PK',
         'Country' => 'Pakistan',
         'CurrencyCode' => 'PKR',
         'CurrencyName' => 'Pakistani Rupee',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PK',
         'Iso3' => 'PAK',
         'Capital' => 'Islamabad',
@@ -2993,14 +6948,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ur-PK,en-PK,pa,sd,ps,brh',
         'Neighbours' => 'CN,AF,IR,IN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 37.084107000000003,
+                'lng' => 77.831619500000002,
+            ],
+            'southwest' => [
+                'lat' => 23.634499900000002,
+                'lng' => 60.872972099999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 30.375321,
+            'lng' => 69.34511599999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 37.084107000000003,
+                'lng' => 77.831619500000002,
+            ],
+            'southwest' => [
+                'lat' => 23.701624299999999,
+                'lng' => 60.872972099999998,
+            ],
+        ],
     ],
     'PL' => [
         'CountryCode' => 'PL',
         'Country' => 'Poland',
         'CurrencyCode' => 'PLN',
         'CurrencyName' => 'Zloty',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PL',
         'Iso3' => 'POL',
         'Capital' => 'Warsaw',
@@ -3011,14 +6990,38 @@ return [
         'PostalCodeRegex' => '^\\d{2}-\\d{3}$',
         'Languages' => 'pl',
         'Neighbours' => 'DE,LT,SK,CZ,BY,UA,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 54.905476100000001,
+                'lng' => 24.1458932,
+            ],
+            'southwest' => [
+                'lat' => 49.002025199999999,
+                'lng' => 14.122864099999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 51.919438,
+            'lng' => 19.145136000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 54.835783999999997,
+                'lng' => 24.1458932,
+            ],
+            'southwest' => [
+                'lat' => 49.002025199999999,
+                'lng' => 14.122864099999999,
+            ],
+        ],
     ],
     'PR' => [
         'CountryCode' => 'PR',
         'Country' => 'Puerto Rico',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'PR',
         'Iso3' => 'PRI',
         'Capital' => 'San Juan',
@@ -3029,14 +7032,38 @@ return [
         'PostalCodeRegex' => '^00[679]\\d{2}(?:-\\d{4})?$',
         'Languages' => 'en-PR,es-PR',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.5160099,
+                'lng' => -65.221109900000002,
+            ],
+            'southwest' => [
+                'lat' => 17.881239999999998,
+                'lng' => -67.951581699999991,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.220832999999999,
+            'lng' => -66.590148999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.5160099,
+                'lng' => -65.221109900000002,
+            ],
+            'southwest' => [
+                'lat' => 17.881432499999999,
+                'lng' => -67.484239799999997,
+            ],
+        ],
     ],
     'PT' => [
         'CountryCode' => 'PT',
         'Country' => 'Portugal',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PT',
         'Iso3' => 'PRT',
         'Capital' => 'Lisbon',
@@ -3047,14 +7074,38 @@ return [
         'PostalCodeRegex' => '^\\d{4}-\\d{3}\\s?[a-zA-Z]{0,25}$',
         'Languages' => 'pt-PT,mwl',
         'Neighbours' => 'ES',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 42.154311100000001,
+                'lng' => -6.1891592000000006,
+            ],
+            'southwest' => [
+                'lat' => 32.289499999999997,
+                'lng' => -31.464799899999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 39.399871999999988,
+            'lng' => -8.2244539999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 42.1540137,
+                'lng' => -6.1891592000000006,
+            ],
+            'southwest' => [
+                'lat' => 36.960169499999999,
+                'lng' => -9.5169765999999996,
+            ],
+        ],
     ],
     'PW' => [
         'CountryCode' => 'PW',
         'Country' => 'Palau',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PW',
         'Iso3' => 'PLW',
         'Capital' => 'Melekeok',
@@ -3065,14 +7116,38 @@ return [
         'PostalCodeRegex' => '^(96940)$',
         'Languages' => 'pau,sov,en-PW,tox,ja,fil,zh',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 8.2386739999999996,
+                'lng' => 135.07689999999999,
+            ],
+            'southwest' => [
+                'lat' => 2.6394000000000002,
+                'lng' => 131.01150000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 7.5149799999999987,
+            'lng' => 134.58251999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 7.7592679999999987,
+                'lng' => 134.64658679999999,
+            ],
+            'southwest' => [
+                'lat' => 6.9734377999999992,
+                'lng' => 134.22170790000001,
+            ],
+        ],
     ],
     'PY' => [
         'CountryCode' => 'PY',
         'Country' => 'Paraguay',
         'CurrencyCode' => 'PYG',
         'CurrencyName' => 'Guarani',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'PY',
         'Iso3' => 'PRY',
         'Capital' => 'Asuncion',
@@ -3083,14 +7158,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'es-PY,gn',
         'Neighbours' => 'BO,BR,AR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -19.2876589,
+                'lng' => -54.258561999999998,
+            ],
+            'southwest' => [
+                'lat' => -27.581759399999999,
+                'lng' => -62.638138799999993,
+            ],
+        ],
+        'Location' => [
+            'lat' => -23.442502999999999,
+            'lng' => -58.443832,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -19.2876589,
+                'lng' => -54.258561999999998,
+            ],
+            'southwest' => [
+                'lat' => -27.581759399999999,
+                'lng' => -62.638138799999993,
+            ],
+        ],
     ],
     'QA' => [
         'CountryCode' => 'QA',
         'Country' => 'Qatar',
         'CurrencyCode' => 'QAR',
         'CurrencyName' => 'Qatar Rial',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'QA',
         'Iso3' => 'QAT',
         'Capital' => 'Doha',
@@ -3101,14 +7200,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar-QA,es',
         'Neighbours' => 'SA',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 26.217099999999999,
+                'lng' => 51.676900000000003,
+            ],
+            'southwest' => [
+                'lat' => 24.471118000000001,
+                'lng' => 50.721100100000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 25.354825999999999,
+            'lng' => 51.183883999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 26.1830927,
+                'lng' => 51.656519000000003,
+            ],
+            'southwest' => [
+                'lat' => 24.471118000000001,
+                'lng' => 50.7328033,
+            ],
+        ],
     ],
     'RE' => [
         'CountryCode' => 'RE',
         'Country' => 'Reunion, Island Of',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'RE',
         'Iso3' => 'REU',
         'Capital' => 'Saint-Denis',
@@ -3119,14 +7242,38 @@ return [
         'PostalCodeRegex' => '^((97|98)(4|7|8)\\d{2})$',
         'Languages' => 'fr-RE',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -20.867152900000001,
+                'lng' => 55.844879199999987,
+            ],
+            'southwest' => [
+                'lat' => -21.4035321,
+                'lng' => 55.209732000000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => -21.115141000000001,
+            'lng' => 55.536383999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -20.871755700000001,
+                'lng' => 55.836553599999988,
+            ],
+            'southwest' => [
+                'lat' => -21.389621999999999,
+                'lng' => 55.216405299999998,
+            ],
+        ],
     ],
     'RO' => [
         'CountryCode' => 'RO',
         'Country' => 'Romania',
         'CurrencyCode' => 'RON',
         'CurrencyName' => 'Leu',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'RO',
         'Iso3' => 'ROU',
         'Capital' => 'Bucharest',
@@ -3137,14 +7284,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'ro,hu,rom',
         'Neighbours' => 'MD,HU,UA,BG,RS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 48.265273999999998,
+                'lng' => 29.778399999999991,
+            ],
+            'southwest' => [
+                'lat' => 43.618619299999999,
+                'lng' => 20.261759300000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 45.943161000000003,
+            'lng' => 24.966760000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 48.265273999999998,
+                'lng' => 29.757080599999998,
+            ],
+            'southwest' => [
+                'lat' => 43.623297699999988,
+                'lng' => 20.261759300000001,
+            ],
+        ],
     ],
     'RS' => [
         'CountryCode' => 'RS',
         'Country' => 'Serbia, Republic of',
         'CurrencyCode' => 'RSD',
         'CurrencyName' => 'Serbia, Dinars',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'RS',
         'Iso3' => 'SRB',
         'Capital' => 'Belgrade',
@@ -3155,14 +7326,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'sr,hu,bs,rom',
         'Neighbours' => 'AL,HU,MK,RO,HR,BA,BG,ME,XK',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 46.190032000000002,
+                'lng' => 23.0063095,
+            ],
+            'southwest' => [
+                'lat' => 42.231502900000002,
+                'lng' => 18.838522099999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 44.016520999999997,
+            'lng' => 21.005859000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 46.190032000000002,
+                'lng' => 23.0063095,
+            ],
+            'southwest' => [
+                'lat' => 42.231502900000002,
+                'lng' => 18.838522099999999,
+            ],
+        ],
     ],
     'RU' => [
         'CountryCode' => 'RU',
         'Country' => 'Russian Federation, The',
         'CurrencyCode' => 'RUB',
         'CurrencyName' => 'Russian Ruble',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'RU',
         'Iso3' => 'RUS',
         'Capital' => 'Moscow',
@@ -3173,14 +7368,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'ru,tt,xal,cau,ady,kv,ce,tyv,cv,udm,tut,mns,bua,myv,mdf,chm,ba,inh,tut,kbd,krc,ava,sah,nog',
         'Neighbours' => 'GE,CN,BY,UA,KZ,LV,PL,EE,LT,FI,MN,NO,AZ,KP',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 82.167390699999999,
+                'lng' => -168.97788,
+            ],
+            'southwest' => [
+                'lat' => 41.185352999999999,
+                'lng' => 19.616099899999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 61.524009999999997,
+            'lng' => 105.31875599999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 70,
+                'lng' => 179,
+            ],
+            'southwest' => [
+                'lat' => 40,
+                'lng' => 27,
+            ],
+        ],
     ],
     'RW' => [
         'CountryCode' => 'RW',
         'Country' => 'Rwanda',
         'CurrencyCode' => 'RWF',
         'CurrencyName' => 'Rwanda Franc',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'RW',
         'Iso3' => 'RWA',
         'Capital' => 'Kigali',
@@ -3191,14 +7410,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'rw,en-RW,fr-RW,sw',
         'Neighbours' => 'TZ,CD,BI,UG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -1.0473752999999999,
+                'lng' => 30.8991179,
+            ],
+            'southwest' => [
+                'lat' => -2.8399383,
+                'lng' => 28.861754000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -1.9402779999999999,
+            'lng' => 29.873888000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -1.0473752999999999,
+                'lng' => 30.8991179,
+            ],
+            'southwest' => [
+                'lat' => -2.8399383,
+                'lng' => 28.861754000000001,
+            ],
+        ],
     ],
     'SA' => [
         'CountryCode' => 'SA',
         'Country' => 'Saudi Arabia',
         'CurrencyCode' => 'SAR',
         'CurrencyName' => 'Saudi Riyal',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SA',
         'Iso3' => 'SAU',
         'Capital' => 'Riyadh',
@@ -3209,14 +7452,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-SA',
         'Neighbours' => 'QA,OM,IQ,YE,JO,AE,KW',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 32.154283999999997,
+                'lng' => 55.666699899999998,
+            ],
+            'southwest' => [
+                'lat' => 16.003599999999999,
+                'lng' => 34.5299999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 23.885942,
+            'lng' => 45.079161999999997,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 32.154283999999997,
+                'lng' => 55.666699899999998,
+            ],
+            'southwest' => [
+                'lat' => 16.0957291,
+                'lng' => 34.548997900000003,
+            ],
+        ],
     ],
     'SB' => [
         'CountryCode' => 'SB',
         'Country' => 'Solomon Islands',
         'CurrencyCode' => 'SBD',
         'CurrencyName' => 'Solomon Islands Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SB',
         'Iso3' => 'SLB',
         'Capital' => 'Honiara',
@@ -3227,14 +7494,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-SB,tpi',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -6.0750109999999999,
+                'lng' => 168.02490230000001,
+            ],
+            'southwest' => [
+                'lat' => -12.683214899999999,
+                'lng' => 155.11871339999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -9.6457099999999993,
+            'lng' => 160.156194,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -6.5892402999999993,
+                'lng' => 162.88854090000001,
+            ],
+            'southwest' => [
+                'lat' => -11.8813861,
+                'lng' => 155.48624050000001,
+            ],
+        ],
     ],
     'SC' => [
         'CountryCode' => 'SC',
         'Country' => 'Seychelles',
         'CurrencyCode' => 'SCR',
         'CurrencyName' => 'Seychelles Rupee',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SC',
         'Iso3' => 'SYC',
         'Capital' => 'Victoria',
@@ -3245,14 +7536,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-SC,fr-SC',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -4.0766036999999997,
+                'lng' => 56.3928224,
+            ],
+            'southwest' => [
+                'lat' => -10.471607300000001,
+                'lng' => 45.983276400000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -4.6795739999999997,
+            'lng' => 55.491976999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -4.5606996000000004,
+                'lng' => 55.539025700000003,
+            ],
+            'southwest' => [
+                'lat' => -4.8069082999999999,
+                'lng' => 55.359914199999999,
+            ],
+        ],
     ],
     'SD' => [
         'CountryCode' => 'SD',
         'Country' => 'Sudan',
         'CurrencyCode' => 'SDG',
         'CurrencyName' => 'Sudanese Pound',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SD',
         'Iso3' => 'SDN',
         'Capital' => 'Khartoum',
@@ -3263,14 +7578,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'ar-SD,en,fia',
         'Neighbours' => 'SS,TD,EG,ET,ER,LY,CF',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 22.224917999999999,
+                'lng' => 38.693799899999988,
+            ],
+            'southwest' => [
+                'lat' => 9.3472208999999999,
+                'lng' => 21.814938999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.862807,
+            'lng' => 30.217635999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 22.224917999999999,
+                'lng' => 38.583674599999988,
+            ],
+            'southwest' => [
+                'lat' => 9.3472209999999993,
+                'lng' => 21.814938999999999,
+            ],
+        ],
     ],
     'SE' => [
         'CountryCode' => 'SE',
         'Country' => 'Sweden',
         'CurrencyCode' => 'SEK',
         'CurrencyName' => 'Swedish Krona',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SE',
         'Iso3' => 'SWE',
         'Capital' => 'Stockholm',
@@ -3281,14 +7620,38 @@ return [
         'PostalCodeRegex' => '^(?:SE)?\\d{3}\\s\\d{2}$',
         'Languages' => 'sv-SE,se,sma,fi-SE',
         'Neighbours' => 'NO,FI',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 69.059970899999996,
+                'lng' => 24.1773101,
+            ],
+            'southwest' => [
+                'lat' => 55.0059799,
+                'lng' => 10.579800000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 60.128161000000013,
+            'lng' => 18.643501000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 69.059164799999991,
+                'lng' => 24.1616356,
+            ],
+            'southwest' => [
+                'lat' => 55.338603000000013,
+                'lng' => 10.963940900000001,
+            ],
+        ],
     ],
     'SG' => [
         'CountryCode' => 'SG',
         'Country' => 'Singapore',
         'CurrencyCode' => 'SGD',
         'CurrencyName' => 'Singapore Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SG',
         'Iso3' => 'SGP',
         'Capital' => 'Singapore',
@@ -3299,14 +7662,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'cmn,en-SG,ms-SG,ta-SG,zh-SG',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 1.4784001,
+                'lng' => 104.0945001,
+            ],
+            'southwest' => [
+                'lat' => 1.1496,
+                'lng' => 103.59399999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 1.3520829999999999,
+            'lng' => 103.819836,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 1.4707592,
+                'lng' => 104.0884808,
+            ],
+            'southwest' => [
+                'lat' => 1.1587023000000001,
+                'lng' => 103.6055575,
+            ],
+        ],
     ],
     'SH' => [
         'CountryCode' => 'SH',
         'Country' => 'SAINT HELENA',
         'CurrencyCode' => 'SHP',
         'CurrencyName' => 'Saint Helenian Pound',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SH',
         'Iso3' => 'SHN',
         'Capital' => 'Jamestown',
@@ -3317,14 +7704,38 @@ return [
         'PostalCodeRegex' => '^(STHL1ZZ)$',
         'Languages' => 'en-SH',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -15.89719,
+                'lng' => -5.6387529999999986,
+            ],
+            'southwest' => [
+                'lat' => -16.020314899999999,
+                'lng' => -5.792052,
+            ],
+        ],
+        'Location' => [
+            'lat' => -15.965010400000001,
+            'lng' => -5.7089240999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -15.903823900000001,
+                'lng' => -5.6394300999999993,
+            ],
+            'southwest' => [
+                'lat' => -16.020314899999999,
+                'lng' => -5.7874086,
+            ],
+        ],
     ],
     'SI' => [
         'CountryCode' => 'SI',
         'Country' => 'Slovenia',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SI',
         'Iso3' => 'SVN',
         'Capital' => 'Ljubljana',
@@ -3335,14 +7746,38 @@ return [
         'PostalCodeRegex' => '^(?:SI)*(\\d{4})$',
         'Languages' => 'sl,sh',
         'Neighbours' => 'HU,IT,HR,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 46.876658999999997,
+                'lng' => 16.6107038,
+            ],
+            'southwest' => [
+                'lat' => 45.421835600000001,
+                'lng' => 13.3753355,
+            ],
+        ],
+        'Location' => [
+            'lat' => 46.151240999999999,
+            'lng' => 14.995463000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 46.876658999999997,
+                'lng' => 16.6107038,
+            ],
+            'southwest' => [
+                'lat' => 45.421835600000001,
+                'lng' => 13.3753355,
+            ],
+        ],
     ],
     'SK' => [
         'CountryCode' => 'SK',
         'Country' => 'Slovakia',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SK',
         'Iso3' => 'SVK',
         'Capital' => 'Bratislava',
@@ -3353,14 +7788,38 @@ return [
         'PostalCodeRegex' => '^\\d{3}\\s?\\d{2}$',
         'Languages' => 'sk,hu',
         'Neighbours' => 'PL,HU,CZ,UA,AT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 49.613805100000008,
+                'lng' => 22.558933799999998,
+            ],
+            'southwest' => [
+                'lat' => 47.731158999999998,
+                'lng' => 16.833182099999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 48.669026000000002,
+            'lng' => 19.699024000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 49.613805100000008,
+                'lng' => 22.558933799999998,
+            ],
+            'southwest' => [
+                'lat' => 47.731158999999998,
+                'lng' => 16.833182099999998,
+            ],
+        ],
     ],
     'SL' => [
         'CountryCode' => 'SL',
         'Country' => 'Sierra Leone',
         'CurrencyCode' => 'SLL',
         'CurrencyName' => 'Sierra Leonean Leone',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SL',
         'Iso3' => 'SLE',
         'Capital' => 'Freetown',
@@ -3371,14 +7830,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-SL,men,tem',
         'Neighbours' => 'LR,GN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 9.9999735999999988,
+                'lng' => -10.271682999999999,
+            ],
+            'southwest' => [
+                'lat' => 6.8445999999999998,
+                'lng' => -13.4032999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 8.4605549999999994,
+            'lng' => -11.779889000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 9.9999752999999991,
+                'lng' => -10.271682999999999,
+            ],
+            'southwest' => [
+                'lat' => 6.8993332000000001,
+                'lng' => -13.302432599999999,
+            ],
+        ],
     ],
     'SM' => [
         'CountryCode' => 'SM',
         'Country' => 'San Marino',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SM',
         'Iso3' => 'SMR',
         'Capital' => 'San Marino',
@@ -3389,14 +7872,38 @@ return [
         'PostalCodeRegex' => '^(4789\\d)$',
         'Languages' => 'it-SM',
         'Neighbours' => 'IT',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 43.992075,
+                'lng' => 12.5167041,
+            ],
+            'southwest' => [
+                'lat' => 43.8936809,
+                'lng' => 12.4034824,
+            ],
+        ],
+        'Location' => [
+            'lat' => 43.942360000000001,
+            'lng' => 12.457777,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 43.992075,
+                'lng' => 12.5167041,
+            ],
+            'southwest' => [
+                'lat' => 43.8936809,
+                'lng' => 12.4034824,
+            ],
+        ],
     ],
     'SN' => [
         'CountryCode' => 'SN',
         'Country' => 'Senegal',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SN',
         'Iso3' => 'SEN',
         'Capital' => 'Dakar',
@@ -3407,14 +7914,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'fr-SN,wo,fuc,mnk',
         'Neighbours' => 'GN,MR,GW,GM,ML',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 16.693053899999999,
+                'lng' => -11.348606999999999,
+            ],
+            'southwest' => [
+                'lat' => 12.2649001,
+                'lng' => -17.687999900000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 14.497401,
+            'lng' => -14.452362000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 16.693053899999999,
+                'lng' => -11.348606999999999,
+            ],
+            'southwest' => [
+                'lat' => 12.3072891,
+                'lng' => -17.530595300000002,
+            ],
+        ],
     ],
     'SO' => [
         'CountryCode' => 'SO',
         'Country' => 'Somalia',
         'CurrencyCode' => 'SOS',
         'CurrencyName' => 'Somali Shilling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SO',
         'Iso3' => 'SOM',
         'Capital' => 'Mogadishu',
@@ -3425,14 +7956,38 @@ return [
         'PostalCodeRegex' => '^([A-Z]{2}\\d{5})$',
         'Languages' => 'so-SO,ar-SO,it,en-SO',
         'Neighbours' => 'ET,KE,DJ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.361499999999999,
+                'lng' => 51.613799999999998,
+            ],
+            'southwest' => [
+                'lat' => -1.8673,
+                'lng' => 40.994373000000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 5.1521489999999996,
+            'lng' => 46.199615999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 11.988614399999999,
+                'lng' => 51.413028799999999,
+            ],
+            'southwest' => [
+                'lat' => -1.6620657999999999,
+                'lng' => 40.994373000000003,
+            ],
+        ],
     ],
     'SR' => [
         'CountryCode' => 'SR',
         'Country' => 'Suriname',
         'CurrencyCode' => 'SRD',
         'CurrencyName' => 'Surinamese Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SR',
         'Iso3' => 'SUR',
         'Capital' => 'Paramaribo',
@@ -3443,14 +7998,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'nl-SR,en,srn,hns,jv',
         'Neighbours' => 'GY,BR,GF',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 6.1295998999999997,
+                'lng' => -53.942899999999987,
+            ],
+            'southwest' => [
+                'lat' => 1.8373060000000001,
+                'lng' => -58.070505900000008,
+            ],
+        ],
+        'Location' => [
+            'lat' => 3.919305,
+            'lng' => -56.027782999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 6.0019958000000004,
+                'lng' => -53.951024399999987,
+            ],
+            'southwest' => [
+                'lat' => 1.8373060000000001,
+                'lng' => -58.070505900000008,
+            ],
+        ],
     ],
     'SS' => [
         'CountryCode' => 'SS',
         'Country' => 'SOUTH SUDAN',
         'CurrencyCode' => 'SSP',
         'CurrencyName' => 'South Sudanese pound',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SS',
         'Iso3' => 'SSD',
         'Capital' => 'Juba',
@@ -3461,14 +8040,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en',
         'Neighbours' => 'CD,CF,ET,KE,SD,UG,',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.236389000000001,
+                'lng' => 35.9489971,
+            ],
+            'southwest' => [
+                'lat' => 3.4889800000000002,
+                'lng' => 23.440849100000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 6.8769918999999993,
+            'lng' => 31.3069788,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.236389000000001,
+                'lng' => 35.9489971,
+            ],
+            'southwest' => [
+                'lat' => 3.4889929999999998,
+                'lng' => 23.440849100000001,
+            ],
+        ],
     ],
     'ST' => [
         'CountryCode' => 'ST',
         'Country' => 'Sao Tome and Principe',
         'CurrencyCode' => 'STD',
         'CurrencyName' => 'Sao Tomean Dobra',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ST',
         'Iso3' => 'STP',
         'Capital' => 'Sao Tome',
@@ -3479,14 +8082,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'pt-ST',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 1.8961687,
+                'lng' => 7.6588439000000008,
+            ],
+            'southwest' => [
+                'lat' => -0.09887689999999999,
+                'lng' => 6.328125,
+            ],
+        ],
+        'Location' => [
+            'lat' => 0.18636,
+            'lng' => 6.6130809999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 0.4133947,
+                'lng' => 6.7606526999999996,
+            ],
+            'southwest' => [
+                'lat' => -0.0140044,
+                'lng' => 6.4604758999999996,
+            ],
+        ],
     ],
     'SV' => [
         'CountryCode' => 'SV',
         'Country' => 'El Salvador',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SV',
         'Iso3' => 'SLV',
         'Capital' => 'San Salvador',
@@ -3497,14 +8124,38 @@ return [
         'PostalCodeRegex' => '^(?:CP)*(\\d{4})$',
         'Languages' => 'es-SV',
         'Neighbours' => 'GT,HN',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 14.4505567,
+                'lng' => -87.668199999999999,
+            ],
+            'southwest' => [
+                'lat' => 13.0473999,
+                'lng' => -90.192299999999989,
+            ],
+        ],
+        'Location' => [
+            'lat' => 13.794185000000001,
+            'lng' => -88.896529999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 14.4505567,
+                'lng' => -87.683850199999995,
+            ],
+            'southwest' => [
+                'lat' => 13.155431200000001,
+                'lng' => -90.126810599999999,
+            ],
+        ],
     ],
     'SY' => [
         'CountryCode' => 'SY',
         'Country' => 'Syria',
         'CurrencyCode' => 'SYP',
         'CurrencyName' => 'Syrian Pound',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SY',
         'Iso3' => 'SYR',
         'Capital' => 'Damascus',
@@ -3515,14 +8166,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar-SY,ku,hy,arc,fr,en',
         'Neighbours' => 'IQ,JO,IL,TR,LB',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 37.318693000000003,
+                'lng' => 42.376308999999999,
+            ],
+            'southwest' => [
+                'lat' => 32.311135999999998,
+                'lng' => 35.628699999999988,
+            ],
+        ],
+        'Location' => [
+            'lat' => 34.802074999999988,
+            'lng' => 38.996814999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 37.318693000000003,
+                'lng' => 42.376308999999999,
+            ],
+            'southwest' => [
+                'lat' => 32.311135999999998,
+                'lng' => 35.716595599999998,
+            ],
+        ],
     ],
     'SZ' => [
         'CountryCode' => 'SZ',
         'Country' => 'Swaziland',
         'CurrencyCode' => 'SZL',
         'CurrencyName' => 'Swazi Lilangeni',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'SZ',
         'Iso3' => 'SWZ',
         'Capital' => 'Mbabane',
@@ -3533,14 +8208,38 @@ return [
         'PostalCodeRegex' => '^([A-Z]\\d{3})$',
         'Languages' => 'en-SZ,ss-SZ',
         'Neighbours' => 'ZA,MZ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -25.717919999999999,
+                'lng' => 32.134906700000002,
+            ],
+            'southwest' => [
+                'lat' => -27.317402000000001,
+                'lng' => 30.79064,
+            ],
+        ],
+        'Location' => [
+            'lat' => -26.522503,
+            'lng' => 31.465865999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -25.717919999999999,
+                'lng' => 32.134906700000002,
+            ],
+            'southwest' => [
+                'lat' => -27.317402000000001,
+                'lng' => 30.79064,
+            ],
+        ],
     ],
     'TC' => [
         'CountryCode' => 'TC',
         'Country' => 'Turks and Caicos Islands',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'TC',
         'Iso3' => 'TCA',
         'Capital' => 'Cockburn Town',
@@ -3551,14 +8250,38 @@ return [
         'PostalCodeRegex' => '^(TKCA 1ZZ)$',
         'Languages' => 'en-TC',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 22.001628499999999,
+                'lng' => -71.059499899999992,
+            ],
+            'southwest' => [
+                'lat' => 21.145992199999998,
+                'lng' => -72.520699999999991,
+            ],
+        ],
+        'Location' => [
+            'lat' => 21.694025,
+            'lng' => -71.797927999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 21.962350199999999,
+                'lng' => -71.461762300000004,
+            ],
+            'southwest' => [
+                'lat' => 21.454027100000001,
+                'lng' => -72.482471599999997,
+            ],
+        ],
     ],
     'TD' => [
         'CountryCode' => 'TD',
         'Country' => 'Chad',
         'CurrencyCode' => 'XAF',
         'CurrencyName' => 'CFA Franc - Central Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TD',
         'Iso3' => 'TCD',
         'Capital' => 'N\'Djamena',
@@ -3569,14 +8292,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-TD,ar-TD,sre',
         'Neighbours' => 'NE,LY,CF,SD,CM,NG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 23.449228000000002,
+                'lng' => 24.000001099999999,
+            ],
+            'southwest' => [
+                'lat' => 7.4429749999999997,
+                'lng' => 13.469999899999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.454166000000001,
+            'lng' => 18.732206999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 23.449228000000002,
+                'lng' => 24.000001099999999,
+            ],
+            'southwest' => [
+                'lat' => 7.4429749999999997,
+                'lng' => 13.469999899999999,
+            ],
+        ],
     ],
     'TG' => [
         'CountryCode' => 'TG',
         'Country' => 'Togo',
         'CurrencyCode' => 'XOF',
         'CurrencyName' => 'CFA Franc - West Africa',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TG',
         'Iso3' => 'TGO',
         'Capital' => 'Lome',
@@ -3587,14 +8334,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'fr-TG,ee,hna,kbp,dag,ha',
         'Neighbours' => 'BJ,GH,BF',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 11.140496300000001,
+                'lng' => 1.8088218,
+            ],
+            'southwest' => [
+                'lat' => 6.0811999999999999,
+                'lng' => -0.144042,
+            ],
+        ],
+        'Location' => [
+            'lat' => 8.6195430000000002,
+            'lng' => 0.82478200000000002,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 11.140496300000001,
+                'lng' => 1.8088149,
+            ],
+            'southwest' => [
+                'lat' => 6.1123949999999994,
+                'lng' => -0.144042,
+            ],
+        ],
     ],
     'TH' => [
         'CountryCode' => 'TH',
         'Country' => 'Thailand',
         'CurrencyCode' => 'THB',
         'CurrencyName' => 'Baht',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TH',
         'Iso3' => 'THA',
         'Capital' => 'Bangkok',
@@ -3605,14 +8376,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'th,en',
         'Neighbours' => 'LA,MM,KH,MY',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 20.465143000000001,
+                'lng' => 105.63681200000001,
+            ],
+            'southwest' => [
+                'lat' => 5.6130380000000004,
+                'lng' => 97.343395999999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.870032,
+            'lng' => 100.992541,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 20.464355099999999,
+                'lng' => 105.6353682,
+            ],
+            'southwest' => [
+                'lat' => 5.6135541,
+                'lng' => 97.344904900000003,
+            ],
+        ],
     ],
     'TJ' => [
         'CountryCode' => 'TJ',
         'Country' => 'Tajikistan',
         'CurrencyCode' => 'TJS',
         'CurrencyName' => 'Tajikistani Somoni',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TJ',
         'Iso3' => 'TJK',
         'Capital' => 'Dushanbe',
@@ -3623,14 +8418,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'tg,ru',
         'Neighbours' => 'CN,AF,KG,UZ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 41.044367000000001,
+                'lng' => 75.153956399999998,
+            ],
+            'southwest' => [
+                'lat' => 36.671989799999999,
+                'lng' => 67.342012099999991,
+            ],
+        ],
+        'Location' => [
+            'lat' => 38.861033999999997,
+            'lng' => 71.276093000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 41.044367000000001,
+                'lng' => 75.153956399999998,
+            ],
+            'southwest' => [
+                'lat' => 36.671989799999999,
+                'lng' => 67.342012099999991,
+            ],
+        ],
     ],
     'TL' => [
         'CountryCode' => 'TL',
         'Country' => 'East Timor',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TL',
         'Iso3' => 'TLS',
         'Capital' => 'Dili',
@@ -3641,14 +8460,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'tet,pt-TL,id,en',
         'Neighbours' => 'ID',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -8.0483999999999991,
+                'lng' => 127.42489999999999,
+            ],
+            'southwest' => [
+                'lat' => -9.5303000999999998,
+                'lng' => 124.03319999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -8.8742169999999998,
+            'lng' => 125.72753899999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -8.1268578999999992,
+                'lng' => 127.3430437,
+            ],
+            'southwest' => [
+                'lat' => -9.462671499999999,
+                'lng' => 124.931763,
+            ],
+        ],
     ],
     'TN' => [
         'CountryCode' => 'TN',
         'Country' => 'Tunisia',
         'CurrencyCode' => 'TND',
         'CurrencyName' => 'Tunisian Dinar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TN',
         'Iso3' => 'TUN',
         'Capital' => 'Tunis',
@@ -3659,14 +8502,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'ar-TN,fr',
         'Neighbours' => 'DZ,LY',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 37.535899999999998,
+                'lng' => 11.599216999999999,
+            ],
+            'southwest' => [
+                'lat' => 30.2280339,
+                'lng' => 7.5223110000000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 33.886916999999997,
+            'lng' => 9.5374990000000004,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 37.358287300000001,
+                'lng' => 11.599216999999999,
+            ],
+            'southwest' => [
+                'lat' => 30.2280339,
+                'lng' => 7.5223110000000002,
+            ],
+        ],
     ],
     'TO' => [
         'CountryCode' => 'TO',
         'Country' => 'Tonga',
         'CurrencyCode' => 'TOP',
         'CurrencyName' => 'Pa\'anga',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TO',
         'Iso3' => 'TON',
         'Capital' => 'Nuku\'alofa',
@@ -3677,14 +8544,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'to,en-TO',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -15.406023599999999,
+                'lng' => -173.25439460000001,
+            ],
+            'southwest' => [
+                'lat' => -21.8360059,
+                'lng' => -175.95703130000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -21.178985999999998,
+            'lng' => -175.19824199999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -21.0430685,
+                'lng' => -174.90059640000001,
+            ],
+            'southwest' => [
+                'lat' => -21.473392,
+                'lng' => -175.35649739999999,
+            ],
+        ],
     ],
     'TR' => [
         'CountryCode' => 'TR',
         'Country' => 'Turkey',
         'CurrencyCode' => 'TRY',
         'CurrencyName' => 'New Turkish Lira',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TR',
         'Iso3' => 'TUR',
         'Capital' => 'Ankara',
@@ -3695,14 +8586,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'tr-TR,ku,diq,az,av',
         'Neighbours' => 'SY,GE,IQ,IR,GR,AM,AZ,BG',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 42.3666999,
+                'lng' => 44.817844899999997,
+            ],
+            'southwest' => [
+                'lat' => 35.808591999999997,
+                'lng' => 25.537700000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 38.963745000000003,
+            'lng' => 35.243321999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 42.106239100000003,
+                'lng' => 44.817493900000002,
+            ],
+            'southwest' => [
+                'lat' => 35.808738900000002,
+                'lng' => 25.665482000000001,
+            ],
+        ],
     ],
     'TT' => [
         'CountryCode' => 'TT',
         'Country' => 'Trinidad and Tobago',
         'CurrencyCode' => 'TTD',
         'CurrencyName' => 'Trinidad and Tobago Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'TT',
         'Iso3' => 'TTO',
         'Capital' => 'Port of Spain',
@@ -3713,14 +8628,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-TT,hns,fr,es,zh',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 11.400399999999999,
+                'lng' => -60.450899899999989,
+            ],
+            'southwest' => [
+                'lat' => 9.9930000999999997,
+                'lng' => -61.972500099999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 10.691803,
+            'lng' => -61.222503000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 10.843815299999999,
+                'lng' => -60.909131799999997,
+            ],
+            'southwest' => [
+                'lat' => 10.042480899999999,
+                'lng' => -61.931417400000001,
+            ],
+        ],
     ],
     'TV' => [
         'CountryCode' => 'TV',
         'Country' => 'Tuvalu',
         'CurrencyCode' => 'AUD',
         'CurrencyName' => 'Australian Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TV',
         'Iso3' => 'TUV',
         'Capital' => 'Funafuti',
@@ -3731,14 +8670,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'tvl,en,sm,gil',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -5.4300853,
+                'lng' => 179.99999990000001,
+            ],
+            'southwest' => [
+                'lat' => -11.1891797,
+                'lng' => 175.5615234,
+            ],
+        ],
+        'Location' => [
+            'lat' => -7.4784205000000004,
+            'lng' => 178.679924,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -7.4577304999999994,
+                'lng' => 178.69743349999999,
+            ],
+            'southwest' => [
+                'lat' => -7.4991105999999998,
+                'lng' => 178.66241450000001,
+            ],
+        ],
     ],
     'TW' => [
         'CountryCode' => 'TW',
         'Country' => 'Taiwan',
         'CurrencyCode' => 'TWD',
         'CurrencyName' => 'New Taiwan Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TW',
         'Iso3' => 'TWN',
         'Capital' => 'Taipei',
@@ -3749,14 +8712,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'zh-TW,zh,nan,hak',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 26.454499999999999,
+                'lng' => 123.5021012,
+            ],
+            'southwest' => [
+                'lat' => 20.517000100000001,
+                'lng' => 116.6665,
+            ],
+        ],
+        'Location' => [
+            'lat' => 23.69781,
+            'lng' => 120.960515,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 25.299653800000002,
+                'lng' => 122.0066942,
+            ],
+            'southwest' => [
+                'lat' => 21.8968211,
+                'lng' => 120.0350435,
+            ],
+        ],
     ],
     'TZ' => [
         'CountryCode' => 'TZ',
         'Country' => 'Tanzania',
         'CurrencyCode' => 'TZS',
         'CurrencyName' => 'Tanzanian Shilling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'TZ',
         'Iso3' => 'TZA',
         'Capital' => 'Dodoma',
@@ -3767,14 +8754,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'sw-TZ,en,ar',
         'Neighbours' => 'MZ,KE,CD,RW,ZM,BI,UG,MW',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -0.98439699999999997,
+                'lng' => 40.639800000000001,
+            ],
+            'southwest' => [
+                'lat' => -11.7612539,
+                'lng' => 29.34,
+            ],
+        ],
+        'Location' => [
+            'lat' => -6.3690280000000001,
+            'lng' => 34.888821999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -0.98447899999999988,
+                'lng' => 40.4449653,
+            ],
+            'southwest' => [
+                'lat' => -11.761212,
+                'lng' => 29.34,
+            ],
+        ],
     ],
     'UA' => [
         'CountryCode' => 'UA',
         'Country' => 'Ukraine',
         'CurrencyCode' => 'UAH',
         'CurrencyName' => 'Hryvna',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'UA',
         'Iso3' => 'UKR',
         'Capital' => 'Kiev',
@@ -3785,14 +8796,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'uk,ru-UA,rom,pl,hu',
         'Neighbours' => 'PL,MD,HU,SK,BY,RO,RU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 52.379580999999988,
+                'lng' => 40.228580899999997,
+            ],
+            'southwest' => [
+                'lat' => 44.292400000000001,
+                'lng' => 22.137159,
+            ],
+        ],
+        'Location' => [
+            'lat' => 48.379432999999999,
+            'lng' => 31.165579999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 52.379562999999997,
+                'lng' => 40.228580899999997,
+            ],
+            'southwest' => [
+                'lat' => 44.3864631,
+                'lng' => 22.137159,
+            ],
+        ],
     ],
     'UG' => [
         'CountryCode' => 'UG',
         'Country' => 'Uganda',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'Ugandan Shilling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'UG',
         'Iso3' => 'UGA',
         'Capital' => 'Kampala',
@@ -3803,14 +8838,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-UG,lg,sw,ar',
         'Neighbours' => 'TZ,KE,SS,CD,RW',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 4.2186278000000001,
+                'lng' => 35.033048899999997,
+            ],
+            'southwest' => [
+                'lat' => -1.4823179,
+                'lng' => 29.573433000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => 1.3733329999999999,
+            'lng' => 32.290275000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 4.2186278000000001,
+                'lng' => 35.033048899999997,
+            ],
+            'southwest' => [
+                'lat' => -1.4823179,
+                'lng' => 29.573433000000001,
+            ],
+        ],
     ],
     'US' => [
         'CountryCode' => 'US',
         'Country' => 'United States Of America',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'US',
         'Iso3' => 'USA',
         'Capital' => 'Washington',
@@ -3821,14 +8880,38 @@ return [
         'PostalCodeRegex' => '^\\d{5}(-\\d{4})?$',
         'Languages' => 'en-US,es-US,haw,fr',
         'Neighbours' => 'CA,MX,CU',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 71.538800100000003,
+                'lng' => -66.885417000000004,
+            ],
+            'southwest' => [
+                'lat' => 18.776299999999999,
+                'lng' => 170.59569999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 37.090240000000001,
+            'lng' => -95.712890999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 49.380000000000003,
+                'lng' => -66.939999999999998,
+            ],
+            'southwest' => [
+                'lat' => 25.82,
+                'lng' => -124.39,
+            ],
+        ],
     ],
     'UY' => [
         'CountryCode' => 'UY',
         'Country' => 'Uruguay',
         'CurrencyCode' => 'UYU',
         'CurrencyName' => 'Peso Uruguayo',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'UY',
         'Iso3' => 'URY',
         'Capital' => 'Montevideo',
@@ -3839,14 +8922,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'es-UY',
         'Neighbours' => 'BR,AR',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -30.0852149,
+                'lng' => -53.0779286,
+            ],
+            'southwest' => [
+                'lat' => -35.1558001,
+                'lng' => -58.491360899999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => -32.522779,
+            'lng' => -55.765835000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -30.0852149,
+                'lng' => -53.184165099999987,
+            ],
+            'southwest' => [
+                'lat' => -35.031463799999997,
+                'lng' => -58.439222600000008,
+            ],
+        ],
     ],
     'UZ' => [
         'CountryCode' => 'UZ',
         'Country' => 'Uzbekistan',
         'CurrencyCode' => 'UZS',
         'CurrencyName' => 'Uzbekistan Som',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'UZ',
         'Iso3' => 'UZB',
         'Capital' => 'Tashkent',
@@ -3857,14 +8964,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'uz,ru,tg',
         'Neighbours' => 'TM,AF,KG,TJ,KZ',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 45.590074999999999,
+                'lng' => 73.148945999999995,
+            ],
+            'southwest' => [
+                'lat' => 37.172257100000003,
+                'lng' => 55.9982179,
+            ],
+        ],
+        'Location' => [
+            'lat' => 41.377490999999999,
+            'lng' => 64.585262,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 45.590074999999999,
+                'lng' => 73.148945999999995,
+            ],
+            'southwest' => [
+                'lat' => 37.172257100000003,
+                'lng' => 55.9982179,
+            ],
+        ],
     ],
     'VC' => [
         'CountryCode' => 'VC',
         'Country' => 'St. Vincent',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'VC',
         'Iso3' => 'VCT',
         'Capital' => 'Kingstown',
@@ -3875,14 +9006,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-VC,fr',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
+        'Location' => [
+            'lat' => NULL,
+            'lng' => NULL,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
     ],
     'VE' => [
         'CountryCode' => 'VE',
         'Country' => 'Venezuela',
         'CurrencyCode' => 'VEF',
         'CurrencyName' => 'Bolivar Fuerte',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'VE',
         'Iso3' => 'VEN',
         'Capital' => 'Caracas',
@@ -3893,14 +9048,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'es-VE',
         'Neighbours' => 'GY,BR,CO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.688599999999999,
+                'lng' => -59.805666000000002,
+            ],
+            'southwest' => [
+                'lat' => 0.64752909999999997,
+                'lng' => -73.351558099999991,
+            ],
+        ],
+        'Location' => [
+            'lat' => 6.4237500000000001,
+            'lng' => -66.589730000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.770409000000001,
+                'lng' => -59.803780000000003,
+            ],
+            'southwest' => [
+                'lat' => 0.54381789999999997,
+                'lng' => -73.425561099999996,
+            ],
+        ],
     ],
     'VG' => [
         'CountryCode' => 'VG',
         'Country' => 'Virgin Islands (British)',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'VG',
         'Iso3' => 'VGB',
         'Capital' => 'Road Town',
@@ -3911,14 +9090,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-VG',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.7539999,
+                'lng' => -64.265199899999999,
+            ],
+            'southwest' => [
+                'lat' => 18.2899998,
+                'lng' => -64.877499999999998,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.420694999999998,
+            'lng' => -64.639967999999996,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.529943599999999,
+                'lng' => -64.320402099999995,
+            ],
+            'southwest' => [
+                'lat' => 18.306288899999998,
+                'lng' => -64.850460200000001,
+            ],
+        ],
     ],
     'VI' => [
         'CountryCode' => 'VI',
         'Country' => 'Virgin Islands (US)',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'VI',
         'Iso3' => 'VIR',
         'Capital' => 'Charlotte Amalie',
@@ -3929,14 +9132,38 @@ return [
         'PostalCodeRegex' => '^008\\d{2}(?:-\\d{4})?$',
         'Languages' => 'en-VI',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.4239,
+                'lng' => -64.439099999999996,
+            ],
+            'southwest' => [
+                'lat' => 17.5482999,
+                'lng' => -65.110100000000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.335764999999999,
+            'lng' => -64.896334999999993,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.628667700000001,
+                'lng' => -64.080481899999995,
+            ],
+            'southwest' => [
+                'lat' => 17.504892699999999,
+                'lng' => -65.396887399999997,
+            ],
+        ],
     ],
     'VN' => [
         'CountryCode' => 'VN',
         'Country' => 'Vietnam',
         'CurrencyCode' => 'VND',
         'CurrencyName' => 'Dong',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'VN',
         'Iso3' => 'VNM',
         'Capital' => 'Hanoi',
@@ -3947,14 +9174,38 @@ return [
         'PostalCodeRegex' => '^(\\d{6})$',
         'Languages' => 'vi,en,fr,zh,km',
         'Neighbours' => 'CN,LA,KH',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 23.393395000000002,
+                'lng' => 109.6765,
+            ],
+            'southwest' => [
+                'lat' => 8.1952000999999992,
+                'lng' => 102.14440999999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => 14.058324000000001,
+            'lng' => 108.277199,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 23.3929069,
+                'lng' => 109.4689041,
+            ],
+            'southwest' => [
+                'lat' => 8.4127294999999993,
+                'lng' => 102.14440999999999,
+            ],
+        ],
     ],
     'VU' => [
         'CountryCode' => 'VU',
         'Country' => 'Vanuatu',
         'CurrencyCode' => 'VUV',
         'CurrencyName' => 'Vanuatu Vatu',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'VU',
         'Iso3' => 'VUT',
         'Capital' => 'Port Vila',
@@ -3965,14 +9216,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'bi,en-VU,fr-VU',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -12.806444900000001,
+                'lng' => 170.50231930000001,
+            ],
+            'southwest' => [
+                'lat' => -20.535077300000001,
+                'lng' => 166.05834949999999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -15.376706,
+            'lng' => 166.959158,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -13.072455400000001,
+                'lng' => 168.64906310000001,
+            ],
+            'southwest' => [
+                'lat' => -17.825971800000001,
+                'lng' => 166.5417588,
+            ],
+        ],
     ],
     'WS' => [
         'CountryCode' => 'WS',
         'Country' => 'Samoa',
         'CurrencyCode' => 'WST',
         'CurrencyName' => 'Samoan Tala',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'WS',
         'Iso3' => 'WSM',
         'Capital' => 'Apia',
@@ -3983,14 +9258,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'sm,en-WS',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -13.4203449,
+                'lng' => -171.3968562,
+            ],
+            'southwest' => [
+                'lat' => -14.083301199999999,
+                'lng' => -172.8108215,
+            ],
+        ],
+        'Location' => [
+            'lat' => -13.759029,
+            'lng' => -172.10462899999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -13.439682299999999,
+                'lng' => -171.39800550000001,
+            ],
+            'southwest' => [
+                'lat' => -14.076503600000001,
+                'lng' => -172.8036764,
+            ],
+        ],
     ],
     'XB' => [
         'CountryCode' => 'XB',
         'Country' => 'Bonaire',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'XB',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4001,14 +9300,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.3121279,
+                'lng' => -68.195761099999999,
+            ],
+            'southwest' => [
+                'lat' => 12.024887,
+                'lng' => -68.420768100000004,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.201890199999999,
+            'lng' => -68.26238219999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.3121279,
+                'lng' => -68.195761099999999,
+            ],
+            'southwest' => [
+                'lat' => 12.024887,
+                'lng' => -68.420768100000004,
+            ],
+        ],
     ],
     'XC' => [
         'CountryCode' => 'XC',
         'Country' => 'Curacao',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'XC',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4019,14 +9342,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 12.4941999,
+                'lng' => -68.567000100000001,
+            ],
+            'southwest' => [
+                'lat' => 11.9224,
+                'lng' => -69.298999999999992,
+            ],
+        ],
+        'Location' => [
+            'lat' => 12.16957,
+            'lng' => -68.990020000000001,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 12.392762599999999,
+                'lng' => -68.736682899999991,
+            ],
+            'southwest' => [
+                'lat' => 12.034319399999999,
+                'lng' => -69.162678200000002,
+            ],
+        ],
     ],
     'XE' => [
         'CountryCode' => 'XE',
         'Country' => 'St. Eustatius',
         'CurrencyCode' => 'ANG',
         'CurrencyName' => 'Netherlands Antilles Guilder',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'XE',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4037,14 +9384,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.525894000000001,
+                'lng' => -62.946068999999987,
+            ],
+            'southwest' => [
+                'lat' => 17.464465100000002,
+                'lng' => -63.002982000000003,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.4890306,
+            'lng' => -62.973554999999998,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 17.525886199999999,
+                'lng' => -62.946068999999987,
+            ],
+            'southwest' => [
+                'lat' => 17.464570599999998,
+                'lng' => -63.002982000000003,
+            ],
+        ],
     ],
     'XM' => [
         'CountryCode' => 'XM',
         'Country' => 'St. Maarten',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'XM',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4055,14 +9426,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.064170699999998,
+                'lng' => -62.978400000000001,
+            ],
+            'southwest' => [
+                'lat' => 17.9941,
+                'lng' => -63.139799900000007,
+            ],
+        ],
+        'Location' => [
+            'lat' => 18.042480000000001,
+            'lng' => -63.054830000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.064170699999998,
+                'lng' => -62.998244799999988,
+            ],
+            'southwest' => [
+                'lat' => 18.005098499999999,
+                'lng' => -63.137957999999998,
+            ],
+        ],
     ],
     'XN' => [
         'CountryCode' => 'XN',
         'Country' => 'Nevis',
         'CurrencyCode' => 'XCD',
         'CurrencyName' => 'East Caribbean Dollar',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'XN',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4073,14 +9468,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.2077366,
+                'lng' => -62.539630899999999,
+            ],
+            'southwest' => [
+                'lat' => 17.094111699999999,
+                'lng' => -62.633521600000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.155355799999999,
+            'lng' => -62.579602599999987,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 17.2077366,
+                'lng' => -62.539630899999999,
+            ],
+            'southwest' => [
+                'lat' => 17.094111699999999,
+                'lng' => -62.633521600000002,
+            ],
+        ],
     ],
     'XS' => [
         'CountryCode' => 'XS',
         'Country' => 'Somaliland, Rep of (North Somalia)',
         'CurrencyCode' => 'SIS',
         'CurrencyName' => 'Somaliland shilling',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'XS',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4091,14 +9510,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
+        'Location' => [
+            'lat' => NULL,
+            'lng' => NULL,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+            'southwest' => [
+                'lat' => NULL,
+                'lng' => NULL,
+            ],
+        ],
     ],
     'XY' => [
         'CountryCode' => 'XY',
         'Country' => 'St. Barthelemy',
         'CurrencyCode' => 'ANG',
         'CurrencyName' => 'Netherlands Antilles Guilder',
-        'WeightUnit' => MassUnit::POUND,
-        'DimensionalUnit' => LengthUnit::INCH,
+        'WeightUnit' => 'lb',
+        'DimensionalUnit' => 'in',
         'Iso2' => 'XY',
         'Iso3' => NULL,
         'Capital' => NULL,
@@ -4109,14 +9552,38 @@ return [
         'PostalCodeRegex' => NULL,
         'Languages' => NULL,
         'Neighbours' => NULL,
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 17.978000000000002,
+                'lng' => -62.786900000000003,
+            ],
+            'southwest' => [
+                'lat' => 17.866299999999999,
+                'lng' => -62.955999900000002,
+            ],
+        ],
+        'Location' => [
+            'lat' => 17.899999999999999,
+            'lng' => -62.833333000000003,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 17.956989,
+                'lng' => -62.789214799999989,
+            ],
+            'southwest' => [
+                'lat' => 17.870828700000001,
+                'lng' => -62.878489500000001,
+            ],
+        ],
     ],
     'YE' => [
         'CountryCode' => 'YE',
         'Country' => 'Yemen, Republic of',
         'CurrencyCode' => 'YER',
         'CurrencyName' => 'Yemeni Riyal',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'YE',
         'Iso3' => 'YEM',
         'Capital' => 'Sanaa',
@@ -4127,14 +9594,38 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'ar-YE',
         'Neighbours' => 'SA,OM',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => 18.9996331,
+                'lng' => 54.678999999999988,
+            ],
+            'southwest' => [
+                'lat' => 11.797499999999999,
+                'lng' => 41.709599999999988,
+            ],
+        ],
+        'Location' => [
+            'lat' => 15.552727000000001,
+            'lng' => 48.516387999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => 18.9996331,
+                'lng' => 54.534124499999997,
+            ],
+            'southwest' => [
+                'lat' => 12.108180900000001,
+                'lng' => 41.816055300000002,
+            ],
+        ],
     ],
     'YT' => [
         'CountryCode' => 'YT',
         'Country' => 'Mayotte',
         'CurrencyCode' => 'EUR',
         'CurrencyName' => 'Euro',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'YT',
         'Iso3' => 'MYT',
         'Capital' => 'Mamoudzou',
@@ -4145,14 +9636,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'fr-YT',
         'Neighbours' => '',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -12.5772665,
+                'lng' => 45.320148499999988,
+            ],
+            'southwest' => [
+                'lat' => -13.035833200000001,
+                'lng' => 44.991416899999997,
+            ],
+        ],
+        'Location' => [
+            'lat' => -12.827500000000001,
+            'lng' => 45.166243999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -12.636411499999999,
+                'lng' => 45.299973899999998,
+            ],
+            'southwest' => [
+                'lat' => -13.005527900000001,
+                'lng' => 45.018170699999999,
+            ],
+        ],
     ],
     'ZA' => [
         'CountryCode' => 'ZA',
         'Country' => 'South Africa',
         'CurrencyCode' => 'ZAR',
         'CurrencyName' => 'South African Rand',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ZA',
         'Iso3' => 'ZAF',
         'Capital' => 'Pretoria',
@@ -4163,14 +9678,38 @@ return [
         'PostalCodeRegex' => '^(\\d{4})$',
         'Languages' => 'zu,xh,af,nso,en-ZA,tn,st,ts,ss,ve,nr',
         'Neighbours' => 'ZW,SZ,MZ,BW,NA,LS',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -22.1254241,
+                'lng' => 38.2216904,
+            ],
+            'southwest' => [
+                'lat' => -47.131348899999999,
+                'lng' => 16.2816999,
+            ],
+        ],
+        'Location' => [
+            'lat' => -30.559481999999999,
+            'lng' => 22.937505999999999,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -22.1254241,
+                'lng' => 32.890991100000001,
+            ],
+            'southwest' => [
+                'lat' => -34.833232300000013,
+                'lng' => 16.453591899999999,
+            ],
+        ],
     ],
     'ZM' => [
         'CountryCode' => 'ZM',
         'Country' => 'Zambia',
         'CurrencyCode' => 'ZMW',
         'CurrencyName' => 'Zambian Kwacha',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ZM',
         'Iso3' => 'ZMB',
         'Capital' => 'Lusaka',
@@ -4181,14 +9720,38 @@ return [
         'PostalCodeRegex' => '^(\\d{5})$',
         'Languages' => 'en-ZM,bem,loz,lun,lue,ny,toi',
         'Neighbours' => 'ZW,TZ,MZ,CD,NA,MW,AO',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -8.203284,
+                'lng' => 33.709030499999997,
+            ],
+            'southwest' => [
+                'lat' => -18.077418000000002,
+                'lng' => 21.999351000000001,
+            ],
+        ],
+        'Location' => [
+            'lat' => -13.133896999999999,
+            'lng' => 27.849332,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -8.203284,
+                'lng' => 33.709030499999997,
+            ],
+            'southwest' => [
+                'lat' => -18.077418000000002,
+                'lng' => 21.999351000000001,
+            ],
+        ],
     ],
     'ZW' => [
         'CountryCode' => 'ZW',
         'Country' => 'Zimbabwe',
         'CurrencyCode' => 'USD',
         'CurrencyName' => 'US Dollar',
-        'WeightUnit' => MassUnit::KILOGRAM,
-        'DimensionalUnit' => LengthUnit::CENTIMETRE,
+        'WeightUnit' => 'kg',
+        'DimensionalUnit' => 'cm',
         'Iso2' => 'ZW',
         'Iso3' => 'ZWE',
         'Capital' => 'Harare',
@@ -4199,5 +9762,29 @@ return [
         'PostalCodeRegex' => '',
         'Languages' => 'en-ZW,sn,nr,nd',
         'Neighbours' => 'ZA,MZ,BW,ZM',
+        'Bounds' => [
+            'northeast' => [
+                'lat' => -15.609318999999999,
+                'lng' => 33.068235999999999,
+            ],
+            'southwest' => [
+                'lat' => -22.4223538,
+                'lng' => 25.237368,
+            ],
+        ],
+        'Location' => [
+            'lat' => -19.015438,
+            'lng' => 29.154857,
+        ],
+        'Viewport' => [
+            'northeast' => [
+                'lat' => -15.609318999999999,
+                'lng' => 33.068235999999999,
+            ],
+            'southwest' => [
+                'lat' => -22.4223538,
+                'lng' => 25.237368,
+            ],
+        ],
     ],
 ];

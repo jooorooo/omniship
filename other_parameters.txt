@@ -20,3 +20,4 @@ priority_time_value /// speedy, econt (Carbon)
 printer_type ///speedy
 reference_id ///dhl
 reference_type ///dhl
+sender_id //speedy ($login->getClientId())
