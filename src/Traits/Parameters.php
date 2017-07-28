@@ -112,6 +112,19 @@ trait Parameters
     }
 
     /**
+     * @param $key
+     * @param $value
+     * @return $this
+     */
+    public function forgetParameter($key)
+    {
+        if($this->parameters->has($key)) {
+            $this->parameters->remove($key);
+        }
+        return $this;
+    }
+
+    /**
      * Check object is empty
      * @return bool
      */
