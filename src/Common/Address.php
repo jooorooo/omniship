@@ -12,6 +12,7 @@ use Omniship\Address\Quarter;
 use Omniship\Address\State;
 use Omniship\Address\Street;
 use Omniship\Exceptions\InvalidArgumentException;
+use Omniship\Helper\Str;
 use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Exceptions;
@@ -631,6 +632,7 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         foreach($list_abbreviations AS $list) {
             $this->time_zones = array_merge(is_array($this->time_zones) ? $this->time_zones : [], array_map(function($timezone) { return $timezone['timezone_id']; }, $list));
         }
-        return array_map('strtolower', array_filter(array_unique($this->time_zones)));
+        return $this->time_zones = array_map('\Omniship\Helper\Helper::lower', array_filter(array_unique($this->time_zones)));
     }
+
 }
