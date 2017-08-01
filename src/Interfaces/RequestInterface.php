@@ -45,6 +45,14 @@ interface RequestInterface extends MessageInterface
      * @return Address
      */
     public function getSenderAddress();
+    /**
+     * @return string
+     */
+    public function getServiceId();
+    /**
+     * @return Address
+     */
+    public function getAddress();
 
     /**
      * @return null|string
@@ -89,6 +97,18 @@ interface RequestInterface extends MessageInterface
      * @return mixed|ParameterBag
      */
     public function getOtherParameters($key = null);
+    /**
+     * Get the request date.
+     *
+     * @return null|Carbon
+     */
+    public function getStartDate();
+    /**
+     * Get the request date.
+     *
+     * @return null|Carbon
+     */
+    public function getEndDate();
     /**
      * Send the request
      *
