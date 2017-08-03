@@ -506,6 +506,25 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
+     * Get the address provider
+     * @return string|mixed
+     */
+    public function getProvider()
+    {
+        return $this->getParameter('provider');
+    }
+
+    /**
+     * Set the address provider
+     * @param string $provider
+     * @return $this
+     */
+    public function setProvider($provider)
+    {
+        return $this->setParameter('provider', $provider);
+    }
+
+    /**
      * Get the address time zone
      * @return string|null
      */
