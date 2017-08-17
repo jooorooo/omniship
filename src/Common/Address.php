@@ -525,6 +525,63 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
+     * Get the address other text
+     * @return string|null
+     */
+    public function getText()
+    {
+        return $this->getParameter('text');
+    }
+
+    /**
+     * Set the address other text
+     * @param string $text
+     * @return $this
+     */
+    public function setText($text)
+    {
+        return $this->setParameter('text', $text);
+    }
+
+    /**
+     * Get the address latitude
+     * @return float|null
+     */
+    public function getLatitude()
+    {
+        return $this->getParameter('latitude');
+    }
+
+    /**
+     * Set the address latitude
+     * @param float $latitude
+     * @return $this
+     */
+    public function setLatitude($latitude)
+    {
+        return $this->setParameter('latitude', $latitude);
+    }
+
+    /**
+     * Get the address longitude
+     * @return float|null
+     */
+    public function getLongitude()
+    {
+        return $this->getParameter('longitude');
+    }
+
+    /**
+     * Set the address longitude
+     * @param float $longitude
+     * @return $this
+     */
+    public function setLongitude($longitude)
+    {
+        return $this->setParameter('longitude', $longitude);
+    }
+
+    /**
      * Get the address time zone
      * @return string|null
      */
@@ -584,7 +641,7 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         return $this;
     }
 
-    public function format($html = true) {
+    public function format($html = true, $with_recipient = true) {
         $addressFormatRepository = new AddressFormatRepository();
         $countryRepository = new CountryRepository();
         $subdivisionRepository = new SubdivisionRepository();
@@ -595,12 +652,14 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         // off html rendering, customizing the wrapper element and its attributes.
 
         $address = new AddressFormatter($this->getCountry()->getIso2());
-        //add company or names to address
-        if($company = $this->getCompanyName()) {
-            $address = $address->withRecipient($company);
-        }
-        if($recipient = $this->getFullName()) {
-            $address = $address->withRecipient($recipient);
+        if($with_recipient) {
+            //add company or names to address
+            if ($company = $this->getCompanyName()) {
+                $address = $address->withRecipient($company);
+            }
+            if ($recipient = $this->getFullName()) {
+                $address = $address->withRecipient($recipient);
+            }
         }
         //add state to address
         if($state = $this->getState()) {
