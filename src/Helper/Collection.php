@@ -471,7 +471,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
      * Key an associative array by a field or using a callback.
      *
      * @param  callable|string  $keyBy
-     * @return static
+     * @return $this
      */
     public function keyBy($keyBy)
     {
