@@ -247,4 +247,48 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
     {
         return $this->setParameter('provider', $value);
     }
+
+    /**
+     * Get city
+     * @return City|null
+     */
+    public function getCity()
+    {
+        return $this->getParameter('city');
+    }
+
+    /**
+     * Set city
+     * @param City|array $city
+     * @return $this
+     */
+    public function setCity($city)
+    {
+        if(!($city instanceof City)) {
+            $city = new City((array)$city);
+        }
+        return $this->setParameter('city', $city);
+    }
+
+    /**
+     * Get country
+     * @return Country|null
+     */
+    public function getCountry()
+    {
+        return $this->getParameter('country');
+    }
+
+    /**
+     * Set country
+     * @param Country|array $country
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        if(!($country instanceof Country)) {
+            $country = new Country((array)$country);
+        }
+        return $this->setParameter('country', $country);
+    }
 }
