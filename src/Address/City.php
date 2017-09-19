@@ -6,11 +6,12 @@ use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\ComponentInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Parameters;
+use Omniship\Traits\ArrayAccess AS TraitArrayAccess;
 
-class City implements ComponentInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class City implements ComponentInterface, ArrayableInterface, \JsonSerializable, JsonableInterface, \ArrayAccess
 {
 
-    use Parameters;
+    use Parameters, TraitArrayAccess;
 
     /**
      * Create a new item with the specified parameters
@@ -92,5 +93,23 @@ class City implements ComponentInterface, ArrayableInterface, \JsonSerializable,
     public function setType($value)
     {
         return $this->setParameter('type', $value);
+    }
+
+    /**
+     * Get city country
+     */
+    public function getCountry()
+    {
+        return $this->getParameter('country');
+    }
+
+    /**
+     * Set city country
+     * @param $value
+     * @return $this
+     */
+    public function setCountry($value)
+    {
+        return $this->setParameter('country', $value);
     }
 }

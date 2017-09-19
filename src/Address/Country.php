@@ -6,11 +6,12 @@ use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\CountryInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Parameters;
+use Omniship\Traits\ArrayAccess AS TraitArrayAccess;
 
-class Country implements CountryInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class Country implements CountryInterface, ArrayableInterface, \JsonSerializable, JsonableInterface, \ArrayAccess
 {
 
-    use Parameters;
+    use Parameters, TraitArrayAccess;
 
     /**
      * Create a new item with the specified parameters
@@ -92,5 +93,79 @@ class Country implements CountryInterface, ArrayableInterface, \JsonSerializable
     public function setIso3($value)
     {
         return $this->setParameter('iso3', $value);
+    }
+
+    /**
+     * Get currency
+     */
+    public function getCurrency()
+    {
+        return $this->getParameter('currency');
+    }
+
+    /**
+     * Set currency
+     * @param $value
+     * @return $this
+     */
+    public function setCurrency($value)
+    {
+        return $this->setParameter('currency', $value);
+    }
+
+    /**
+     * Get is require post code
+     */
+    public function getRequirePostCode()
+    {
+        return $this->getParameter('require_post_code');
+    }
+
+    /**
+     * Set is require post code
+     * @param $value
+     * @return $this
+     */
+    public function setRequirePostCode($value)
+    {
+        return $this->setParameter('require_post_code', $value);
+    }
+
+    /**
+     * Get is state require
+     */
+    public function getRequireState()
+    {
+        return $this->getParameter('require_state');
+    }
+
+    /**
+     * Set state require
+     * @param $value
+     * @return $this
+     */
+    public function setRequireState($value)
+    {
+        return $this->setParameter('require_state', $value);
+    }
+
+
+
+    /**
+     * Get has cities nomenclature
+     */
+    public function getHasCities()
+    {
+        return $this->getParameter('has_cities');
+    }
+
+    /**
+     * Set has cities nomenclature
+     * @param $value
+     * @return $this
+     */
+    public function setHasCities($value)
+    {
+        return $this->setParameter('has_cities', $value);
     }
 }

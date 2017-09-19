@@ -6,11 +6,12 @@ use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Interfaces\StateInterface;
 use Omniship\Traits\Parameters;
+use Omniship\Traits\ArrayAccess AS TraitArrayAccess;
 
-class State implements StateInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class State implements StateInterface, ArrayableInterface, \JsonSerializable, JsonableInterface, \ArrayAccess
 {
 
-    use Parameters;
+    use Parameters, TraitArrayAccess;
 
     /**
      * Create a new item with the specified parameters

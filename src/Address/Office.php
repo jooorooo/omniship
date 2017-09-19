@@ -7,11 +7,12 @@ use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\ComponentInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Parameters;
+use Omniship\Traits\ArrayAccess AS TraitArrayAccess;
 
-class Office implements ComponentInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
+class Office implements ComponentInterface, ArrayableInterface, \JsonSerializable, JsonableInterface, \ArrayAccess
 {
 
-    use Parameters;
+    use Parameters, TraitArrayAccess;
 
     /**
      * Create a new item with the specified parameters

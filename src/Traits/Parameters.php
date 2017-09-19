@@ -102,6 +102,15 @@ trait Parameters
 
     /**
      * @param $key
+     * @return mixed
+     */
+    public function hasParameter($key)
+    {
+        return $this->parameters->has($key);
+    }
+
+    /**
+     * @param $key
      * @param $value
      * @return $this
      */
