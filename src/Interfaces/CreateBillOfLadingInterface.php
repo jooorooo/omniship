@@ -40,6 +40,11 @@ interface CreateBillOfLadingInterface
      */
     public function getBolId();
     /**
+     * Get Service ID
+     * @return string|string[]
+     */
+    public function getServiceId();
+    /**
      * Total Price of the Bill
      * @return mixed
      */
