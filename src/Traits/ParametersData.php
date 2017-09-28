@@ -759,6 +759,66 @@ trait ParametersData
         return $this->setParameter('package_id', $value);
     }
     /**
+     * @return Carbon
+     */
+    public function getPriorityTime()
+    {
+        return $this->getParameter('priority_time');
+    }
+    /**
+     * @param  $priority_time
+     * @return $this
+     */
+    public function setPriorityTime(Carbon $priority_time = null)
+    {
+        return $this->setParameter('priority_time', $priority_time);
+    }
+    /**
+     * @return Carbon
+     */
+    public function getPriorityTimeType()
+    {
+        return $this->getParameter('priority_time_type');
+    }
+    /**
+     * @param  $priority_time_type
+     * @return $this
+     */
+    public function setPriorityTimeType($priority_time_type)
+    {
+        return $this->setParameter('priority_time_type', $priority_time_type);
+    }
+    /**
+     * @param array $value
+     * @return $this
+     */
+    public function setAllowedServices(array $value)
+    {
+        return $this->setParameter('allowed_services', $value);
+    }
+    /**
+     * @return array|null
+     */
+    public function getAllowedServices()
+    {
+        return $this->getParameter('allowed_services');
+    }
+    /**
+     * @param bool $value
+     * @return $this
+     */
+    public function setMoneyTransfer($value)
+    {
+        return $this->setParameter('money_transfer', $value);
+    }
+    /**
+     * @return bool
+     */
+    public function getMoneyTransfer()
+    {
+        return (bool)$this->getParameter('money_transfer');
+    }
+    /**
      * @param $key
      * @param null $default
      * @return mixed|ParameterBag

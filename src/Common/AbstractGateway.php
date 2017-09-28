@@ -236,6 +236,15 @@ abstract class AbstractGateway implements GatewayInterface
         return method_exists($this, 'getClient');
     }
     /**
+     * Supports supportsTrackingUrl
+     *
+     * @return boolean True if this gateway supports trackingUrl
+     */
+    public function supportsTrackingUrl()
+    {
+        return method_exists($this, 'trackingUrl');
+    }
+    /**
      * Supports Cash On Delivery
      *
      * @return boolean True if this gateway supports the Cash On Delivery
@@ -263,13 +272,22 @@ abstract class AbstractGateway implements GatewayInterface
         return false;
     }
     /**
-     * Supports supportsTrackingUrl
+     * Supports Priority Time for delivery
      *
-     * @return boolean True if this gateway supports trackingUrl
+     * @return boolean True if this gateway supports Priority Time
      */
-    public function supportsTrackingUrl()
+    public function supportPriorityTime()
     {
-        return method_exists($this, 'trackingUrl');
+        return false;
+    }
+    /**
+     * Supports Money Transfer
+     *
+     * @return boolean True if this gateway supports Money Transfer
+     */
+    public function supportMoneyTransfer()
+    {
+        return false;
     }
     /**
      * Create and initialize a request object

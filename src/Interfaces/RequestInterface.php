@@ -110,6 +110,18 @@ interface RequestInterface extends MessageInterface
      */
     public function getEndDate();
     /**
+     * @return Carbon
+     */
+    public function getPriorityTime();
+    /**
+     * @return Carbon
+     */
+    public function getPriorityTimeType();
+    /**
+     * @return array|null
+     */
+    public function getAllowedServices();
+    /**
      * Send the request
      *
      * @return ResponseInterface
