@@ -272,6 +272,15 @@ abstract class AbstractGateway implements GatewayInterface
         return false;
     }
     /**
+     * Supports Priority Day for delivery
+     *
+     * @return boolean True if this gateway supports Priority Day
+     */
+    public function supportPriorityDay()
+    {
+        return false;
+    }
+    /**
      * Supports Priority Time for delivery
      *
      * @return boolean True if this gateway supports Priority Time
