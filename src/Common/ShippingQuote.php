@@ -236,4 +236,21 @@ class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \Json
         return $this->setParameter('exchange_rate', $value);
     }
 
+    /**
+     * @return string
+     */
+    public function getPayer()
+    {
+        return strtoupper($this->getParameter('payer'));
+    }
+
+    /**
+     * @param  string $value
+     * @return $this
+     */
+    public function setPayer($value)
+    {
+        return $this->setParameter('payer', $value);
+    }
+
 }

@@ -50,6 +50,10 @@ interface RequestInterface extends MessageInterface
      */
     public function getServiceId();
     /**
+     * @return string
+     */
+    public function getPayer();
+    /**
      * @return Address
      */
     public function getAddress();
