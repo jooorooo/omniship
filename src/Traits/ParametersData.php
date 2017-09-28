@@ -548,9 +548,6 @@ trait ParametersData
      */
     public function getPayer()
     {
-        if(!$this->getParameter('payer')) {
-            $this->setParameter('payer', Consts::PAYER_SENDER);
-        }
         return $this->getParameter('payer');
     }
     /**
