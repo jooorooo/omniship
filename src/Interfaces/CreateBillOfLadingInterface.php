@@ -54,4 +54,9 @@ interface CreateBillOfLadingInterface
      * @return mixed
      */
     public function getInsurance();
+    /**
+     * get cash on delivery amount
+     * @return mixed
+     */
+    public function getCashOnDelivery();
 }

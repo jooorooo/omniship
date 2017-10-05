@@ -179,6 +179,24 @@ class Create implements CreateBillOfLadingInterface, ArrayableInterface, \JsonSe
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getCashOnDelivery()
+    {
+        return $this->getParameter('cash_on_delivery');
+    }
+
+    /**
+     * Set cash on delivery amount
+     * @param mixed $value
+     * @return $this
+     */
+    public function setCashOnDelivery($value = null)
+    {
+        return $this->setParameter('cash_on_delivery', $value);
+    }
+
+    /**
      * @return string
      */
     public function getCurrency()

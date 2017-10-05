@@ -33,6 +33,11 @@ interface ShippingQuoteInterface extends ComponentInterface
      */
     public function getInsurance();
     /**
+     * get cash on delivery amount
+     * @return mixed
+     */
+    public function getCashOnDelivery();
+    /**
      * Pickup date of the quote
      * @return Carbon|null
      */

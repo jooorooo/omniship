@@ -506,6 +506,25 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
+     * Get the address company vat
+     * @return string|mixed
+     */
+    public function getCompanyVat()
+    {
+        return $this->getParameter('company_vat');
+    }
+
+    /**
+     * Set the address company vat
+     * @param string $company_vat
+     * @return $this
+     */
+    public function setCompanyVat($company_vat)
+    {
+        return $this->setParameter('company_vat', $company_vat);
+    }
+
+    /**
      * Get the address provider
      * @return string|mixed
      */

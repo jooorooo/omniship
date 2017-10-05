@@ -328,7 +328,7 @@ abstract class AbstractGateway implements GatewayInterface
      * @param array $parameters
      * @return \Omniship\Message\AbstractRequest
      */
-    protected function createRequest($class, array $parameters)
+    public function createRequest($class, array $parameters)
     {
         /** @var $obj RequestInterface */
         $obj = new $class($this->httpClient, $this->httpRequest);
