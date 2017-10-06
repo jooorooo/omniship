@@ -5,6 +5,7 @@
 namespace Omniship\Interfaces;
 use Carbon\Carbon;
 use Money\Money;
+use Omniship\Common\AbstractGateway;
 use Omniship\Common\Address;
 use Omniship\Exceptions\InvalidRequestException;
 use Symfony\Component\HttpFoundation\ParameterBag;
@@ -30,6 +31,12 @@ interface RequestInterface extends MessageInterface
      * @return array
      */
     public function getParameters();
+    /**
+     * Get Gateway
+     *
+     * @return AbstractGateway
+     */
+    public function getGateway();
     /**
      * Get a single parameter.
      *

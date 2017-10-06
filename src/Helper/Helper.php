@@ -150,6 +150,7 @@ class Helper
         }
         return '\\Omniship\\'.$shortName.'Gateway';
     }
+
     /**
      * Convert strings with underscores to be all lowercase before camelCase is preformed.
      *

@@ -271,4 +271,58 @@ class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \Json
         return $this->setParameter('payer', $value);
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getAllowanceFixedTimeDelivery()
+    {
+        return (bool)$this->getParameter('allowance_fixed_time_delivery');
+    }
+
+    /**
+     * Set Insurance
+     * @param mixed $value
+     * @return $this
+     */
+    public function setAllowanceFixedTimeDelivery($value = null)
+    {
+        return $this->setParameter('allowance_fixed_time_delivery', (bool)$value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAllowanceCashOnDelivery()
+    {
+        return (bool)$this->getParameter('allowance_cash_on_delivery');
+    }
+
+    /**
+     * Set Insurance
+     * @param mixed $value
+     * @return $this
+     */
+    public function setAllowanceCashOnDelivery($value = null)
+    {
+        return $this->setParameter('allowance_cash_on_delivery', (bool)$value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAllowanceInsurance()
+    {
+        return (bool)$this->getParameter('allowance_insurance');
+    }
+
+    /**
+     * Set Insurance
+     * @param mixed $value
+     * @return $this
+     */
+    public function setAllowanceInsurance($value = null)
+    {
+        return $this->setParameter('allowance_insurance', (bool)$value);
+    }
+
 }

@@ -4,6 +4,7 @@
  */
 namespace Omniship\Message;
 
+use Omniship\Common\AbstractGateway;
 use Omniship\Exceptions\InvalidRequestException;
 use Omniship\Exceptions\RuntimeException;
 use Omniship\Helper\Helper;
@@ -84,6 +85,12 @@ abstract class AbstractRequest implements RequestInterface
      */
     protected $response;
     /**
+     * An associated AbstractGateway.
+     *
+     * @var AbstractGateway
+     */
+    protected $gateway;
+    /**
      * Create a new Request
      *
      * @param Client $httpClient  A HTTP client to make API calls with
@@ -114,6 +121,25 @@ abstract class AbstractRequest implements RequestInterface
         Helper::initialize($this, $parameters);
         return $this;
     }
+
+    /**
+     * @param AbstractGateway $gateway
+     * @return $this
+     */
+    public function setGateway(AbstractGateway $gateway)
+    {
+        $this->gateway = $gateway;
+        return $this;
+    }
+
+    /**
+     * @return AbstractGateway $gateway
+     */
+    public function getGateway()
+    {
+        return $this->gateway;
+    }
+
     /**
      * Set a single parameter
      *

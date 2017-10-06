@@ -62,4 +62,29 @@ interface ShippingQuoteInterface extends ComponentInterface
      * @return string
      */
     public function getCurrency();
+
+    /**
+     * @return string
+     */
+    public function getExchangeRate();
+
+    /**
+     * @return string
+     */
+    public function getPayer();
+
+    /**
+     * @return boolean
+     */
+    public function getAllowanceFixedTimeDelivery();
+
+    /**
+     * @return boolean
+     */
+    public function getAllowanceCashOnDelivery();
+
+    /**
+     * @return boolean
+     */
+    public function getAllowanceInsurance();
 }
