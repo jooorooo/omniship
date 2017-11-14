@@ -96,6 +96,24 @@ class City implements ComponentInterface, ArrayableInterface, \JsonSerializable,
     }
 
     /**
+     * Get city country ID
+     */
+    public function getCountryId()
+    {
+        return $this->getParameter('country_id');
+    }
+
+    /**
+     * Set city country ID
+     * @param $value
+     * @return $this
+     */
+    public function setCountryId($value)
+    {
+        return $this->setParameter('country_id', $value);
+    }
+
+    /**
      * Get city country
      */
     public function getCountry()
