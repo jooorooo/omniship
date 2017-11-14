@@ -250,6 +250,25 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
     }
 
     /**
+     * Get city ID
+     * @return int|null
+     */
+    public function getCityId()
+    {
+        return $this->getParameter('city_id');
+    }
+
+    /**
+     * Set city ID
+     * @param int|null
+     * @return $this
+     */
+    public function setCityId($city_id)
+    {
+        return $this->setParameter('city_id', $city_id);
+    }
+
+    /**
      * Get city
      * @return City|null
      */
@@ -269,6 +288,25 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
             $city = new City((array)$city);
         }
         return $this->setParameter('city', $city);
+    }
+
+    /**
+     * Get country ID
+     * @return int|null
+     */
+    public function getCountryId()
+    {
+        return $this->getParameter('country_id');
+    }
+
+    /**
+     * Set country ID
+     * @param int|null
+     * @return $this
+     */
+    public function setCountryId($country_id)
+    {
+        return $this->setParameter('country_id', $country_id);
     }
 
     /**
