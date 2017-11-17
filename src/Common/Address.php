@@ -5,6 +5,7 @@
 
 namespace Omniship\Common;
 
+use Carbon\Carbon;
 use Omniship\Address\City;
 use Omniship\Address\Country;
 use Omniship\Address\Office;
@@ -619,7 +620,9 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         if(!$timezone) {
             return $this;
         }
-        if(array_search(strtolower($timezone), $this->getTimeZones()) === false) {
+        try {
+            Carbon::now($timezone);
+        } catch (\Exception $e) {
             $this->invalidArguments('10004', sprintf('Invalid timezone set "%s"', $timezone));
         }
         return $this->setParameter('timezone', $timezone);
@@ -716,20 +719,6 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         }
 
         return $formatter->format($address);
-    }
-
-    /**
-     * @return array
-     */
-    protected function getTimeZones() {
-        if(!is_null($this->time_zones)) {
-            return $this->time_zones;
-        }
-        $list_abbreviations = DateTimeZone::listAbbreviations();
-        foreach($list_abbreviations AS $list) {
-            $this->time_zones = array_merge(is_array($this->time_zones) ? $this->time_zones : [], array_map(function($timezone) { return $timezone['timezone_id']; }, $list));
-        }
-        return $this->time_zones = array_map('\Omniship\Helper\Helper::lower', array_filter(array_unique($this->time_zones)));
     }
 
 }
