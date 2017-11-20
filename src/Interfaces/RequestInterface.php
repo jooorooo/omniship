@@ -37,6 +37,14 @@ interface RequestInterface extends MessageInterface
      * @return AbstractGateway
      */
     public function getGateway();
+
+    /**
+     * Set Gateway
+     *
+     * @param GatewayInterface $gateway
+     * @return AbstractGateway
+     */
+    public function setGateway(GatewayInterface $gateway);
     /**
      * Get a single parameter.
      *

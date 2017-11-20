@@ -9,6 +9,7 @@ use Omniship\Exceptions\InvalidRequestException;
 use Omniship\Exceptions\RuntimeException;
 use Omniship\Helper\Helper;
 use Omniship\Http\Client;
+use Omniship\Interfaces\GatewayInterface;
 use Omniship\Interfaces\RequestInterface;
 use Omniship\Interfaces\ResponseInterface;
 use Omniship\Traits\Exceptions;
@@ -123,10 +124,10 @@ abstract class AbstractRequest implements RequestInterface
     }
 
     /**
-     * @param AbstractGateway $gateway
+     * @param GatewayInterface $gateway
      * @return $this
      */
-    public function setGateway(AbstractGateway $gateway)
+    public function setGateway(GatewayInterface $gateway)
     {
         $this->gateway = $gateway;
         return $this;
