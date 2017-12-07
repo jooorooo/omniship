@@ -54,6 +54,11 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     protected $full_name_template = '{first_name} {last_name}';
 
     /**
+     * @var array
+     */
+    protected $street_format = '{street_name} {street_number}';
+
+    /**
      * Get the address id
      * @return mixed
      */
@@ -663,6 +668,26 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         return $this;
     }
 
+    /**
+     * Get template for street
+     * @return mixed
+     */
+    public function getTemplateStreet()
+    {
+        return $this->street_format;
+    }
+
+    /**
+     * Set template for street
+     * @param $value
+     * @return $this
+     */
+    public function setTemplateStreet($value)
+    {
+        $this->street_format = $value;
+        return $this;
+    }
+
     public function format($html = true, $with_recipient = true) {
         $addressFormatRepository = new AddressFormatRepository();
         $countryRepository = new CountryRepository();
@@ -704,9 +729,18 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         $line1 = '';
         if(!is_null($street = $this->getStreet())) {
             $number = $this->getStreetNumber();
-            $line1 .= implode(' ', array_filter([$street->getName(), ($number ? '#' . $number : '')]));
+            $line1 .= trim(str_replace([
+                '{street_name}',
+                '{street_number}'
+            ], [
+                $street->getName(),
+                $number
+            ], $this->getTemplateStreet()));
         } else if(!is_null($quarter = $this->getQuarter())) {
             $line1 .= $quarter->getName();
+            if(!empty($number = $this->getStreetNumber())) {
+                $line1 .= ' ' . $number;
+            }
         }
         if($other = implode(' - ', array_filter([$this->getBuilding(), $this->getEntrance(), $this->getFloor(), $this->getApartment()]))) {
             $line1 .= ($line1 ? ' / ' : '') . $other;
