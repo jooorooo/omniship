@@ -60,6 +60,24 @@ class City implements ComponentInterface, ArrayableInterface, \JsonSerializable,
     }
 
     /**
+     * Get city ascii name
+     */
+    public function getAsciiName()
+    {
+        return $this->getParameter('ascii_name');
+    }
+
+    /**
+     * Set city ascii name
+     * @param $value
+     * @return $this
+     */
+    public function setAsciiName($value)
+    {
+        return $this->setParameter('ascii_name', $value);
+    }
+
+    /**
      * Get city post_code
      */
     public function getPostCode()
