@@ -607,6 +607,25 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
     }
 
     /**
+     * Get the address local
+     * @return float|null
+     */
+    public function getLocal()
+    {
+        return $this->getParameter('local');
+    }
+
+    /**
+     * Set the address local
+     * @param float $local
+     * @return $this
+     */
+    public function setLocal($local)
+    {
+        return $this->setParameter('local', $local);
+    }
+
+    /**
      * Get the address time zone
      * @return string|null
      */
@@ -692,7 +711,8 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         $addressFormatRepository = new AddressFormatRepository();
         $countryRepository = new CountryRepository();
         $subdivisionRepository = new SubdivisionRepository();
-        $formatter = new DefaultFormatter($addressFormatRepository, $countryRepository, $subdivisionRepository, $this->getCountry()->getIso2(), [
+        $locale = $this->getLocal() ? $this->getLocal() : $this->getCountry()->getIso2();
+        $formatter = new DefaultFormatter($addressFormatRepository, $countryRepository, $subdivisionRepository, $locale, [
             'html' => $html
         ]);
         // Options passed to the constructor or setOption / setOptions allow turning
