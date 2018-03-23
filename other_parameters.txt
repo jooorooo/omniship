@@ -6,7 +6,7 @@ shipping_price_in_cod ///speedy
 credit_account_number ////econt(key_word)
 sender_vat ////dhl
 special_delivery_id ///speedy
-fragile ////speedy
+fragile ////speedy, rapido
 instructions /// econt
 deffered_days /// speedy
 sms_no /// econt
