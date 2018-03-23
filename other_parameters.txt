@@ -12,7 +12,7 @@ deffered_days /// speedy
 sms_no /// econt
 pack_1...pack_8 ///econt
 ref ///econt
-money_transfer ///econt, speedy -> ->getMoneyTransfer()
+money_transfer ///econt, speedy, rapido -> ->getMoneyTransfer()
 express_city_courier_e ///econt
 printer_type ///speedy
 reference_id ///dhl
