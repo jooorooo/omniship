@@ -20,3 +20,4 @@ reference_type ///dhl
 sender_id //speedy ($login->getClientId())
 fixed_time_delivery //rapido , 0,1
 price_list //rapido -> (CENOVA_LISTA : http://www.rapido.bg/soap_help/#create_order)
+sender_office_id //rapido sender address ID
