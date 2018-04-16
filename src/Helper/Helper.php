@@ -99,7 +99,7 @@ class Helper
             foreach ($parameters as $key => $value) {
                 $method = 'set'.ucfirst(static::camelCase($key));
                 if (method_exists($target, $method)) {
-                    $target->$method($value);
+                    $target->$method(!empty($value) ? $value : null);
                 }
             }
         }
