@@ -153,4 +153,10 @@ interface RequestInterface extends MessageInterface
      * @return ResponseInterface
      */
     public function sendData($data);
+    /**
+     * Get the formatted Request.
+     *
+     * @return null|string
+     */
+    public function getRequestFormatted();
 }

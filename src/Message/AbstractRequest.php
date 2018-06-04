@@ -197,4 +197,11 @@ abstract class AbstractRequest implements RequestInterface
         }
         return $this->response;
     }
+    /**
+     * {@inheritdoc}
+     */
+    public function getRequestFormatted()
+    {
+        return null;
+    }
 }
