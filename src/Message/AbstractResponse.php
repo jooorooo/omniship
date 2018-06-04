@@ -78,6 +78,24 @@ abstract class AbstractResponse implements ResponseInterface
         return $this->data;
     }
     /**
+     * Get the request data formatted.
+     *
+     * @return null|string
+     */
+    public function getRequestFormatted()
+    {
+        return null;
+    }
+    /**
+     * Get the response data formatted.
+     *
+     * @return null|string
+     */
+    public function getResponseFormatted()
+    {
+        return null;
+    }
+    /**
      * Response Message
      *
      * @return null|string A response message from the payment gateway

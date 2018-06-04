@@ -32,4 +32,16 @@ interface ResponseInterface extends MessageInterface
      * @return null|string A response code from the payment gateway
      */
     public function getCode();
+    /**
+     * Get the request data formatted.
+     *
+     * @return null|string
+     */
+    public function getRequestFormatted();
+    /**
+     * Get the response data formatted.
+     *
+     * @return null|string
+     */
+    public function getResponseFormatted();
 }
