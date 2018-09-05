@@ -718,7 +718,7 @@ class Address implements AddressInterface, ArrayableInterface, \JsonSerializable
         // Options passed to the constructor or setOption / setOptions allow turning
         // off html rendering, customizing the wrapper element and its attributes.
 
-        $address = new AddressFormatter($this->getCountry()->getIso2());
+        $address = new AddressFormatter($this->getCountry()->getIso2() ? : 'BG');
         if($with_recipient) {
             //add company or names to address
             if ($company = $this->getCompanyName()) {
