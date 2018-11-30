@@ -18,7 +18,6 @@ use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Exceptions;
 use Omniship\Traits\Parameters;
 use Omniship\Interfaces\AddressInterface;
-use DateTimeZone;
 //formatter
 
 use CommerceGuys\Addressing\Model\Address AS AddressFormatter;
