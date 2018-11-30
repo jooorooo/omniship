@@ -24,7 +24,7 @@ trait ParametersData
      */
     public function getTestMode()
     {
-        return $this->getParameter('testMode');
+        return $this->getParameter('test_mode');
     }
     /**
      * @param  boolean $value
@@ -32,7 +32,22 @@ trait ParametersData
      */
     public function setTestMode($value)
     {
-        return $this->setParameter('testMode', $value);
+        return $this->setParameter('test_mode', $value);
+    }
+    /**
+     * @return null|array
+     */
+    public function getConnectionOptions()
+    {
+        return $this->getParameter('connection_options');
+    }
+    /**
+     * @param  array $value
+     * @return $this
+     */
+    public function setConnectionOptions(array $value)
+    {
+        return $this->setParameter('connection_options', $value);
     }
     /**
      * Get the card token.
