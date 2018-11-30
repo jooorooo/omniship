@@ -21,11 +21,11 @@ use Omniship\Interfaces\AddressInterface;
 use DateTimeZone;
 //formatter
 
-use CommerceGuys\Addressing\Address AS AddressFormatter;
+use CommerceGuys\Addressing\Model\Address AS AddressFormatter;
 use CommerceGuys\Addressing\Formatter\DefaultFormatter;
-use CommerceGuys\Addressing\AddressFormat\AddressFormatRepository;
-use CommerceGuys\Addressing\Country\CountryRepository;
-use CommerceGuys\Addressing\Subdivision\SubdivisionRepository;
+use CommerceGuys\Addressing\Repository\AddressFormatRepository;
+use CommerceGuys\Addressing\Repository\CountryRepository;
+use CommerceGuys\Addressing\Repository\SubdivisionRepository;
 
 class Address implements AddressInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
