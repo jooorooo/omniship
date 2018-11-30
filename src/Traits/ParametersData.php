@@ -45,7 +45,7 @@ trait ParametersData
      * @param  array $value
      * @return $this
      */
-    public function setConnectionOptions(array $value)
+    public function setConnectionOptions(array $value = null)
     {
         return $this->setParameter('connection_options', $value);
     }
