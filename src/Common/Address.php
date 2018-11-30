@@ -13,7 +13,6 @@ use Omniship\Address\Quarter;
 use Omniship\Address\State;
 use Omniship\Address\Street;
 use Omniship\Exceptions\InvalidArgumentException;
-use Omniship\Helper\Str;
 use Omniship\Interfaces\ArrayableInterface;
 use Omniship\Interfaces\JsonableInterface;
 use Omniship\Traits\Exceptions;
@@ -22,11 +21,11 @@ use Omniship\Interfaces\AddressInterface;
 use DateTimeZone;
 //formatter
 
-use CommerceGuys\Addressing\Model\Address AS AddressFormatter;
+use CommerceGuys\Addressing\Address AS AddressFormatter;
 use CommerceGuys\Addressing\Formatter\DefaultFormatter;
-use CommerceGuys\Addressing\Repository\AddressFormatRepository;
-use CommerceGuys\Addressing\Repository\CountryRepository;
-use CommerceGuys\Addressing\Repository\SubdivisionRepository;
+use CommerceGuys\Addressing\AddressFormat\AddressFormatRepository;
+use CommerceGuys\Addressing\Country\CountryRepository;
+use CommerceGuys\Addressing\Subdivision\SubdivisionRepository;
 
 class Address implements AddressInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
