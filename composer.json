@@ -23,12 +23,12 @@
     "php-http/message-factory": "^1.0@dev",
     "php-http/discovery": "^1.5@dev",
     "php-http/message": "^1.6@dev",
-    "symfony/intl": "^4.3@dev",
+    "php-http/curl-client": "^2.0@dev",
+    "symfony/intl": "3.1.*",
+    "symfony/http-foundation": "3.1.*",
     "commerceguys/addressing": "^1.0@dev",
     "crisu83/php-conversion": "dev-master",
     "nesbot/carbon": "dev-master",
-    "symfony/http-foundation": "^4.3@dev",
-    "php-http/curl-client": "^2.0@dev",
     "guzzlehttp/psr7": "^1.5@dev"
   },
   "require-dev": {
