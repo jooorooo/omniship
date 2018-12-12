@@ -58,6 +58,9 @@ trait Parameters
      */
     public function initializeFromValues($parameters)
     {
+        if($parameters instanceof ArrayableInterface) {
+            $parameters = $parameters->toArray();
+        }
         if(is_array($parameters)) {
             return $this->initialize($parameters);
         }
