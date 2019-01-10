@@ -25,7 +25,7 @@
     "php-http/message": "^1.6@dev",
     "php-http/curl-client": "^2.0@dev",
     "symfony/intl": "^2.1|^3.1|^4.3@dev",
-    "symfony/http-foundation": "^2.1|^3.1|^4.3@dev",
+    "symfony/http-foundation": "^2.1|^3.1|^4.1",
     "commerceguys/addressing": "^0.8.4",
     "crisu83/php-conversion": "^0.5|dev-master",
     "nesbot/carbon": "~1.20|dev-master",
