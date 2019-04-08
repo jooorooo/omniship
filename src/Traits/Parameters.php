@@ -150,6 +150,25 @@ trait Parameters
      */
     public function toArray()
     {
+//        $re = new \ReflectionClass($this);
+//        $methods = array_map(function(\ReflectionMethod $method) {
+//            if(substr($methodName = $method->getName(), 0, 3) != 'get') {
+//                return null;
+//            } elseif(in_array($methodName, ['getParameters', 'getParameter'])) {
+//                return null;
+//            }
+//            $key = Helper::snake(substr($methodName, 3));
+//            return [
+//                'key' => $key,
+//                'value' => $this->$methodName()
+//            ];
+//        }, $re->getMethods(\ReflectionMethod::IS_PUBLIC));
+//
+//        $methods = array_values(array_filter($methods));
+//        $methods = array_combine(array_column($methods, 'key'), array_column($methods, 'value'));
+//
+//        return $this->_toArray($methods);
+
         return $this->_toArray($this->parameters->all());
     }
 
