@@ -65,7 +65,7 @@ trait Parameters
             return $this->initialize($parameters);
         }
 
-        $values = !empty($this->values) && is_array($this->values) ? $this->values : [];
+        $values = $this->_getValues();
         $temporary = [];
         foreach($values AS $key => $value) {
             if(is_string($value)) {
@@ -84,6 +84,18 @@ trait Parameters
             $temporary[$setter] = $this->setValueType($val, $type, $sub_object);
         }
         return $this->initialize($temporary);
+    }
+
+    /**
+     * @return array
+     */
+    protected function _getValues()
+    {
+        if(property_exists($this, 'values') && is_array($this->values)) {
+            return $this->values;
+        }
+
+        return [];
     }
 
     /**
@@ -237,25 +249,25 @@ trait Parameters
         switch($type) {
             case 'string':
                 $val = (string)$val;
-            break;
+                break;
             case 'int':
             case 'integer':
                 $val = (int)$val;
-            break;
+                break;
             case 'float':
             case 'double':
                 $val = (float)$val;
-            break;
+                break;
             case 'bool':
             case 'boolean':
                 $val = empty(trim((string)$val)) ? false : true;
-            break;
+                break;
             case 'array':
                 $val = (array)$val;
-            break;
+                break;
             case 'object':
                 $val = (object)$val;
-            break;
+                break;
         }
         return $sub_object ? new $sub_object($val) : $val;
     }
