@@ -22,7 +22,7 @@ class Client
      */
     public function send($method, $uri, array $headers = [], array $parameters = null, $xml = null)
     {
-        $request = $this->createRequest($method, $uri, $headers, $body, $xml);
+        $request = $this->createRequest($method, $uri, $headers, $parameters, $xml);
         return $this->sendRequest($request);
     }
     /**
