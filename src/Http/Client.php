@@ -2,87 +2,104 @@
 
 namespace Omniship\Http;
 
-use Http\Client\HttpClient;
-use Http\Discovery\HttpClientDiscovery;
-use Http\Discovery\MessageFactoryDiscovery;
-use Http\Message\RequestFactory;
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\StreamInterface;
-use Psr\Http\Message\UriInterface;
-
-class Client implements HttpClient, RequestFactory
+class Client
 {
     /**
-     * @var HttpClient
+     * @var Curl
      */
     private $httpClient;
-    /**
-     * @var RequestFactory
-     */
-    private $requestFactory;
-    public function __construct(HttpClient $httpClient = null, RequestFactory $requestFactory = null)
+
+    public function __construct(Curl $httpClient = null)
     {
-        $this->httpClient = $httpClient ?: HttpClientDiscovery::find();
-        $this->requestFactory = $requestFactory ?: MessageFactoryDiscovery::find();
+        $this->httpClient = $httpClient ?: new Curl();
     }
     /**
      * @param $method
      * @param $uri
      * @param array $headers
-     * @param string|array|resource|StreamInterface|null $body
-     * @param string $protocolVersion
-     * @return ResponseInterface
+     * @param array $parameters
+     * @return Curl
      */
-    public function send($method, $uri, array $headers = [], $body = null, $protocolVersion = '1.1')
+    public function send($method, $uri, array $headers = [], array $parameters = null, $xml = null)
     {
-        if (is_array($body)) {
-            $body = http_build_query($body, '', '&');
-        }
-        $request = $this->createRequest($method, $uri, $headers, $body, $protocolVersion);
+        $request = $this->createRequest($method, $uri, $headers, $body, $xml);
         return $this->sendRequest($request);
     }
     /**
      * @param $method
      * @param $uri
      * @param array $headers
-     * @param string|resource|StreamInterface|null $body
-     * @param string $protocolVersion
-     * @return RequestInterface
+     * @param array $parameters
+     * @param xml $parameters
+     * @return Curl
      */
-    public function createRequest($method, $uri, array $headers = [], $body = null, $protocolVersion = '1.1')
+    public function createRequest($method, $uri, array $headers = [], array $parameters = null, $xml = null)
     {
-        return $this->requestFactory->createRequest($method, $uri, $headers, $body, $protocolVersion);
+        $this->httpClient->setMethod($method)
+            ->setTarget($uri)
+            ->setHeaders($headers);
+        if($xml) {
+            $this->httpClient->setXml($xml);
+        } elseif($parameters) {
+            $this->httpClient->setParams($parameters);
+        }
+        return $this->httpClient;
     }
     /**
-     * @param  RequestInterface $request
-     * @return ResponseInterface
+     * @param  Curl $request
+     * @return Curl
      */
-    public function sendRequest(RequestInterface $request) : ResponseInterface
+    public function sendRequest(Curl $request) : Curl
     {
-        return $this->httpClient->sendRequest($request);
+        $request->execute();
+        return $request;
     }
     /**
      * Send a GET request.
      *
-     * @param UriInterface|string $uri
+     * @param string $uri
      * @param array $headers
-     * @return ResponseInterface
+     * @param array $parameters
+     * @return Curl
      */
-    public function get($uri, array $headers = [])
+    public function get($uri, array $headers = [], array $parameters = null)
     {
-        return $this->send('GET', $uri, $headers);
+        return $this->send('GET', $uri, $headers, $parameters);
     }
     /**
      * Send a POST request.
      *
-     * @param UriInterface|string $uri
+     * @param string $uri
      * @param array $headers
-     * @param string|array|null|resource|StreamInterface $body
-     * @return ResponseInterface
+     * @param array $parameters
+     * @return Curl
      */
-    public function post($uri, array $headers = [], $body = null)
+    public function post($uri, array $headers = [], array $parameters = null)
     {
-        return $this->send('POST', $uri, $headers, $body);
+        return $this->send('POST', $uri, $headers, $parameters);
+    }
+    /**
+     * Send a GET request.
+     *
+     * @param string $uri
+     * @param array $headers
+     * @param string $xml
+     * @return Curl
+     */
+    public function getXml($uri, array $headers = [], $xml = null)
+    {
+        return $this->send('GET', $uri, $headers, null, $xml);
+    }
+    /**
+     * Send a XML POST request.
+     *
+     * @param string $uri
+     * @param array $headers
+     * @param string $xml
+     * @return Curl
+     */
+    public function postXml($uri, array $headers = [], $xml = null)
+    {
+        return $this->send('POST', $uri, $headers, null, $xml);
     }
 }

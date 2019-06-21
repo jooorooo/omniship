@@ -6,6 +6,8 @@ namespace Omniship\Message;
 
 use Omniship\Interfaces\RequestInterface;
 use Omniship\Interfaces\ResponseInterface;
+use Symfony\Component\Intl\Countries;
+use Symfony\Component\Intl\Exception\MissingResourceException;
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Translation\Loader\PhpFileLoader;
 
@@ -121,10 +123,10 @@ abstract class AbstractResponse implements ResponseInterface
      */
     public function getCountryName($code)
     {
-        $name = Intl::getRegionBundle()->getCountryName(strtoupper($code), $this->getRequest()->getLanguageCode() ? : 'en');
-        if($name) {
-            return $name;
+        try {
+            return Countries::getName(strtoupper($code), $this->getRequest()->getLanguageCode() ? : 'en');
+        } catch (MissingResourceException $e) {
+            return $code;
         }
-        return $code;
     }
 }
