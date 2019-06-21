@@ -38,9 +38,6 @@
       "src/Helper/helpers.php"
     ]
   },
-  "suggest": {
-    "php-http/guzzle6-adapter": "Use the Guzzle adapter to send your requests."
-  },
   "scripts": {
     "check-style": "phpcs -p --standard=PSR2 src/",
     "fix-style": "phpcbf -p --standard=PSR2 src/"
