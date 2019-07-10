@@ -325,4 +325,22 @@ class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \Json
         return $this->setParameter('allowance_insurance', (bool)$value);
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getErrorMessage()
+    {
+        return $this->getParameter('error_message');
+    }
+
+    /**
+     * Set Error message
+     * @param null|string $value
+     * @return $this
+     */
+    public function setErrorMessage($value = null)
+    {
+        return $this->setParameter('error_message', $value);
+    }
+
 }
