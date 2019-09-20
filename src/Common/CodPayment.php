@@ -20,7 +20,7 @@ class CodPayment implements CodPaymentInterface, ArrayableInterface, \JsonSerial
 
     protected $values = [
         'id', 'date', 'price',
-        'error'
+        'error', 'type'
     ];
 
     /**
@@ -91,6 +91,23 @@ class CodPayment implements CodPaymentInterface, ArrayableInterface, \JsonSerial
     public function getError()
     {
         return $this->getParameter('error');
+    }
+
+    /**
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        return $this->setParameter('type', in_array($type = strtolower($type), ['money_transfer', 'cod']) ? $type : 'cod');
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->getParameter('type') ? : 'cod';
     }
 
 }
