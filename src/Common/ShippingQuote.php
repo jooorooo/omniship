@@ -328,6 +328,24 @@ class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \Json
     /**
      * {@inheritDoc}
      */
+    public function getType()
+    {
+        return $this->getParameter('type') ? : 'calculator';
+    }
+
+    /**
+     * Set Insurance
+     * @param mixed $value
+     * @return $this
+     */
+    public function setType($value = null)
+    {
+        return $this->setParameter('type', $value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getErrorMessage()
     {
         return $this->getParameter('error_message');
