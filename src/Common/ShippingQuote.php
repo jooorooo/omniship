@@ -24,7 +24,15 @@ use Omniship\Traits\Parameters;
 class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
 
-    use Parameters;
+    use Parameters {
+        Parameters::__construct as construct;
+    }
+
+    public function __construct($parameters = [])
+    {
+        $parameters['type'] = $parameters['type'] ?? 'calculator';
+        $this->construct($parameters);
+    }
 
     /**
      * Get item id
