@@ -101,6 +101,24 @@ class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \Json
     /**
      * {@inheritDoc}
      */
+    public function getPriceFormatted()
+    {
+        return $this->getParameter('price_formatted');
+    }
+
+    /**
+     * Set the item price
+     * @param mixed $value
+     * @return $this
+     */
+    public function setPriceFormatted($value = null)
+    {
+        return $this->setParameter('price_formatted', $value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getTax()
     {
         return $this->getParameter('tax');
