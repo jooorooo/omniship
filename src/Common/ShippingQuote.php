@@ -24,7 +24,15 @@ use Omniship\Traits\Parameters;
 class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \JsonSerializable, JsonableInterface
 {
 
-    use Parameters;
+    use Parameters {
+        Parameters::__construct as construct;
+    }
+
+    public function __construct($parameters = [])
+    {
+        $parameters['type'] = $parameters['type'] ?? 'calculator';
+        $this->construct($parameters);
+    }
 
     /**
      * Get item id
@@ -341,6 +349,24 @@ class ShippingQuote implements ShippingQuoteInterface, ArrayableInterface, \Json
     public function setAllowanceInsurance($value = null)
     {
         return $this->setParameter('allowance_insurance', (bool)$value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getType()
+    {
+        return $this->getParameter('type') ? : 'calculator';
+    }
+
+    /**
+     * Set Insurance
+     * @param mixed $value
+     * @return $this
+     */
+    public function setType($value = null)
+    {
+        return $this->setParameter('type', $value);
     }
 
     /**

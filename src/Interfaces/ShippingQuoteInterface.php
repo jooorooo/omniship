@@ -89,6 +89,11 @@ interface ShippingQuoteInterface extends ComponentInterface
     public function getAllowanceInsurance();
 
     /**
+     * @return string
+     */
+    public function getType();
+
+    /**
      * @return null|string
      */
     public function getErrorMessage();
