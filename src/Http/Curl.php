@@ -854,7 +854,7 @@ class Curl
     {
         $headers = [];
         foreach ($this->set_headers AS $key => $value) {
-            $headers[] = sprintf('%s: %s', $k, $v);
+            $headers[] = sprintf('%s: %s', $key, $value);
         }
 
         return $headers;
