@@ -330,4 +330,45 @@ class Office implements ComponentInterface, ArrayableInterface, \JsonSerializabl
         }
         return $this->setParameter('country', $country);
     }
+
+    /**
+     * Get state ID
+     * @return int|null
+     */
+    public function getStateId()
+    {
+        return $this->getParameter('state_id');
+    }
+
+    /**
+     * Set state ID
+     * @param int|null
+     * @return $this
+     */
+    public function setStateId($state_id)
+    {
+        return $this->setParameter('state_id', $state_id);
+    }
+
+    /**
+     * Get state
+     * @return State|null
+     */
+    public function getState()
+    {
+        return $this->getParameter('state');
+    }
+
+    /**
+     * Set state
+     * @param State|array $state
+     * @return $this
+     */
+    public function setState($state)
+    {
+        if(!($state instanceof State)) {
+            $state = new State((array)$state);
+        }
+        return $this->setParameter('state', $state);
+    }
 }
