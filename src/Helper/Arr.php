@@ -133,7 +133,7 @@ class Arr
     {
         if (is_null($callback)) {
             if (empty($array)) {
-                return value($default);
+                return closureOrValue($default);
             }
 
             foreach ($array as $item) {
@@ -147,7 +147,7 @@ class Arr
             }
         }
 
-        return value($default);
+        return closureOrValue($default);
     }
 
     /**
@@ -161,7 +161,7 @@ class Arr
     public static function last($array, callable $callback = null, $default = null)
     {
         if (is_null($callback)) {
-            return empty($array) ? value($default) : end($array);
+            return empty($array) ? closureOrValue($default) : end($array);
         }
 
         return static::first(array_reverse($array, true), $callback, $default);
@@ -244,7 +244,7 @@ class Arr
     public static function get($array, $key, $default = null)
     {
         if (! static::accessible($array)) {
-            return value($default);
+            return closureOrValue($default);
         }
 
         if (is_null($key)) {
@@ -259,7 +259,7 @@ class Arr
             if (static::accessible($array) && static::exists($array, $segment)) {
                 $array = $array[$segment];
             } else {
-                return value($default);
+                return closureOrValue($default);
             }
         }
 
@@ -350,7 +350,7 @@ class Arr
         list($value, $key) = static::explodePluckParameters($value, $key);
 
         foreach ($array as $item) {
-            $itemValue = data_get($item, $value);
+            $itemValue = os_data_get($item, $value);
 
             // If the key is "null", we will just append the value to the array and keep
             // looping. Otherwise we will key the array using the value of the key we
@@ -358,7 +358,7 @@ class Arr
             if (is_null($key)) {
                 $results[] = $itemValue;
             } else {
-                $itemKey = data_get($item, $key);
+                $itemKey = os_data_get($item, $key);
 
                 $results[$itemKey] = $itemValue;
             }

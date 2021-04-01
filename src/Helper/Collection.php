@@ -92,8 +92,8 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             return null;
         }
 
-        $values = with(isset($key) ? $this->pluck($key) : $this)
-                    ->sort()->values();
+        $values = isset($key) ? $this->pluck($key) : $this;
+        $values = $values->sort()->values();
 
         $middle = (int) ($count / 2);
 
@@ -158,7 +158,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
     {
         if (func_num_args() == 2) {
             return $this->contains(function ($item) use ($key, $value) {
-                return data_get($item, $key) == $value;
+                return os_data_get($item, $key) == $value;
             });
         }
 
@@ -180,7 +180,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
     {
         if (func_num_args() == 2) {
             return $this->contains(function ($item) use ($key, $value) {
-                return data_get($item, $key) === $value;
+                return os_data_get($item, $key) === $value;
             });
         }
 
@@ -312,7 +312,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
     protected function operatorForWhere($key, $operator, $value)
     {
         return function ($item) use ($key, $operator, $value) {
-            $retrieved = data_get($item, $key);
+            $retrieved = os_data_get($item, $key);
 
             switch ($operator) {
                 default:
@@ -355,7 +355,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
         $values = $this->getArrayableItems($values);
 
         return $this->filter(function ($item) use ($key, $values, $strict) {
-            return in_array(data_get($item, $key), $values, $strict);
+            return in_array(os_data_get($item, $key), $values, $strict);
         });
     }
 
@@ -432,7 +432,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
             return $this->items[$key];
         }
 
-        return value($default);
+        return closureOrValue($default);
     }
 
     /**
@@ -1154,7 +1154,7 @@ class Collection implements ArrayAccess, ArrayableInterface, Countable, Iterator
         }
 
         return function ($item) use ($value) {
-            return data_get($item, $value);
+            return os_data_get($item, $value);
         };
     }
 

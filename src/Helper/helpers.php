@@ -3,7 +3,7 @@
 use Omniship\Helper\Collection;
 use Omniship\Helper\Arr;
 
-if (! function_exists('data_get')) {
+if (! function_exists('os_data_get')) {
     /**
      * Get an item from an array or object using "dot" notation.
      *
@@ -12,7 +12,7 @@ if (! function_exists('data_get')) {
      * @param  mixed   $default
      * @return mixed
      */
-    function data_get($target, $key, $default = null)
+    function os_data_get($target, $key, $default = null)
     {
         if (is_null($key)) {
             return $target;
@@ -25,7 +25,7 @@ if (! function_exists('data_get')) {
                 if ($target instanceof Collection) {
                     $target = $target->all();
                 } elseif (! is_array($target)) {
-                    return value($default);
+                    return closureOrValue($default);
                 }
 
                 $result = Arr::pluck($target, $key);
@@ -38,7 +38,7 @@ if (! function_exists('data_get')) {
             } elseif (is_object($target) && isset($target->{$segment})) {
                 $target = $target->{$segment};
             } else {
-                return value($default);
+                return closureOrValue($default);
             }
         }
 
@@ -46,29 +46,15 @@ if (! function_exists('data_get')) {
     }
 }
 
-if (! function_exists('value')) {
+if (! function_exists('closureOrValue')) {
     /**
      * Return the default value of the given value.
      *
      * @param  mixed  $value
      * @return mixed
      */
-    function value($value)
+    function closureOrValue($value)
     {
         return $value instanceof Closure ? $value() : $value;
-    }
-}
-
-if (! function_exists('with')) {
-    /**
-     * Return the given value, optionally passed through the given callback.
-     *
-     * @param  mixed  $value
-     * @param  callable|null  $callback
-     * @return mixed
-     */
-    function with($value, callable $callback = null)
-    {
-        return is_null($callback) ? $value : $callback($value);
     }
 }
