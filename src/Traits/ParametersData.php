@@ -333,7 +333,8 @@ trait ParametersData
             $address = new Address($address);
         }
         if ($address->isEmpty()) {
-            $this->invalidArguments('20002');
+            //$this->invalidArguments('20002');
+			return $this;
         }
         return $this->setParameter('sender_address', $address);
     }
