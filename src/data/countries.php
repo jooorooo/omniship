@@ -214,8 +214,8 @@ return [
     'AL' => [
         'CountryCode' => 'AL',
         'Country' => 'Albania',
-        'CurrencyCode' => 'EUR',
-        'CurrencyName' => 'Euro',
+        'CurrencyCode' => 'ALL',
+        'CurrencyName' => 'Albanian lek',
         'WeightUnit' => 'kg',
         'DimensionalUnit' => 'cm',
         'Iso2' => 'AL',
